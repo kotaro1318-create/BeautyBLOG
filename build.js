@@ -23,7 +23,9 @@ function renderArticleLi(article, index) {
     ? `<div class="sources">
               <div class="sources-label">出典</div>
               <ol>${article.sources
-                .map((s) => `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`)
+                .map((s) => s.url
+                ? `<li><a href="${s.url}" target="_blank" rel="noopener noreferrer">${s.label}</a></li>`
+                : `<li>${s.label}</li>`)
                 .join("")}</ol>
             </div>`
     : "";
@@ -68,7 +70,7 @@ function renderJsonLd() {
             citation: a.sources.map((s) => ({
               "@type": "CreativeWork",
               name: s.label,
-              url: s.url,
+              ...(s.url ? { url: s.url } : {}),
             })),
           }
         : {}),
