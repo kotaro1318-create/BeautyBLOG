@@ -469,6 +469,76 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容の科学』(日本コスメティック協会)" }
     ]
+  },
+  {
+    title: "その頬の赤み、日焼けじゃないかも。「酒さ」を悪化させる意外な引き金たち",
+    date: "2026-09-07",
+    conclusion: "顔の赤み・ほてりが続く「酒さ」は4つの病型に分かれ、悪化因子の多くは気温やストレスなど日常生活に潜んでいます。",
+    body: "「なんだか顔が赤い」「すぐほてる」が続くとき、実は単なる肌の弱さではなく「酒さ(しゅさ)」という慢性の炎症性疾患が隠れていることがあります。酒さは症状によって4つのタイプに分かれ、頬や鼻がじんわり赤くなる「紅斑毛細血管拡張型」、ニキビに似た丘疹や膿疱が出る「丘疹膿疱型」、鼻まわりが腫れぼったくなる「鼻瘤」、目の充血や乾燥を伴う「眼型」があります。共通点は皮膚のバリア機能が低下し、経表皮水分蒸散量(いわゆる肌からの水分の蒸発しやすさ)が健常な肌より高くなっていること。つまり「刺激を受けやすい状態」がベースにあるわけです。悪化因子として報告の割合が高いのは日光曝露や心理的ストレス、気温の高さ、風、激しい運動、アルコール、熱いお風呂など。特別な成分よりも、まず日常の中の刺激を避けることが土台になります。スキンケアは低刺激性の洗浄剤・保湿剤を選び、洗顔後は肌が湿ったまま重ねづけせず、水分を優しく拭き取ってから少し置いて保湿するのがポイント。紫外線対策も欠かせませんが、こすれやすい摩擦や刺激の強い成分は避けたいところです。思い当たる方は、自己判断でケアを重ねる前に皮膚科での相談も選択肢に入れておくと安心です。",
+    visual: `
+      <div class="viz">
+        <p class="viz-title">表:酒さの4つの病型</p>
+        <div class="viz-table-wrap">
+          <table class="viz-table">
+            <thead>
+              <tr><th>病型</th><th>主な特徴</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>紅斑毛細血管拡張型</td><td>顔面中心の赤み・ほてり(いわゆる「赤ら顔」)</td></tr>
+              <tr><td>丘疹膿疱型</td><td>ニキビに似た丘疹・膿疱(面皰は伴わない)</td></tr>
+              <tr><td>鼻瘤</td><td>鼻を中心とした腫れぼったさ</td></tr>
+              <tr><td>眼型</td><td>まぶた・眼球結膜の充血や炎症</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="viz-note">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>
+      </div>
+      <div class="viz">
+        <p class="viz-title">図:酒さを悪化させる要因(報告された割合)</p>
+        <div class="viz-bars">
+          <div class="bar-row">
+            <span class="bar-label">日光曝露</span>
+            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
+            <span class="bar-value">81%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">心理ストレス</span>
+            <span class="bar-track"><span class="bar-fill" style="width:98%"></span></span>
+            <span class="bar-value">79%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">高気温</span>
+            <span class="bar-track"><span class="bar-fill" style="width:93%"></span></span>
+            <span class="bar-value">75%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">風</span>
+            <span class="bar-track"><span class="bar-fill" style="width:70%"></span></span>
+            <span class="bar-value">57%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">激しい運動</span>
+            <span class="bar-track"><span class="bar-fill" style="width:69%"></span></span>
+            <span class="bar-value">56%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">アルコール</span>
+            <span class="bar-track"><span class="bar-fill" style="width:64%"></span></span>
+            <span class="bar-value">52%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">熱いお風呂</span>
+            <span class="bar-track"><span class="bar-fill" style="width:63%"></span></span>
+            <span class="bar-value">51%</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>
+      </div>
+    `,
+    sources: [
+      { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" },
+      { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" }
+    ]
   }
 ];
 
