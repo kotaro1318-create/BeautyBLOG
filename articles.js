@@ -763,6 +763,53 @@ const ARTICLES = [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
     ]
+  },
+  {
+    title: "そのニキビ、潰していませんか?我慢できないときの「正解」",
+    date: "2026-09-13",
+    conclusion: "ニキビを指で潰すのは跡が残るリスクが高く、塗り薬の塗り方を工夫しながら気長に治療を続けるほうが結果的に近道です。",
+    body: "鏡の前でニキビを見つけると、つい指でつぶしたくなりますよね。でも自己判断でつぶす行為は、組織そのものを傷つけてしまい、凸凹の痕や赤み・色素沈着として長く残ってしまうリスクが高いといわれています。ニキビ治療の主役は、毛穴の詰まりを改善するアダパレンと、殺菌・角質剥離作用を持つ過酸化ベンゾイル。ただしこの2つは効果が高い分、使い始めの1〜2週間は赤みやヒリつきが出やすいのが悩みどころです。そこで臨床の現場で紹介されているのが2つの塗り方の工夫。過酸化ベンゾイルは気になる1カ所だけに少量をちょんと乗せてから徐々に範囲を広げる「チョンのせ法」、アダパレンは1カ所を中心に薄く塗り広げていく「塗り広げ法」が、肌への負担を抑えながら慣らしていくコツだそうです。根気強く続けた場合、炎症のある赤ニキビや黄ニキビは治療開始から1カ月でおよそ7割、3カ月でおよそ9割減ったというデータも報告されています。どうしても気になる場合は、自己流でつぶす前に皮膚科で面皰圧出を相談するのが安全な選択肢です。",
+    visual: `
+      <div class="viz">
+        <p class="viz-title">図:治療を続けると炎症性皮疹はどう減るか(目安)</p>
+        <div class="viz-bars">
+          <div class="bar-row">
+            <span class="bar-label">治療前</span>
+            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
+            <span class="bar-value">100%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">1ヶ月後</span>
+            <span class="bar-track"><span class="bar-fill" style="width:30%"></span></span>
+            <span class="bar-value">約30%に減少</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">3ヶ月後</span>
+            <span class="bar-track"><span class="bar-fill" style="width:10%"></span></span>
+            <span class="bar-value">約10%に減少</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
+      </div>
+      <div class="viz">
+        <p class="viz-title">図:刺激が出やすい外用薬、塗り方の工夫</p>
+        <div class="viz-stats">
+          <div class="stat-tile">
+            <span class="stat-value">チョンのせ法</span>
+            <span class="stat-label">過酸化ベンゾイル向き。1カ所に少量を置き、慣れたら範囲を広げる</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">塗り広げ法</span>
+            <span class="stat-label">アダパレン向き。1カ所を中心に薄く面積を広げていく</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
+      </div>
+    `,
+    sources: [
+      { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
+      { label: "『美容皮膚Q&A』(川田暁)" }
+    ]
   }
 ];
 
