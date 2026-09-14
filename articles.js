@@ -810,6 +810,52 @@ const ARTICLES = [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
       { label: "『美容皮膚Q&A』(川田暁)" }
     ]
+  },
+  {
+    title: "肌老化の8割は紫外線のせい?「光老化」は曇りの日も冬も室内でも進みます",
+    date: "2026-09-14",
+    conclusion: "肌老化の多くは加齢そのものより紫外線の積み重ねによる「光老化」が占めるとされ、天候や季節を問わない対策が近道と考えられています。",
+    body: "「日焼け対策は夏の晴れた日だけでいい」——そう思っていませんか。実は肌の老化は、加齢によって自然に起こる部分よりも、紫外線を浴び続けたことによる「光老化」の影響のほうがずっと大きく、肌老化全体のおよそ8割を占めるという報告もあるそうです。厄介なのは、紫外線が真夏の直射日光だけの話ではないこと。曇りの日でも紫外線の8割以上は雲を通り抜けて地上に届きますし、冬でも量が減るだけで日焼けはします。雪山では雪面の反射で浴びる紫外線量が約2倍になり、標高が1000m上がるごとに紫外線量はおよそ1割増えるとも言われています。さらに油断しがちなのが室内。窓ガラスは紫外線の一部(UV-A)を通してしまうため、部屋にいても肌の深部にダメージが届き、シワやたるみにつながる可能性があります。日焼け止めも「塗ればOK」ではなく、多くの人は顔なら液状タイプで1円玉1個分を2度塗りするという目安の半分以下しか使えていないとも指摘されています。天気や季節、屋内外を問わず、紫外線対策は一年を通じての習慣にしておきたいところです。",
+    visual: `
+      <div class="viz">
+        <p class="viz-title">図:肌老化に占める光老化の割合(目安)</p>
+        <div class="viz-bars">
+          <div class="bar-row">
+            <span class="bar-label">光老化(紫外線の影響)</span>
+            <span class="bar-track"><span class="bar-fill" style="width:80%"></span></span>
+            <span class="bar-value">約80%</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">自然老化(加齢の影響)</span>
+            <span class="bar-track"><span class="bar-fill" style="width:20%"></span></span>
+            <span class="bar-value">約20%</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『コスメの教科書』(日本化粧品検定協会)(香粧会誌 41(3), 2017の報告に基づく)</p>
+      </div>
+      <div class="viz">
+        <p class="viz-title">図:油断しがちな紫外線、実はこんなに届いている</p>
+        <div class="viz-stats">
+          <div class="stat-tile">
+            <span class="stat-value">80%以上</span>
+            <span class="stat-label">曇りの日でも雲を通過して届く紫外線の割合</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">約2倍</span>
+            <span class="stat-label">雪山で雪面反射により浴びる紫外線量の増加目安</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">+約10%</span>
+            <span class="stat-label">標高が1000m上がるごとに増える紫外線量の目安</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『コスメの教科書』(日本化粧品検定協会)</p>
+      </div>
+    `,
+    sources: [
+      { label: "『コスメの教科書』(日本化粧品検定協会)" },
+      { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" }
+    ]
   }
 ];
 
