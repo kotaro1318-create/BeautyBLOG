@@ -856,6 +856,52 @@ const ARTICLES = [
       { label: "『コスメの教科書』(日本化粧品検定協会)" },
       { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" }
     ]
+  },
+  {
+    title: "自分の血液で肌を若返らせる?「PRP療法」の仕組みと、見落とせない法律の話",
+    date: "2026-09-15",
+    conclusion: "PRP療法は自分の血液由来のため注目されている美容医療ですが、日本では法律上の届出施設かどうかを確認することが安全に受けるための大事な条件とされています。",
+    body: "「自分の血液で肌を若返らせる」と聞くとちょっと不思議に感じますが、これがPRP(多血小板血漿)療法の考え方です。やり方はシンプルで、採血した血液を遠心分離機にかけて血小板だけを濃縮し、それを気になる部分に注入します。血小板には出血を止める役割だけでなく、活性化するとPDGFやTGF-βといった細胞の増殖因子を放出し、組織の修復を後押しする働きがあるとされ、この仕組みを利用しているわけです。実際にシワへ注射した研究では、生理食塩水を注射した側に比べてPRPを注射した側でコラーゲンの密度がおよそ89%多く増えたという報告もあるそうです。ただし専門書でも「効果は不安定な面がある」と指摘されており、過度な期待は禁物。さらに大事なのが法律面で、日本ではPRP療法は「再生医療等安全性確保法」の対象になっており、クリニック側は細胞培養加工施設としての届出や厚生労働省への手続きが必要とされています。「自分の血だから安全」というイメージだけで選ばず、届出をきちんと済ませた施設かどうかを確認する視点も持っておきたいところです。",
+    visual: `
+      <div class="viz">
+        <p class="viz-title">図:シワへの注射でコラーゲン密度はどう変わったか(研究報告の一例)</p>
+        <div class="viz-bars">
+          <div class="bar-row">
+            <span class="bar-label">生理食塩水側</span>
+            <span class="bar-track"><span class="bar-fill" style="width:53%"></span></span>
+            <span class="bar-value">増加量の目安:100</span>
+          </div>
+          <div class="bar-row">
+            <span class="bar-label">PRP側</span>
+            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
+            <span class="bar-value">増加量の目安:189(約89%多い)</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『MB Derma No.262 再考!美容皮膚診療』の報告に基づく目安</p>
+      </div>
+      <div class="viz">
+        <p class="viz-title">図:PRP療法、知っておきたいポイント</p>
+        <div class="viz-stats">
+          <div class="stat-tile">
+            <span class="stat-value">2014→2015年</span>
+            <span class="stat-label">「再生医療等安全性確保法」が成立・施行された年</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">要届出</span>
+            <span class="stat-label">実施には細胞培養加工施設としての届出などの手続きが必要</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">効果は不安定</span>
+            <span class="stat-label">専門書でも安定した効果とは言い切れないと指摘されている</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『MB Derma No.262 再考!美容皮膚診療』『美容皮膚Q&A』(川田暁)</p>
+      </div>
+    `,
+    sources: [
+      { label: "『MB Derma No.262 再考!美容皮膚診療』" },
+      { label: "『美容皮膚Q&A』(川田暁)" }
+    ]
   }
 ];
 
