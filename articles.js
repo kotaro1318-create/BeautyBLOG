@@ -5,6 +5,7 @@
 //
 // date は "YYYY-MM-DD" 形式。表示形式は config.js の SITE_CONFIG.dateFormat で
 // 一括変更できます(この配列の日付そのものは変更していません)。
+// このファイルは admin-server.js のWeb管理画面(http://localhost:5055/)から編集・生成されます。
 
 const ARTICLES = [
   {
@@ -12,41 +13,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "SPFの数値通りの効果を得るには、多くの人が実際に塗っている量よりずっと多い日焼け止めが必要です。",
     body: "「ちゃんとSPF50を塗ったのに焼けた」という経験、ありませんか?実はSPFの数値は、規定量(1平方センチあたり2mg)をきちんと塗った場合のテスト結果です。SPF15でUVBの約93%、SPF30で約96〜97%、SPF50で約98%、SPF100でも約99%と、実は数値が上がるほど効果の伸びしろは小さくなっていきます。それでも数値にこだわる理由は、多くの人が実際には規定量の半分以下しか塗っていないから。半分の量では、SPF50でも体感的にはSPF20〜30程度まで効果が落ちてしまうのです。さらに面白いのは、国によって認可されているUV吸収剤の数が違うこと。EUでは34種類のUV吸収剤が認可されているのに対し、米国は16種類にとどまります。日本や韓国では「PA」という別の指標でUVA(シワやたるみの原因になる波長)への強さを表しており、SPFだけでは分からない情報を補っています。塗る量と塗り直しの頻度こそが、実は成分選び以上に効果を左右するポイントかもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:SPFの数値とUVBカット率の関係</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>SPF</th><th>UVBカット率</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>15</td><td class="num">約93%</td></tr>
-              <tr><td>30</td><td class="num">約96〜97%</td></tr>
-              <tr><td>50</td><td class="num">約98%</td></tr>
-              <tr><td>100</td><td class="num">約99%</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:Cureus「Global Perspectives on Regional Sun Protection Factor (SPF) Requirements」</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:地域別の認可UV吸収剤 数</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">EU</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">34種類</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">米国</span>
-            <span class="bar-track"><span class="bar-fill" style="width:47%"></span></span>
-            <span class="bar-value">16種類</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:EWG's Guide to Sunscreens「Do other countries have better sunscreens than the U.S.?」</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:SPFの数値とUVBカット率の関係</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>SPF</th><th>UVBカット率</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>15</td><td class=\"num\">約93%</td></tr>\n              <tr><td>30</td><td class=\"num\">約96〜97%</td></tr>\n              <tr><td>50</td><td class=\"num\">約98%</td></tr>\n              <tr><td>100</td><td class=\"num\">約99%</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:Cureus「Global Perspectives on Regional Sun Protection Factor (SPF) Requirements」</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:地域別の認可UV吸収剤 数</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">EU</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">34種類</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">米国</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:47%\"></span></span>\n            <span class=\"bar-value\">16種類</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:EWG's Guide to Sunscreens「Do other countries have better sunscreens than the U.S.?」</p>\n      </div>\n    ",
     sources: [
       { label: "Cureus「Global Perspectives on Regional Sun Protection Factor (SPF) Requirements: Scientific and Regulatory Insights」", url: "https://www.cureus.com/articles/459797-global-perspectives-on-regional-sun-protection-factor-spf-requirements-scientific-and-regulatory-insights" },
       { label: "EWG's Guide to Sunscreens「Do other countries have better sunscreens than the U.S.?」", url: "https://www.ewg.org/sunscreen/report/do-other-countries-have-better-sunscreens-than-the-u-s/" }
@@ -57,25 +24,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "定番のスキンケア成分は、それぞれ異なる作用のしくみで臨床試験による裏付けを持っています。",
     body: "スキンケア成分は数え切れないほどありますが、実際に臨床試験で効果が確認されているものは限られています。レチノールは肌のコラーゲンを分解する酵素(MMP)の働きを抑えつつ、コラーゲンの生成を促す仕組みが報告されています。ビタミンCは紫外線でできる活性酸素を消去する抗酸化物質で、10%濃度の美容液を12週間使った臨床試験では、シワの減少と真皮のコラーゲン増加が確認されました。ナイアシンアミドは細胞のエネルギー代謝やDNA修復に関わるNAD⁺という物質のもとになる成分で、5%濃度で12週間使用した臨床試験では、小じわ・色素沈着・赤み・弾力の見た目の改善が報告されています。ヒアルロン酸は自分の重さの1000倍もの水を抱え込める成分で、8週間の使用で角質層の水分保持とバリア機能の指標が改善したという報告もあります。「なんとなく良さそう」ではなく、それぞれの成分がどんな仕組みで、どのくらいの期間で効果を示すのかを知っておくと、選び方の解像度がぐっと上がります。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:主要成分と臨床試験で報告された変化</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>成分</th><th>主な作用</th><th>報告された変化</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>レチノール</td><td>コラーゲン分解抑制・生成促進</td><td>シワ・ハリの改善</td></tr>
-              <tr><td>ビタミンC(10%)</td><td>抗酸化・コラーゲン生成促進</td><td>12週間でシワ減少</td></tr>
-              <tr><td>ナイアシンアミド(5%)</td><td>NAD⁺産生・DNA修復支援</td><td>12週間で色素沈着・赤み改善</td></tr>
-              <tr><td>ヒアルロン酸</td><td>自重の1000倍の保水</td><td>8週間で水分保持改善</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:PMC「Mechanistic Basis and Clinical Evidence for the Applications of Nicotinamide」ほか</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:主要成分と臨床試験で報告された変化</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>成分</th><th>主な作用</th><th>報告された変化</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>レチノール</td><td>コラーゲン分解抑制・生成促進</td><td>シワ・ハリの改善</td></tr>\n              <tr><td>ビタミンC(10%)</td><td>抗酸化・コラーゲン生成促進</td><td>12週間でシワ減少</td></tr>\n              <tr><td>ナイアシンアミド(5%)</td><td>NAD⁺産生・DNA修復支援</td><td>12週間で色素沈着・赤み改善</td></tr>\n              <tr><td>ヒアルロン酸</td><td>自重の1000倍の保水</td><td>8週間で水分保持改善</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:PMC「Mechanistic Basis and Clinical Evidence for the Applications of Nicotinamide」ほか</p>\n      </div>\n    ",
     sources: [
       { label: "PMC「Mechanistic Basis and Clinical Evidence for the Applications of Nicotinamide (Niacinamide) to Control Skin Aging and Pigmentation」", url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8389214/" },
       { label: "MDPI「Clinical and Instrumental Evaluation of the Anti-Aging Effectiveness of a Cream Based on Hyaluronic Acid and Vitamin C」", url: "https://www.mdpi.com/2079-9284/12/4/177" }
@@ -86,29 +35,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "韓国コスメの輸出額は2025年に5年連続で過去最高を更新しており、世界的なブームは一過性ではなさそうです。",
     body: "「K-beautyはもう一段落したのでは」と思いきや、数字を見るとむしろ勢いは増しています。2025年の韓国コスメの輸出額は102億ドルに達し、前年比21.4%増と5年連続で過去最高を更新しました。市場規模の推計は調査会社によって幅があり、韓国製コスメに絞った推計では120億〜160億ドル程度、K-beauty的な処方や世界中のインスパイア商品まで含めた広い定義では1000億ドルを超える推計も出ています。この差自体が、K-beautyがもはや「韓国製品」という枠を超えて、ひとつの美容スタイルとして世界中のブランドに取り入れられていることを物語っています。成長を後押ししているのは、SNSでのバイラルな広がりと、消費者のスキンケアへの意識の高まり。10ステップスキンケアのような手厚いルーティン文化や、シートマスク、発酵成分、独自のテクスチャー開発力などが、世界の消費者に「新しい体験」として刺さり続けているのが背景にあります。ある予測では、2030年までに市場は210億ドル規模に達し、今よりさらに36%拡大するとも見込まれています。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:韓国コスメ輸出額の推移(推計)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">2024年</span>
-            <span class="bar-track"><span class="bar-fill" style="width:84%"></span></span>
-            <span class="bar-value">約84億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">2025年</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">102億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">2030年(予測)</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">約210億ドル規模へ</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:Euromonitor International「K-Beauty Growth Hits $15 Billion as Global Demand Surges」(2024年輸出額は前年比21.4%増から逆算した概算)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:韓国コスメ輸出額の推移(推計)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2024年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:84%\"></span></span>\n            <span class=\"bar-value\">約84億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2025年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">102億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2030年(予測)</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">約210億ドル規模へ</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:Euromonitor International「K-Beauty Growth Hits $15 Billion as Global Demand Surges」(2024年輸出額は前年比21.4%増から逆算した概算)</p>\n      </div>\n    ",
     sources: [
       { label: "Euromonitor International「K-Beauty Growth Hits $15 Billion as Global Demand Surges」", url: "https://www.euromonitor.com/newsroom/press-releases/august-2026/k-beauty-global-growth-beauty-market-2026" },
       { label: "IMARC Group「K-Beauty Products Market Size, Share & Growth Forecast」", url: "https://www.imarcgroup.com/k-beauty-products-market" }
@@ -119,24 +46,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "J-beautyは「治す」より「防ぐ」を軸にした引き算のスキンケア哲学で、世界の美容トレンドにも影響を与えています。",
     body: "10ステップの手厚いK-beautyルーティンが話題になる一方、じわじわと世界で注目を集めているのが日本発の「J-beauty」です。最大の特徴は、ダメージが起きてから対処するのではなく、そもそもダメージを起こさせない「予防」を軸に置いていること。たくさんの製品を重ねるのではなく、質の良い少数の製品を、肌本来の働きに寄り添う形で使うミニマルな考え方が土台にあります。米・緑茶・酒粕などの発酵成分を取り入れた処方や、ダブル洗顔の文化、日常的に紫外線対策をする習慣なども、実はJ-beauty由来として世界のトレンドに広がってきた経緯があります。派手な「10ステップ」ではなく、地味だけれど毎日続けられる「儀式」としてスキンケアを捉える感覚こそが、情報過多で疲れてしまった海外の消費者にとって新鮮に映っているようです。「足す」美容と「引く」美容、どちらが正解ということではなく、自分の肌と生活リズムに合った哲学を選ぶという視点が、これからのスキンケア選びには欠かせません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:J-beautyとK-beautyの哲学の違い(傾向)</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th></th><th>J-beauty</th><th>K-beauty</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>基本姿勢</td><td>予防・引き算</td><td>多層ケア・足し算</td></tr>
-              <tr><td>ルーティン</td><td>少数の高品質アイテム</td><td>10ステップなど手厚いケア</td></tr>
-              <tr><td>代表的な成分</td><td>米・緑茶・酒粕などの発酵成分</td><td>カタツムリ・シカ・シートマスクなど</td></tr>
-              <tr><td>キーワード</td><td>儀式・自己ケア</td><td>トレンド・体験</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:J-beautyとK-beautyの哲学の違い(傾向)</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th></th><th>J-beauty</th><th>K-beauty</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>基本姿勢</td><td>予防・引き算</td><td>多層ケア・足し算</td></tr>\n              <tr><td>ルーティン</td><td>少数の高品質アイテム</td><td>10ステップなど手厚いケア</td></tr>\n              <tr><td>代表的な成分</td><td>米・緑茶・酒粕などの発酵成分</td><td>カタツムリ・シカ・シートマスクなど</td></tr>\n              <tr><td>キーワード</td><td>儀式・自己ケア</td><td>トレンド・体験</td></tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    ",
     sources: [
       { label: "Shikō Beauty Collective「What Is J-Beauty? Understanding Japanese Skincare Philosophy」", url: "https://shikobeauty.com/pages/what-is-j-beauty-understanding-japanese-skincare-philosophy" },
       { label: "VEXX Skincare「J-Beauty 2026: How Japanese Skincare's Minimalist Rituals, Ferments and Hydration Are Reshaping Global Beauty」", url: "https://vexxskincare.com/blogs/skincare-tips-and-tricks/j-beauty-2026-how-japanese-skincares-minimalist-rituals-ferments-and-hydration-are-reshaping-global-beauty" }
@@ -147,25 +57,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "睡眠不足やストレスは、コルチゾールの増加や肌のバリア機能の低下を通じて、肌の老化サインを増やすことが分かっています。",
     body: "「寝不足の日は肌の調子が悪い気がする」というのは、単なる気のせいではありません。眠っている間、肌では成長ホルモンの分泌が増え、コラーゲンの生成や血流の改善など、修復と再生のプロセスが進んでいます。睡眠の質が低い人ほど、経表皮水分蒸散量(肌からの水分の蒸発量)が多く、バリア機能が乱れたあとの回復も遅く、紫外線を浴びたあとの赤みの回復も遅いことが報告されています。さらに睡眠不足の人ほど、色素沈着や小じわなど老化のサインが多く見られたというデータもあります。ストレスも見逃せない要因で、慢性的なストレスはコルチゾールというホルモンを増やし、皮脂分泌を増やしてニキビを悪化させたり、湿疹や乾癬の症状を悪化させたりすることが知られています。ストレスは傷の治りを遅くし、バリア機能そのものを弱めることも報告されています。食事面では、果物や野菜に含まれる抗酸化物質が活性酸素と戦い、オメガ3脂肪酸が炎症を抑える一方、加工食品や糖分の摂りすぎはニキビやくすみを悪化させる可能性があるとされています。スキンケア用品を変える前に、まず睡眠・ストレス・食事という土台を見直す価値は十分にありそうです。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:睡眠・ストレス・食事が肌に与える主な影響</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">睡眠</span>
-            <span class="stat-label">成長ホルモン↑・コラーゲン生成↑<br>睡眠不足で水分蒸散量↑、UV後の回復↓</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">ストレス</span>
-            <span class="stat-label">コルチゾール↑で皮脂↑<br>ニキビ・湿疹・乾癬の悪化、治癒遅延</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">食事</span>
-            <span class="stat-label">抗酸化物質・オメガ3で炎症抑制<br>加工食品・糖分の摂りすぎでニキビ悪化の可能性</span>
-          </div>
-        </div>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:睡眠・ストレス・食事が肌に与える主な影響</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">睡眠</span>\n            <span class=\"stat-label\">成長ホルモン↑・コラーゲン生成↑<br>睡眠不足で水分蒸散量↑、UV後の回復↓</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">ストレス</span>\n            <span class=\"stat-label\">コルチゾール↑で皮脂↑<br>ニキビ・湿疹・乾癬の悪化、治癒遅延</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">食事</span>\n            <span class=\"stat-label\">抗酸化物質・オメガ3で炎症抑制<br>加工食品・糖分の摂りすぎでニキビ悪化の可能性</span>\n          </div>\n        </div>\n      </div>\n    ",
     sources: [
       { label: "MDPI「The Sleep–Skin Axis: Clinical Insights and Therapeutic Approaches for Inflammatory Dermatologic Conditions」", url: "https://www.mdpi.com/2673-6179/5/3/13" },
       { label: "International Journal of Community Medicine and Public Health「Influence of lifestyle factors-sleep patterns and stress on skin health and ageing amongst the general population in India」", url: "https://www.ijcmph.com/index.php/ijcmph/article/view/12610" }
@@ -176,24 +68,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "EUは2023年の規制でスキンケア中のマイクロプラスチックを段階的に禁止しており、製品カテゴリーごとに移行期限が定められています。",
     body: "「洗顔スクラブのつぶつぶ」や「ファンデーションのなめらかな質感」の裏側には、実はマイクロプラスチックが使われていることがあります。EUは2023年に採択した規則(Regulation (EU) 2023/2055)で、意図的に添加された合成ポリマー微粒子(直径5mm未満で、有機性・水に溶けず、分解されにくいもの)を段階的に規制することを決めました。対象になりやすい成分は、洗顔スクラブなどに使われるポリエチレンやポリプロピレンのマイクロビーズ、パウダーやファンデーションに使われるナイロン粒子、質感を作るアクリレート共重合体などです。移行期限は製品カテゴリーごとに異なり、シャワージェルなどの「洗い流すタイプ」は2027年10月17日まで、クリームや乳液などの「つけたままのタイプ」は2029年10月17日まで、メイクや口紅、ネイル製品は最も長く2035年10月17日までとされています。ただしメイク・口紅・ネイル製品については2031年10月17日以降、マイクロプラスチックを含む場合はその旨をラベルに表示することが義務付けられます。日本の消費者から見るとまだ先の話に感じるかもしれませんが、グローバルに展開するブランドの処方は今後こうした基準に合わせて静かに変わっていくはずです。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:EUマイクロプラスチック規制の移行期限</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>製品カテゴリー</th><th>移行期限</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>洗い流すタイプ(スクラブ・シャワージェル等)</td><td>2027年10月17日</td></tr>
-              <tr><td>つけたままのタイプ(クリーム・乳液等)</td><td>2029年10月17日</td></tr>
-              <tr><td>メイク・口紅・ネイル製品</td><td>2035年10月17日(2031年10月17日以降は表示義務)</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:REACH24H「EU Microplastics Restriction: First Key Deadline on Oct 17, 2025」</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:EUマイクロプラスチック規制の移行期限</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>製品カテゴリー</th><th>移行期限</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>洗い流すタイプ(スクラブ・シャワージェル等)</td><td>2027年10月17日</td></tr>\n              <tr><td>つけたままのタイプ(クリーム・乳液等)</td><td>2029年10月17日</td></tr>\n              <tr><td>メイク・口紅・ネイル製品</td><td>2035年10月17日(2031年10月17日以降は表示義務)</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:REACH24H「EU Microplastics Restriction: First Key Deadline on Oct 17, 2025」</p>\n      </div>\n    ",
     sources: [
       { label: "REACH24H「EU Microplastics Restriction: First Key Deadline on Oct 17, 2025」", url: "https://en.reach24h.com/news/insights/chemical/eu-microplastics-spm-restriction-deadline" },
       { label: "BeautyMatter「EU Microplastics Regulation: The Global Beauty Impact」", url: "https://beautymatter.com/articles/eu-microplastics-regulation-the-global-beauty-impact" }
@@ -204,39 +79,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "世界の化粧品市場は調査会社ごとに推計の幅があるものの、2025年時点でおおむね3000億〜4400億ドル規模とされ、今も年3〜7%前後で成長を続けています。",
     body: "「化粧品市場はどのくらい大きいのか」という質問に、実は一つの正解はありません。調査会社によって、2025年の世界市場規模の推計は3300億ドルから4400億ドルまで幅があります。この差は、どこまでを「化粧品」に含めるかという定義の違いによるものです。パーソナルケア用品まで広く含めるか、スキンケア・メイクなど狭い意味の化粧品に絞るかで、数字は大きく変わってきます。とはいえ共通しているのは「成長が続いている」という点。Statistaのデータでは2025年の世界市場は前年比で約3.5%成長したとされ、各社の予測でも2026年以降おおむね年4〜7%程度のペースで拡大が見込まれています。数字の大小に一喜一憂するより、「これだけ幅のある推計が出るほど、化粧品市場は定義が難しいくらい多様化・グローバル化している」という事実の方が、実は面白いポイントかもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:2025年 世界の化粧品市場規模(調査会社別推計)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">Grand View<br><span class="bar-sub">Research</span></span>
-            <span class="bar-track"><span class="bar-fill" style="width:75%"></span></span>
-            <span class="bar-value">3301億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Fortune Business<br><span class="bar-sub">Insights</span></span>
-            <span class="bar-track"><span class="bar-fill" style="width:81%"></span></span>
-            <span class="bar-value">3547億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Expert Market<br><span class="bar-sub">Research</span></span>
-            <span class="bar-track"><span class="bar-fill" style="width:82%"></span></span>
-            <span class="bar-value">3612億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Precedence<br><span class="bar-sub">Research</span></span>
-            <span class="bar-track"><span class="bar-fill" style="width:97%"></span></span>
-            <span class="bar-value">4247億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">Research and<br><span class="bar-sub">Markets</span></span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">4391億ドル</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:各社公表資料をもとに作成。定義の違いにより推計に幅があります。</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:2025年 世界の化粧品市場規模(調査会社別推計)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">Grand View<br><span class=\"bar-sub\">Research</span></span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:75%\"></span></span>\n            <span class=\"bar-value\">3301億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">Fortune Business<br><span class=\"bar-sub\">Insights</span></span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:81%\"></span></span>\n            <span class=\"bar-value\">3547億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">Expert Market<br><span class=\"bar-sub\">Research</span></span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:82%\"></span></span>\n            <span class=\"bar-value\">3612億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">Precedence<br><span class=\"bar-sub\">Research</span></span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:97%\"></span></span>\n            <span class=\"bar-value\">4247億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">Research and<br><span class=\"bar-sub\">Markets</span></span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">4391億ドル</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:各社公表資料をもとに作成。定義の違いにより推計に幅があります。</p>\n      </div>\n    ",
     sources: [
       { label: "Statista「Global growth of the cosmetics market 2025」", url: "https://www.statista.com/statistics/297070/growth-rate-of-the-global-cosmetics-market/" },
       { label: "Grand View Research「Cosmetics Market Size, Share, Growth | Industry Report」", url: "https://www.grandviewresearch.com/industry-analysis/cosmetics-market" }
@@ -247,37 +90,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "「たくさん塗る」から「厳選して少なく塗る」へ、世界の消費者のスキンケア行動は明確にシフトしています。",
     body: "何年も「スキンケアは足すもの」という空気がありましたが、ここへ来て潮目が変わってきました。「スキニマリズム(skinimalism)」と呼ばれるこの流れは、肌を健やかに保つために本当に必要な、少数の効果的な製品だけを選ぶという考え方です。スキンサイクリングやスラギングなど、次々と現れたトレンドを試した結果、逆にバリア機能を乱してしまった人が増えたことへの反動とも言われています。Statistaの調査によると、朝のビューティールーティンにかける時間は2020年の平均22分から2025年には14分にまで短縮しました。典型的なスキニマリズムのルーティンは、朝は洗顔または水洗い・狙いを定めた美容液1本・日焼け止め入り保湿剤の3〜4アイテム、夜も4〜5アイテム程度に絞られます。実際、消費者の75%がスキンケア製品を3個以下しか買わなくなっているというデータもあり、これは業界の競争のあり方そのものを変えつつあります。製品を10個から4個に減らすと、月々の美容費は平均40〜60%削減できるという試算も。「増やす」ことに疲れた人にとって、今こそ持ち物を見直すいいタイミングなのかもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:朝のビューティールーティンにかける平均時間</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">2020年</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">22分</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">2025年</span>
-            <span class="bar-track"><span class="bar-fill" style="width:64%"></span></span>
-            <span class="bar-value">14分</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:Statista調査(2025年)、GCI Magazine「Less is More: How Skinimalism is Redefining Beauty Routines and Packaging」より引用</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:スキンケア購入行動の変化</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">75%</span>
-            <span class="stat-label">スキンケア製品を3個以下しか購入しない消費者の割合</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">40〜60%</span>
-            <span class="stat-label">製品を10個から4個に減らした場合の月間美容費の削減幅</span>
-          </div>
-        </div>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:朝のビューティールーティンにかける平均時間</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2020年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">22分</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2025年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:64%\"></span></span>\n            <span class=\"bar-value\">14分</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:Statista調査(2025年)、GCI Magazine「Less is More: How Skinimalism is Redefining Beauty Routines and Packaging」より引用</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:スキンケア購入行動の変化</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">75%</span>\n            <span class=\"stat-label\">スキンケア製品を3個以下しか購入しない消費者の割合</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">40〜60%</span>\n            <span class=\"stat-label\">製品を10個から4個に減らした場合の月間美容費の削減幅</span>\n          </div>\n        </div>\n      </div>\n    ",
     sources: [
       { label: "Global Cosmetic Industry (GCI Magazine)「Less is More: How Skinimalism is Redefining Beauty Routines and Packaging」", url: "https://www.gcimagazine.com/consumers-markets/news/22938448/less-is-more-how-skinimalism-is-redefining-beauty-routines-and-packaging" },
       { label: "IML Testing & Research「Skinimalism Trend 2026: Fewer Products, More Effective」", url: "https://www.imlresearch.com/en/skinimalism-trend-fewer-products-effective/" }
@@ -288,24 +101,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "健康な頭皮バリアを保つことが、フケや炎症だけでなく抜け毛の予防にもつながることが分かってきています。",
     body: "髪のケアというと、シャンプーやトリートメントなど「髪そのもの」に意識が向きがちですが、実はその土台である「頭皮バリア」こそが鍵を握っています。健康な頭皮バリアは、水分の蒸発・雑菌・酸化ストレスから頭皮を守る働きを持ち、これが乱れるとフケや炎症、さらには抜け毛にまでつながることが報告されています。ある臨床試験では、頭皮に特化した処方を12週間使ったところ経表皮水分蒸散量(TEWL)が61.5%減少し、24週間では69%まで改善したというデータもあり、頭皮バリアの回復力の高さがうかがえます。研究の最前線でも動きがあり、2025年2月にはバージニア大学の研究チームが、薄毛が進んだ頭皮にも残存する新しいタイプの幹細胞集団を発見したと発表しました。また男性型脱毛症(AGA)は頭皮の微生物バランスの乱れ(ディスバイオシス)と関連しているという報告もあり、「頭皮環境を整えること」自体が今後の脱毛ケアの重要なテーマになりつつあります。育毛剤選びの前に、まずは頭皮の乾燥や炎症をケアすることから始めてみる価値がありそうです。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:頭皮特化処方によるTEWL(経表皮水分蒸散量)の改善</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">12週間後</span>
-            <span class="bar-track"><span class="bar-fill" style="width:61.5%"></span></span>
-            <span class="bar-value">-61.5%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">24週間後</span>
-            <span class="bar-track"><span class="bar-fill" style="width:69%"></span></span>
-            <span class="bar-value">-69%</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:MDhair「Damaged scalp barrier, dandruff and hair loss」</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:頭皮特化処方によるTEWL(経表皮水分蒸散量)の改善</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">12週間後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:61.5%\"></span></span>\n            <span class=\"bar-value\">-61.5%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">24週間後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:69%\"></span></span>\n            <span class=\"bar-value\">-69%</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:MDhair「Damaged scalp barrier, dandruff and hair loss」</p>\n      </div>\n    ",
     sources: [
       { label: "MDhair「Damaged scalp barrier, dandruff and hair loss」", url: "https://www.mdhair.co/article/is-damaged-scalp-barrier-the-cause-for-dandruff-and-hair-loss" },
       { label: "PMC「Microbial dysbiosis and its diagnostic potential in androgenetic alopecia」", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC12172500/" }
@@ -316,24 +112,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "クリーンビューティーは「無添加」を訴えるだけの時代から、科学的根拠に基づく検証データの開示を求められる時代へと変わりつつあります。",
     body: "「オーガニック」「無添加」といった言葉だけで支持を集められた時代は終わりつつあります。世界のクリーンビューティー市場は2025年時点で105億ドル規模とされ、2033年には353億ドルまで拡大すると予測されるほど成長を続けていますが、同時に消費者の目も厳しくなっています。ある調査では、半数以上の消費者が「クリーンビューティー」を謳う製品の主張の信憑性に疑問を持っていると回答しました。この空気を受けて、業界の重心は「生分解性」「再生可能な原料比率」「ライフサイクルデータ」といった、検証可能な科学的根拠を示す方向へと移りつつあります。2025年には美容ブランドの約8割が、持続可能なパッケージや原料調達、倫理的なサプライチェーンに力を入れると見込まれており、安全性データを公開したり、第三者機関による試験結果を開示したり、信頼できる認証を取得したりする動きが広がっています。「クリーン」という言葉を鵜呑みにするのではなく、その裏にどんなデータや検証があるかを見る視点が、これからの製品選びには欠かせません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:世界のクリーンビューティー市場規模の推移(予測)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">2025年</span>
-            <span class="bar-track"><span class="bar-fill" style="width:30%"></span></span>
-            <span class="bar-value">105億ドル</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">2033年(予測)</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">353億ドル</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:Grand View Research「Clean Beauty Market Size, Share & Trends Report」(CAGR 16.8%の予測に基づく)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:世界のクリーンビューティー市場規模の推移(予測)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2025年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:30%\"></span></span>\n            <span class=\"bar-value\">105億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2033年(予測)</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">353億ドル</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:Grand View Research「Clean Beauty Market Size, Share & Trends Report」(CAGR 16.8%の予測に基づく)</p>\n      </div>\n    ",
     sources: [
       { label: "Grand View Research「Clean Beauty Market Size, Share & Trends Report, 2026-2033」", url: "https://www.grandviewresearch.com/industry-analysis/clean-beauty-market-report" },
       { label: "Personal Care Insights「Clean Beauty trades ‘free-from’ labels for science-led standards」", url: "https://www.personalcareinsights.com/news/clean-beauty-science-led-standards.html" }
@@ -344,41 +123,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "近赤外線が肌の老化を進めるか抑えるかは、照射量の違いによって結論が大きく変わる可能性が指摘されています。",
     body: "紫外線対策はすっかり定着しましたが、実は太陽光が肌に届けるエネルギーの内訳を見ると、紫外線はわずか7%ほどで、可視光線が39%、そして赤外線が54%と最も大きな割合を占めています。中でも近赤外線(波長760〜1400nm)は紫外線と違って肌の表面にとどまらず、真皮や皮下組織まで届くため、老化への影響をめぐって専門家の間でも意見が分かれてきました。「シワやたるみの改善」「傷の治りを早める」「紫外線で傷んだDNAの修復を助ける」といった肌に優しい報告がある一方で、「コラーゲンを壊す酵素(MMP-1)を増やす」「肌の抗酸化力を下げる」という真逆の報告も存在します。興味深いのは、老化を促進すると結論づけた研究の多くが、実際の真夏の屋外(平均20mW/cm²、ピークでも40mW/cm²程度)よりおよそ10倍も強い光を実験で当てていたという点。赤外線そのものの善悪というより、どれだけの量を浴びたかという条件の違いが、正反対の結論を生んでいた可能性が高いのです。紫外線だけでなく、赤外線についても「浴びすぎない」くらいの意識を持っておくのがちょうど良さそうです。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:太陽光が肌に届けるエネルギーの内訳</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">紫外線</span>
-            <span class="bar-track"><span class="bar-fill" style="width:13%"></span></span>
-            <span class="bar-value">約7%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">可視光線</span>
-            <span class="bar-track"><span class="bar-fill" style="width:72%"></span></span>
-            <span class="bar-value">約39%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">赤外線</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">約54%</span>
-          </div>
-        </div>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:近赤外線の強さ、実際と実験条件の差</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">20〜40mW/cm²</span>
-            <span class="stat-label">真夏の屋外での近赤外線の強さ(平均〜ピーク)</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">約10倍</span>
-            <span class="stat-label">「老化を促進する」とした研究の多くで使われた照射量の目安</span>
-          </div>
-        </div>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:太陽光が肌に届けるエネルギーの内訳</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">紫外線</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:13%\"></span></span>\n            <span class=\"bar-value\">約7%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">可視光線</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:72%\"></span></span>\n            <span class=\"bar-value\">約39%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">赤外線</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">約54%</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:近赤外線の強さ、実際と実験条件の差</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">20〜40mW/cm²</span>\n            <span class=\"stat-label\">真夏の屋外での近赤外線の強さ(平均〜ピーク)</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約10倍</span>\n            <span class=\"stat-label\">「老化を促進する」とした研究の多くで使われた照射量の目安</span>\n          </div>\n        </div>\n      </div>\n    ",
     sources: [
       { label: "『美容の科学』(日本コスメティック協会)" },
       { label: "Monthly Book Derma. No.262「再考!美容皮膚診療－自然な若返りを望む患者への治療のコツ－」(森脇真一 編集企画)" }
@@ -389,40 +134,7 @@ const ARTICLES = [
     date: "2026-09-05",
     conclusion: "入浴後に肌がもっとも保湿剤を受け入れやすいのは、数分程度のごく短い時間帯だけかもしれません。",
     body: "「お風呂上がりは保湿」とはよく聞きますが、実は効果的なタイミングはかなりシビアかもしれません。入浴中は角層がお湯を吸ってふっくらしますが、同時に経表皮水分蒸散量(TEWL、肌表面から水分が逃げていく量)も上がっており、せっかく含んだ水分はどんどん蒸発していきます。この、角層がまだ水分を多く含んでいる入浴直後のごく短い時間帯は「モイスチャライズウィンドウ」と呼ばれ、この間に保湿剤を重ねることでバリア機能の回復効果を引き出しやすいと報告されています。目安として10分ほどで効果が薄れ始め、15分以上経つと角層の水分量は入浴前とほぼ変わらないところまで戻ってしまうとも言われています。お湯の温度にも注意が必要で、42℃前後になると「かゆみセンサー」が働きやすくなるとされ、熱すぎるお湯は必要な皮脂まで洗い流してバリア機能を弱めます。目安は38〜40℃程度のぬるめのお湯で5〜10分。長湯すると角質がふやけてかえってバリアが乱れる「浸軟現象」を招くこともあるので、「ぬるめ・短め・出たらすぐ保湿」を意識してみてください。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:入浴後の経過時間と肌の状態(モイスチャライズウィンドウ)</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">0〜数分</span>
-            <span class="stat-label">角層の水分量が一時的に増加。保湿剤が浸透しやすい「モイスチャライズウィンドウ」</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">10分前後</span>
-            <span class="stat-label">TEWL(経表皮水分蒸散量)の上昇により水分が蒸発し、保湿効果が薄れ始める目安</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">15分以上</span>
-            <span class="stat-label">角層の水分量が入浴前とほぼ同じ水準まで低下しやすい</span>
-          </div>
-        </div>
-      </div>
-      <div class="viz">
-        <p class="viz-title">表:お湯の温度と肌への影響</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>お湯の温度・時間</th><th>肌への影響</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>38〜40℃・5〜10分</td><td>推奨される目安。皮脂を守りながら温まれる</td></tr>
-              <tr><td>42℃前後</td><td>かゆみを感じるセンサーが働きやすくなるとされる</td></tr>
-              <tr><td>15分以上の長湯</td><td>角質がふやけてバリア機能が乱れる「浸軟現象」のリスク</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:入浴後の経過時間と肌の状態(モイスチャライズウィンドウ)</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">0〜数分</span>\n            <span class=\"stat-label\">角層の水分量が一時的に増加。保湿剤が浸透しやすい「モイスチャライズウィンドウ」</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">10分前後</span>\n            <span class=\"stat-label\">TEWL(経表皮水分蒸散量)の上昇により水分が蒸発し、保湿効果が薄れ始める目安</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">15分以上</span>\n            <span class=\"stat-label\">角層の水分量が入浴前とほぼ同じ水準まで低下しやすい</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:お湯の温度と肌への影響</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>お湯の温度・時間</th><th>肌への影響</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>38〜40℃・5〜10分</td><td>推奨される目安。皮脂を守りながら温まれる</td></tr>\n              <tr><td>42℃前後</td><td>かゆみを感じるセンサーが働きやすくなるとされる</td></tr>\n              <tr><td>15分以上の長湯</td><td>角質がふやけてバリア機能が乱れる「浸軟現象」のリスク</td></tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n    ",
     sources: [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
@@ -433,38 +145,7 @@ const ARTICLES = [
     date: "2026-09-06",
     conclusion: "目の下のくまは茶色・青・黒の3タイプに分かれ、それぞれ原因もケアの方向性も異なります。",
     body: "「なんだか疲れて見える」代表格の目の下のくま、実は色によって原因がまったく違う3タイプに分かれることをご存じでしょうか。まず「茶色いくま」はメラニンの沈着が正体で、目をこする摩擦やアイメイクの刺激が引き金になりやすいタイプ。ケアの基本は刺激を取り除くことと、ビタミンC誘導体などによる美白ケアです。次に「青みがかったくま」は、皮膚が薄い目の下で血流がうっ滞したり、下にある眼輪筋が透けて見えたりすることで生じ、比較的若い世代に多いとされています。睡眠不足で目立ちやすくなる一方、温めて血行を促すセルフケアで和らぐこともあります。そして「黒っぽいくま」は、加齢による小ジワやたるみが作る「影」が正体。加齢とともに目のまわりの骨がやせて眼窩が広がり、下まぶたのふくらみ(いわゆる目袋)が目立ちやすくなることも、影を濃くする一因と考えられています。データを見ると、青いくまは若い世代に多く、メラニン由来の茶色いくまは高齢層に多い傾向があるとも報告されており、年齢を重ねるほど「原因が変わっていく」パーツでもあるようです。3タイプはしばしば混在するため、コンシーラー選びも「隠したい色」に合わせて考えると失敗が減るかもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:目の下の「くま」3タイプの原因とケア</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>タイプ</th><th>主な原因</th><th>基本のケア</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>茶色いくま</td><td>メラニン沈着(摩擦・アイメイクの刺激)</td><td>刺激を避ける+美白ケア</td></tr>
-              <tr><td>青いくま</td><td>血流のうっ滞・眼輪筋の透け見え</td><td>睡眠改善・温めで血行促進</td></tr>
-              <tr><td>黒いくま</td><td>小ジワ・たるみによる陰影(骨の変化も関与)</td><td>ハリを補うケア・施術</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『美容皮膚Q&A』(川田暁 編著)</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:くまの色と年代の傾向</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">青いくま</span>
-            <span class="stat-label">比較的若い世代に多い傾向</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">茶色いくま</span>
-            <span class="stat-label">メラニン由来で高齢層に多い傾向</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『美容の科学』(日本コスメティック協会)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:目の下の「くま」3タイプの原因とケア</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>タイプ</th><th>主な原因</th><th>基本のケア</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>茶色いくま</td><td>メラニン沈着(摩擦・アイメイクの刺激)</td><td>刺激を避ける+美白ケア</td></tr>\n              <tr><td>青いくま</td><td>血流のうっ滞・眼輪筋の透け見え</td><td>睡眠改善・温めで血行促進</td></tr>\n              <tr><td>黒いくま</td><td>小ジワ・たるみによる陰影(骨の変化も関与)</td><td>ハリを補うケア・施術</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:くまの色と年代の傾向</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">青いくま</span>\n            <span class=\"stat-label\">比較的若い世代に多い傾向</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">茶色いくま</span>\n            <span class=\"stat-label\">メラニン由来で高齢層に多い傾向</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n    ",
     sources: [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容の科学』(日本コスメティック協会)" }
@@ -475,66 +156,7 @@ const ARTICLES = [
     date: "2026-09-07",
     conclusion: "顔の赤み・ほてりが続く「酒さ」は4つの病型に分かれ、悪化因子の多くは気温やストレスなど日常生活に潜んでいます。",
     body: "「なんだか顔が赤い」「すぐほてる」が続くとき、実は単なる肌の弱さではなく「酒さ(しゅさ)」という慢性の炎症性疾患が隠れていることがあります。酒さは症状によって4つのタイプに分かれ、頬や鼻がじんわり赤くなる「紅斑毛細血管拡張型」、ニキビに似た丘疹や膿疱が出る「丘疹膿疱型」、鼻まわりが腫れぼったくなる「鼻瘤」、目の充血や乾燥を伴う「眼型」があります。共通点は皮膚のバリア機能が低下し、経表皮水分蒸散量(いわゆる肌からの水分の蒸発しやすさ)が健常な肌より高くなっていること。つまり「刺激を受けやすい状態」がベースにあるわけです。悪化因子として報告の割合が高いのは日光曝露や心理的ストレス、気温の高さ、風、激しい運動、アルコール、熱いお風呂など。特別な成分よりも、まず日常の中の刺激を避けることが土台になります。スキンケアは低刺激性の洗浄剤・保湿剤を選び、洗顔後は肌が湿ったまま重ねづけせず、水分を優しく拭き取ってから少し置いて保湿するのがポイント。紫外線対策も欠かせませんが、こすれやすい摩擦や刺激の強い成分は避けたいところです。思い当たる方は、自己判断でケアを重ねる前に皮膚科での相談も選択肢に入れておくと安心です。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:酒さの4つの病型</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>病型</th><th>主な特徴</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>紅斑毛細血管拡張型</td><td>顔面中心の赤み・ほてり(いわゆる「赤ら顔」)</td></tr>
-              <tr><td>丘疹膿疱型</td><td>ニキビに似た丘疹・膿疱(面皰は伴わない)</td></tr>
-              <tr><td>鼻瘤</td><td>鼻を中心とした腫れぼったさ</td></tr>
-              <tr><td>眼型</td><td>まぶた・眼球結膜の充血や炎症</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:酒さを悪化させる要因(報告された割合)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">日光曝露</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">81%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">心理ストレス</span>
-            <span class="bar-track"><span class="bar-fill" style="width:98%"></span></span>
-            <span class="bar-value">79%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">高気温</span>
-            <span class="bar-track"><span class="bar-fill" style="width:93%"></span></span>
-            <span class="bar-value">75%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">風</span>
-            <span class="bar-track"><span class="bar-fill" style="width:70%"></span></span>
-            <span class="bar-value">57%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">激しい運動</span>
-            <span class="bar-track"><span class="bar-fill" style="width:69%"></span></span>
-            <span class="bar-value">56%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">アルコール</span>
-            <span class="bar-track"><span class="bar-fill" style="width:64%"></span></span>
-            <span class="bar-value">52%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">熱いお風呂</span>
-            <span class="bar-track"><span class="bar-fill" style="width:63%"></span></span>
-            <span class="bar-value">51%</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:酒さの4つの病型</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>病型</th><th>主な特徴</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>紅斑毛細血管拡張型</td><td>顔面中心の赤み・ほてり(いわゆる「赤ら顔」)</td></tr>\n              <tr><td>丘疹膿疱型</td><td>ニキビに似た丘疹・膿疱(面皰は伴わない)</td></tr>\n              <tr><td>鼻瘤</td><td>鼻を中心とした腫れぼったさ</td></tr>\n              <tr><td>眼型</td><td>まぶた・眼球結膜の充血や炎症</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:酒さを悪化させる要因(報告された割合)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">日光曝露</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">81%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">心理ストレス</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:98%\"></span></span>\n            <span class=\"bar-value\">79%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">高気温</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:93%\"></span></span>\n            <span class=\"bar-value\">75%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">風</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:70%\"></span></span>\n            <span class=\"bar-value\">57%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">激しい運動</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:69%\"></span></span>\n            <span class=\"bar-value\">56%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">アルコール</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:64%\"></span></span>\n            <span class=\"bar-value\">52%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">熱いお風呂</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:63%\"></span></span>\n            <span class=\"bar-value\">51%</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n    ",
     sources: [
       { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" },
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" }
@@ -545,42 +167,7 @@ const ARTICLES = [
     date: "2026-09-08",
     conclusion: "保湿剤や外用薬は薄くのばすよりも、FTU(フィンガーチップユニット)という目安でたっぷりのせる方が、本来の効果を発揮しやすいとされています。",
     body: "「化粧水はたっぷり、でも乳液やクリームは少なめに」というイメージ、ありませんか?実は保湿剤や外用薬に関しては、多くの人が推奨されている量よりかなり少なく塗ってしまっていることが指摘されています。そこで目安として使われるのが「FTU(フィンガーチップユニット)」という考え方です。1FTUは、口径5mmのチューブから人差し指の先端から第一関節までの長さ分押し出した量で、だいたい0.5g。この量で大人の手のひら2枚分、つまり体表面積の約2%をカバーできるとされています。単純計算すると、5gのチューブ1本で手のひら20枚分、体表面積の20%相当を塗れる計算になります。この「体表面積に対する割合」という考え方は、アトピー性皮膚炎の重症度判定(炎症を伴う皮疹が体表面積の10%未満なら中等症、など)にも使われているくらい、皮膚科では馴染み深いものさしです。「ほんの少量を広範囲にすり込む」という塗り方は効果が薄まりやすく、「たっぷり、やさしくのせる」感覚の方が理にかなっているようです。次に保湿剤を手に取るときは、指の第一関節を思い出してみてください。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:FTU(フィンガーチップユニット)の目安</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">1FTU ≒ 0.5g</span>
-            <span class="stat-label">口径5mmチューブから人差し指の先端〜第一関節分</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">手のひら2枚分</span>
-            <span class="stat-label">1FTUでカバーできる範囲(体表面積の約2%)</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">体表面積の20%</span>
-            <span class="stat-label">5gチューブ1本(手のひら20枚分)でカバーできる範囲</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">表:アトピー性皮膚炎の重症度と皮疹の体表面積</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>重症度</th><th>炎症を伴う皮疹の体表面積</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>中等症</td><td class="num">10%未満</td></tr>
-              <tr><td>中重症</td><td class="num">10〜30%未満</td></tr>
-              <tr><td>最重症</td><td class="num">30%以上</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『美容の科学』(日本コスメティック協会)(日本皮膚科学会ガイドライン2016年版に基づく)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:FTU(フィンガーチップユニット)の目安</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">1FTU ≒ 0.5g</span>\n            <span class=\"stat-label\">口径5mmチューブから人差し指の先端〜第一関節分</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">手のひら2枚分</span>\n            <span class=\"stat-label\">1FTUでカバーできる範囲(体表面積の約2%)</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">体表面積の20%</span>\n            <span class=\"stat-label\">5gチューブ1本(手のひら20枚分)でカバーできる範囲</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:アトピー性皮膚炎の重症度と皮疹の体表面積</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>重症度</th><th>炎症を伴う皮疹の体表面積</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>中等症</td><td class=\"num\">10%未満</td></tr>\n              <tr><td>中重症</td><td class=\"num\">10〜30%未満</td></tr>\n              <tr><td>最重症</td><td class=\"num\">30%以上</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)(日本皮膚科学会ガイドライン2016年版に基づく)</p>\n      </div>\n    ",
     sources: [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
       { label: "『美容の科学』(日本コスメティック協会)" }
@@ -591,39 +178,7 @@ const ARTICLES = [
     date: "2026-09-09",
     conclusion: "シミは原因別に大きく4タイプに分かれ、特に肝斑は誤ったレーザー治療でかえって悪化することもあるため、見極めが何より大切です。",
     body: "「シミ」とひとくくりに呼ばれがちですが、実は原因によって大きく4タイプに分かれることをご存じでしょうか。代表格は「日光黒子(老人性色素斑)」。長年の紫外線の蓄積が原因で40代以降に増え始め、60代ではほとんどの人にみられるとされる、いわば加齢のサインです。次に「雀卵斑(そばかす)」は遺伝の影響が強く、色白の人の鼻や頬に幼少期から現れ、夏に濃くなるのが特徴。そして見分けが難しいのが「肝斑」で、30〜40代女性の頬に左右対称に生じる淡い褐色斑です。女性ホルモンの影響や洗顔時の摩擦が関わっているとされ、妊娠中や経口避妊薬の使用で濃くなることもあるようです。厄介なのは、肝斑は一般的なレーザー治療でかえって悪化することがあると報告されている点。最後は「炎症後色素沈着」で、ニキビや虫刺され、摩擦などの炎症がきっかけで残る色素沈着です。同じ「シミ」でも原因が違えば対処の方向性はまったく変わるため、気になる場合は自己判断でケアを進める前に、専門家に見分けてもらうのが遠回りに見えて一番の近道かもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:シミの4タイプと見分け方の目安</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>タイプ</th><th>主な特徴</th><th>主な原因</th><th>ケアの注意点</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>日光黒子</td><td>40代以降に増加。境界明瞭な褐色斑</td><td>長年の紫外線蓄積</td><td>レーザーが有効なことが多い</td></tr>
-              <tr><td>雀卵斑(そばかす)</td><td>色白の人の鼻・頬に幼少期から</td><td>遺伝的要因</td><td>夏場の紫外線対策が重要</td></tr>
-              <tr><td>肝斑</td><td>30〜40代女性の頬に左右対称</td><td>女性ホルモン・摩擦</td><td>レーザーで悪化することも</td></tr>
-              <tr><td>炎症後色素沈着</td><td>ニキビ跡など炎症の後に残る</td><td>摩擦・炎症の繰り返し</td><td>刺激を避ければ自然改善しやすい</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『美容皮膚Q&A』(川田暁 編著)</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:見誤りやすいポイント</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">60代以上</span>
-            <span class="stat-label">ほぼ全員に日光黒子がみられるとされる</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">肝斑</span>
-            <span class="stat-label">レーザー治療は禁忌とされることが多い</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『美容のヒフ科学』(安田利顕)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:シミの4タイプと見分け方の目安</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>タイプ</th><th>主な特徴</th><th>主な原因</th><th>ケアの注意点</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>日光黒子</td><td>40代以降に増加。境界明瞭な褐色斑</td><td>長年の紫外線蓄積</td><td>レーザーが有効なことが多い</td></tr>\n              <tr><td>雀卵斑(そばかす)</td><td>色白の人の鼻・頬に幼少期から</td><td>遺伝的要因</td><td>夏場の紫外線対策が重要</td></tr>\n              <tr><td>肝斑</td><td>30〜40代女性の頬に左右対称</td><td>女性ホルモン・摩擦</td><td>レーザーで悪化することも</td></tr>\n              <tr><td>炎症後色素沈着</td><td>ニキビ跡など炎症の後に残る</td><td>摩擦・炎症の繰り返し</td><td>刺激を避ければ自然改善しやすい</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:見誤りやすいポイント</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">60代以上</span>\n            <span class=\"stat-label\">ほぼ全員に日光黒子がみられるとされる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">肝斑</span>\n            <span class=\"stat-label\">レーザー治療は禁忌とされることが多い</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容のヒフ科学』(安田利顕)</p>\n      </div>\n    ",
     sources: [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
@@ -634,38 +189,7 @@ const ARTICLES = [
     date: "2026-09-10",
     conclusion: "ホームピーリングと医療機関のケミカルピーリングは同じ「酸」を使っていても、剥離する深さや使える濃度が法律で明確に線引きされています。",
     body: "「おうちでピーリング」をうたうスキンケア用品、最近よく見かけますよね。実はこれ、医療機関で行う本格的なケミカルピーリングとは似て非なるものです。ケミカルピーリングは酸で肌表面をごく薄く剥がして生まれ変わりを促す治療で、届く深さによって段階が分かれますが、瘢痕リスクを避けるため日本では最も浅い「角層」までの範囲が主流とされています。ホームピーリングはさらにその中でも低濃度・低刺激なものに限られ、代表的な成分はグリコール酸などのAHA(アルファヒドロキシ酸)と、サリチル酸に代表されるBHA(ベータヒドロキシ酸)。角質細胞同士をつなぐ「デスモソーム」という接着構造をゆるめて、古い角質を剥がれやすくする仕組みです。ここで面白いのが濃度の話。日本では2016年の薬機法改正で、グリコール酸は遊離酸濃度が3.6%を超えると「劇物」に指定されるようになり、市販品の濃度には実質的な上限があります。臨床試験では、顔の片側に低濃度グリコール酸、反対側にプラセボを塗り、両側にハイドロキノンを重ねて比較したところ、グリコール酸を使った側の方が医師・患者どちらの評価でも改善率が高く、メラニン量も有意に減少したと報告されています。ただし赤みや乾燥、ヒリつきといった刺激も一定数見られており、使用中は紫外線対策と保湿を徹底することが欠かせません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:市販品と医療用を分ける法律の数字</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">3.6%</span>
-            <span class="stat-label">日本でグリコール酸(遊離酸)が「劇物」指定となる濃度の境界(2016年薬機法改正)</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">4段階</span>
-            <span class="stat-label">ケミカルピーリングは届く深さで分類。東洋人は瘢痕リスクを避け最も浅い「角層」中心</span>
-          </div>
-        </div>
-      </div>
-      <div class="viz">
-        <p class="viz-title">表:ホームピーリングと医療ケミカルピーリングの違い</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th></th><th>ホームピーリング</th><th>医療ケミカルピーリング</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>剥離の深さ</td><td>角層のみ(浅い)</td><td>医師管理下でより段階的に調整</td></tr>
-              <tr><td>主な成分</td><td>低濃度AHA(グリコール酸等)・BHA</td><td>サリチル酸マクロゴール・グリコール酸等</td></tr>
-              <tr><td>頻度・場所</td><td>自宅で日常的に</td><td>月1回程度、医療機関に通院</td></tr>
-              <tr><td>期待される効果</td><td>ニキビ・くすみ・小ジワの穏やかな改善</td><td>ニキビ・赤ら顔・シミ・小ジワ・くすみ</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『美容皮膚Q&A』(川田暁)、『MB Derma No.262 再考!美容皮膚診療』</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:市販品と医療用を分ける法律の数字</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">3.6%</span>\n            <span class=\"stat-label\">日本でグリコール酸(遊離酸)が「劇物」指定となる濃度の境界(2016年薬機法改正)</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">4段階</span>\n            <span class=\"stat-label\">ケミカルピーリングは届く深さで分類。東洋人は瘢痕リスクを避け最も浅い「角層」中心</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:ホームピーリングと医療ケミカルピーリングの違い</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th></th><th>ホームピーリング</th><th>医療ケミカルピーリング</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>剥離の深さ</td><td>角層のみ(浅い)</td><td>医師管理下でより段階的に調整</td></tr>\n              <tr><td>主な成分</td><td>低濃度AHA(グリコール酸等)・BHA</td><td>サリチル酸マクロゴール・グリコール酸等</td></tr>\n              <tr><td>頻度・場所</td><td>自宅で日常的に</td><td>月1回程度、医療機関に通院</td></tr>\n              <tr><td>期待される効果</td><td>ニキビ・くすみ・小ジワの穏やかな改善</td><td>ニキビ・赤ら顔・シミ・小ジワ・くすみ</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁)、『MB Derma No.262 再考!美容皮膚診療』</p>\n      </div>\n    ",
     sources: [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『MB Derma No.262 再考!美容皮膚診療』" }
@@ -676,43 +200,7 @@ const ARTICLES = [
     date: "2026-09-11",
     conclusion: "顔のたるみは皮膚の弾力低下だけでなく、骨の萎縮・脂肪の下垂・支持靱帯まわりのゆるみが同時に起こることで生まれる、立体的な老化現象だと考えられています。",
     body: "「たるみ=皮膚がゆるむこと」というイメージ、実は半分しか合っていません。顔は皮膚・皮下脂肪・表情筋・深部脂肪・骨膜という5層構造でできていて、加齢はこの全部で同時に進むと考えられています。まず骨。目のまわりや上あご、あご先のあたりは加齢とともに少しずつ骨が吸収されて痩せていき、眼窩(目の穴)が広がることで下まぶたのふくらみが目立ちやすくなるといわれています。次に脂肪。顔の脂肪は一枚の層ではなく「脂肪区画」という小部屋に分かれていて、深い場所の脂肪は加齢で体積そのものが減るのに対し、頬の外側やあごまわりなど浅い場所の脂肪はよく動く性質があり、重力に負けて下に垂れ下がってくるとされています。垂れた分だけ下のほうにボリュームが増えたように見えるのも、この脂肪の移動が一因なのだとか。骨や脂肪の位置が変われば、それらをつなぎとめる「支持靱帯」自体は比較的丈夫なままでも、周りとの相対的な位置関係がずれてしまい、目の下のくぼみや頬・あごのたるみとして表に出てくる、という仕組みです。スキンケアで皮膚の弾力を保つことはもちろん大切ですが、たるみの正体は皮膚一枚の問題ではなく、顔全体の「土台」が少しずつ変化していくことにある、と捉えると見え方が変わってくるかもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:顔の老化は3つの層で同時に進む</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">骨</span>
-            <span class="stat-label">眼窩まわり・上顎・あご先で骨吸収が進み、輪郭が痩せていく</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">脂肪</span>
-            <span class="stat-label">深い脂肪は体積が減り、浅い脂肪は重力で下垂・移動する</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">支持靱帯</span>
-            <span class="stat-label">靱帯自体は保たれても、周囲の骨・脂肪とのズレでゆるんで見える</span>
-          </div>
-        </div>
-      </div>
-      <div class="viz">
-        <p class="viz-title">表:顔の5層構造とそれぞれの加齢変化</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>層</th><th>主な加齢変化</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>皮膚(表皮・真皮)</td><td>ターンオーバー低下、コラーゲン・弾力線維の減少</td></tr>
-              <tr><td>皮下脂肪(浅層)</td><td>可動性が高く、重力で下垂・移動しやすい</td></tr>
-              <tr><td>表情筋(SMAS)</td><td>収縮の繰り返しでシワが徐々に固定化</td></tr>
-              <tr><td>深部脂肪・結合組織</td><td>体積が減少し、ボリューム不足を招く</td></tr>
-              <tr><td>骨膜・骨</td><td>眼窩・上顎・あご先などで骨吸収が進行</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『あたらしい美容皮膚科学』(日本美容皮膚科学会)、『美容のヒフ科学』(安田利顕)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:顔の老化は3つの層で同時に進む</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">骨</span>\n            <span class=\"stat-label\">眼窩まわり・上顎・あご先で骨吸収が進み、輪郭が痩せていく</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">脂肪</span>\n            <span class=\"stat-label\">深い脂肪は体積が減り、浅い脂肪は重力で下垂・移動する</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">支持靱帯</span>\n            <span class=\"stat-label\">靱帯自体は保たれても、周囲の骨・脂肪とのズレでゆるんで見える</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:顔の5層構造とそれぞれの加齢変化</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>層</th><th>主な加齢変化</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>皮膚(表皮・真皮)</td><td>ターンオーバー低下、コラーゲン・弾力線維の減少</td></tr>\n              <tr><td>皮下脂肪(浅層)</td><td>可動性が高く、重力で下垂・移動しやすい</td></tr>\n              <tr><td>表情筋(SMAS)</td><td>収縮の繰り返しでシワが徐々に固定化</td></tr>\n              <tr><td>深部脂肪・結合組織</td><td>体積が減少し、ボリューム不足を招く</td></tr>\n              <tr><td>骨膜・骨</td><td>眼窩・上顎・あご先などで骨吸収が進行</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『あたらしい美容皮膚科学』(日本美容皮膚科学会)、『美容のヒフ科学』(安田利顕)</p>\n      </div>\n    ",
     sources: [
       { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
@@ -723,42 +211,7 @@ const ARTICLES = [
     date: "2026-09-12",
     conclusion: "手荒れは「洗いすぎ・拭かない・保湿しない」という日常の積み重ねで悪化しやすく、洗い方と保湿剤の選び方を見直すだけでも変わってくると考えられています。",
     body: "手指消毒や手洗いの習慣が定着してから、手荒れに悩む人が増えたと言われています。実は手荒れを進行させる主な原因は、殺菌力の強い石けんそのものよりも「洗い方」や「洗ったあとの過ごし方」にあることが多いようです。例えばゴシゴシ洗う、熱いお湯を使う、洗ったあと自然乾燥させる(気化熱で逆に乾燥が進む)、ハンドドライヤーで乾かす、といった一つひとつは些細な習慣が、皮膚の油分とバリア機能をじわじわ奪っていきます。おすすめの手順は、ぬるま湯でよく泡立てた石けんを使ってやさしく洗い、指の間や爪まわりも丁寧にすすぎ、清潔なタオルで押さえるように水分を拭き取り、すぐにハンドクリームで保湿するという流れです。石けんも、殺菌力のある弱アルカリ性(帰宅時や汚れが気になるとき向け)と、肌のpHに近く低刺激な弱酸性(食事前など日常のこまめな手洗い向け)を使い分けると、必要以上に皮脂を奪わずに済むといわれています。保湿剤も症状によって向き不向きがあり、軽い乾燥にはさらっとしたクリームやローション、ひどい乾燥にはベタつきが強くても保湿効果の高い軟膏タイプが向いています。さらに冬は空気の乾燥・冷水での洗浄・暖房による血行不良が重なって手荒れが増えやすい季節。室内の湿度を保ち、外出時は手袋で乾燥した外気から手を守るといった対策も合わせると、より効果的かもしれません。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">表:症状別に見る手の保湿剤タイプの使い分け</p>
-        <div class="viz-table-wrap">
-          <table class="viz-table">
-            <thead>
-              <tr><th>剤形</th><th>特徴</th><th>向いている症状</th></tr>
-            </thead>
-            <tbody>
-              <tr><td>ローション</td><td>さらっとしていて日中も使いやすいが保湿力は控えめ</td><td>軽度の乾燥</td></tr>
-              <tr><td>クリーム</td><td>ベタつきと保湿力のバランスが良い定番タイプ</td><td>普段使い・予防</td></tr>
-              <tr><td>軟膏</td><td>ベタつくが油分の膜で水分をしっかり閉じ込める</td><td>ひどい乾燥・ひび割れ</td></tr>
-            </tbody>
-          </table>
-        </div>
-        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:冬に手荒れが増える3つの理由</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">1</span>
-            <span class="stat-label">空気の乾燥と暖房で、皮膚の水分が奪われやすくなる</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">2</span>
-            <span class="stat-label">冷たい水道水での洗い物が、手先の血行を悪くする</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">3</span>
-            <span class="stat-label">熱いお湯での手洗いが、必要な皮脂まで洗い流してしまう</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:症状別に見る手の保湿剤タイプの使い分け</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>剤形</th><th>特徴</th><th>向いている症状</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>ローション</td><td>さらっとしていて日中も使いやすいが保湿力は控えめ</td><td>軽度の乾燥</td></tr>\n              <tr><td>クリーム</td><td>ベタつきと保湿力のバランスが良い定番タイプ</td><td>普段使い・予防</td></tr>\n              <tr><td>軟膏</td><td>ベタつくが油分の膜で水分をしっかり閉じ込める</td><td>ひどい乾燥・ひび割れ</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:冬に手荒れが増える3つの理由</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">1</span>\n            <span class=\"stat-label\">空気の乾燥と暖房で、皮膚の水分が奪われやすくなる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">2</span>\n            <span class=\"stat-label\">冷たい水道水での洗い物が、手先の血行を悪くする</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">3</span>\n            <span class=\"stat-label\">熱いお湯での手洗いが、必要な皮脂まで洗い流してしまう</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>\n      </div>\n    ",
     sources: [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
@@ -769,43 +222,7 @@ const ARTICLES = [
     date: "2026-09-13",
     conclusion: "ニキビを指で潰すのは跡が残るリスクが高く、塗り薬の塗り方を工夫しながら気長に治療を続けるほうが結果的に近道です。",
     body: "鏡の前でニキビを見つけると、つい指でつぶしたくなりますよね。でも自己判断でつぶす行為は、組織そのものを傷つけてしまい、凸凹の痕や赤み・色素沈着として長く残ってしまうリスクが高いといわれています。ニキビ治療の主役は、毛穴の詰まりを改善するアダパレンと、殺菌・角質剥離作用を持つ過酸化ベンゾイル。ただしこの2つは効果が高い分、使い始めの1〜2週間は赤みやヒリつきが出やすいのが悩みどころです。そこで臨床の現場で紹介されているのが2つの塗り方の工夫。過酸化ベンゾイルは気になる1カ所だけに少量をちょんと乗せてから徐々に範囲を広げる「チョンのせ法」、アダパレンは1カ所を中心に薄く塗り広げていく「塗り広げ法」が、肌への負担を抑えながら慣らしていくコツだそうです。根気強く続けた場合、炎症のある赤ニキビや黄ニキビは治療開始から1カ月でおよそ7割、3カ月でおよそ9割減ったというデータも報告されています。どうしても気になる場合は、自己流でつぶす前に皮膚科で面皰圧出を相談するのが安全な選択肢です。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:治療を続けると炎症性皮疹はどう減るか(目安)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">治療前</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">100%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">1ヶ月後</span>
-            <span class="bar-track"><span class="bar-fill" style="width:30%"></span></span>
-            <span class="bar-value">約30%に減少</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">3ヶ月後</span>
-            <span class="bar-track"><span class="bar-fill" style="width:10%"></span></span>
-            <span class="bar-value">約10%に減少</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:刺激が出やすい外用薬、塗り方の工夫</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">チョンのせ法</span>
-            <span class="stat-label">過酸化ベンゾイル向き。1カ所に少量を置き、慣れたら範囲を広げる</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">塗り広げ法</span>
-            <span class="stat-label">アダパレン向き。1カ所を中心に薄く面積を広げていく</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:治療を続けると炎症性皮疹はどう減るか(目安)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">治療前</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">100%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">1ヶ月後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:30%\"></span></span>\n            <span class=\"bar-value\">約30%に減少</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">3ヶ月後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:10%\"></span></span>\n            <span class=\"bar-value\">約10%に減少</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:刺激が出やすい外用薬、塗り方の工夫</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">チョンのせ法</span>\n            <span class=\"stat-label\">過酸化ベンゾイル向き。1カ所に少量を置き、慣れたら範囲を広げる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">塗り広げ法</span>\n            <span class=\"stat-label\">アダパレン向き。1カ所を中心に薄く面積を広げていく</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>\n      </div>\n    ",
     sources: [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
       { label: "『美容皮膚Q&A』(川田暁)" }
@@ -816,42 +233,7 @@ const ARTICLES = [
     date: "2026-09-14",
     conclusion: "肌老化の多くは加齢そのものより紫外線の積み重ねによる「光老化」が占めるとされ、天候や季節を問わない対策が近道と考えられています。",
     body: "「日焼け対策は夏の晴れた日だけでいい」——そう思っていませんか。実は肌の老化は、加齢によって自然に起こる部分よりも、紫外線を浴び続けたことによる「光老化」の影響のほうがずっと大きく、肌老化全体のおよそ8割を占めるという報告もあるそうです。厄介なのは、紫外線が真夏の直射日光だけの話ではないこと。曇りの日でも紫外線の8割以上は雲を通り抜けて地上に届きますし、冬でも量が減るだけで日焼けはします。雪山では雪面の反射で浴びる紫外線量が約2倍になり、標高が1000m上がるごとに紫外線量はおよそ1割増えるとも言われています。さらに油断しがちなのが室内。窓ガラスは紫外線の一部(UV-A)を通してしまうため、部屋にいても肌の深部にダメージが届き、シワやたるみにつながる可能性があります。日焼け止めも「塗ればOK」ではなく、多くの人は顔なら液状タイプで1円玉1個分を2度塗りするという目安の半分以下しか使えていないとも指摘されています。天気や季節、屋内外を問わず、紫外線対策は一年を通じての習慣にしておきたいところです。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:肌老化に占める光老化の割合(目安)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">光老化(紫外線の影響)</span>
-            <span class="bar-track"><span class="bar-fill" style="width:80%"></span></span>
-            <span class="bar-value">約80%</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">自然老化(加齢の影響)</span>
-            <span class="bar-track"><span class="bar-fill" style="width:20%"></span></span>
-            <span class="bar-value">約20%</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『コスメの教科書』(日本化粧品検定協会)(香粧会誌 41(3), 2017の報告に基づく)</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:油断しがちな紫外線、実はこんなに届いている</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">80%以上</span>
-            <span class="stat-label">曇りの日でも雲を通過して届く紫外線の割合</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">約2倍</span>
-            <span class="stat-label">雪山で雪面反射により浴びる紫外線量の増加目安</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">+約10%</span>
-            <span class="stat-label">標高が1000m上がるごとに増える紫外線量の目安</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『コスメの教科書』(日本化粧品検定協会)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:肌老化に占める光老化の割合(目安)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">光老化(紫外線の影響)</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:80%\"></span></span>\n            <span class=\"bar-value\">約80%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">自然老化(加齢の影響)</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:20%\"></span></span>\n            <span class=\"bar-value\">約20%</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『コスメの教科書』(日本化粧品検定協会)(香粧会誌 41(3), 2017の報告に基づく)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:油断しがちな紫外線、実はこんなに届いている</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">80%以上</span>\n            <span class=\"stat-label\">曇りの日でも雲を通過して届く紫外線の割合</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約2倍</span>\n            <span class=\"stat-label\">雪山で雪面反射により浴びる紫外線量の増加目安</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">+約10%</span>\n            <span class=\"stat-label\">標高が1000m上がるごとに増える紫外線量の目安</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『コスメの教科書』(日本化粧品検定協会)</p>\n      </div>\n    ",
     sources: [
       { label: "『コスメの教科書』(日本化粧品検定協会)" },
       { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" }
@@ -862,50 +244,29 @@ const ARTICLES = [
     date: "2026-09-15",
     conclusion: "PRP療法は自分の血液由来のため注目されている美容医療ですが、日本では法律上の届出施設かどうかを確認することが安全に受けるための大事な条件とされています。",
     body: "「自分の血液で肌を若返らせる」と聞くとちょっと不思議に感じますが、これがPRP(多血小板血漿)療法の考え方です。やり方はシンプルで、採血した血液を遠心分離機にかけて血小板だけを濃縮し、それを気になる部分に注入します。血小板には出血を止める役割だけでなく、活性化するとPDGFやTGF-βといった細胞の増殖因子を放出し、組織の修復を後押しする働きがあるとされ、この仕組みを利用しているわけです。実際にシワへ注射した研究では、生理食塩水を注射した側に比べてPRPを注射した側でコラーゲンの密度がおよそ89%多く増えたという報告もあるそうです。ただし専門書でも「効果は不安定な面がある」と指摘されており、過度な期待は禁物。さらに大事なのが法律面で、日本ではPRP療法は「再生医療等安全性確保法」の対象になっており、クリニック側は細胞培養加工施設としての届出や厚生労働省への手続きが必要とされています。「自分の血だから安全」というイメージだけで選ばず、届出をきちんと済ませた施設かどうかを確認する視点も持っておきたいところです。",
-    visual: `
-      <div class="viz">
-        <p class="viz-title">図:シワへの注射でコラーゲン密度はどう変わったか(研究報告の一例)</p>
-        <div class="viz-bars">
-          <div class="bar-row">
-            <span class="bar-label">生理食塩水側</span>
-            <span class="bar-track"><span class="bar-fill" style="width:53%"></span></span>
-            <span class="bar-value">増加量の目安:100</span>
-          </div>
-          <div class="bar-row">
-            <span class="bar-label">PRP側</span>
-            <span class="bar-track"><span class="bar-fill" style="width:100%"></span></span>
-            <span class="bar-value">増加量の目安:189(約89%多い)</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『MB Derma No.262 再考!美容皮膚診療』の報告に基づく目安</p>
-      </div>
-      <div class="viz">
-        <p class="viz-title">図:PRP療法、知っておきたいポイント</p>
-        <div class="viz-stats">
-          <div class="stat-tile">
-            <span class="stat-value">2014→2015年</span>
-            <span class="stat-label">「再生医療等安全性確保法」が成立・施行された年</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">要届出</span>
-            <span class="stat-label">実施には細胞培養加工施設としての届出などの手続きが必要</span>
-          </div>
-          <div class="stat-tile">
-            <span class="stat-value">効果は不安定</span>
-            <span class="stat-label">専門書でも安定した効果とは言い切れないと指摘されている</span>
-          </div>
-        </div>
-        <p class="viz-note">出典:『MB Derma No.262 再考!美容皮膚診療』『美容皮膚Q&A』(川田暁)</p>
-      </div>
-    `,
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:シワへの注射でコラーゲン密度はどう変わったか(研究報告の一例)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">生理食塩水側</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:53%\"></span></span>\n            <span class=\"bar-value\">増加量の目安:100</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">PRP側</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">増加量の目安:189(約89%多い)</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『MB Derma No.262 再考!美容皮膚診療』の報告に基づく目安</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:PRP療法、知っておきたいポイント</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">2014→2015年</span>\n            <span class=\"stat-label\">「再生医療等安全性確保法」が成立・施行された年</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">要届出</span>\n            <span class=\"stat-label\">実施には細胞培養加工施設としての届出などの手続きが必要</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">効果は不安定</span>\n            <span class=\"stat-label\">専門書でも安定した効果とは言い切れないと指摘されている</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『MB Derma No.262 再考!美容皮膚診療』『美容皮膚Q&A』(川田暁)</p>\n      </div>\n    ",
     sources: [
       { label: "『MB Derma No.262 再考!美容皮膚診療』" },
       { label: "『美容皮膚Q&A』(川田暁)" }
     ]
+  },
+  {
+    title: "脱毛の常識が変わる:家庭用IPL急進化とZ世代の新しい体毛観",
+    date: "2026-09-16",
+    conclusion: "家庭用IPLの進化と多様化する脱毛観により、脱毛は「全身つるつるを目指す画一的なケア」から「自分に合った付き合い方を選ぶパーソナルな美容習慣」へと変化している。",
+    body: "実は、脱毛サロンに通う人よりも「家で自分でレーザーを当てる人」の方が、いま世界的に増えているのをご存知でしょうか。\r\n\r\n私は美容業界のトレンドを日々ウォッチしていますが、この数年で脱毛の景色は大きく変わりました。かつては「サロンでお金をかけてやってもらうもの」でしたが、今は家庭用IPL(光美容器)の性能がぐんと上がり、サロン施術の10〜15%ほどのコストで、80〜90%の減毛効果を謳う機種まで登場しています。しかも肌センサーやサファイア冷却機能がついていて、「痛くて怖い」というかつてのイメージも薄れつつあります。\r\n\r\nこれ、プロの目線で見ても「ハリボテ」ではありません。\r\n\r\n実際に12週間以内に効果を実感するユーザーが8割を超えるというデータもあり、継続すれば一定の減毛効果は期待できます。ただし誤解してほしくないのは、これは永久脱毛ではなく「減毛」だということ。クリニックのレーザーのような医療機器レベルの出力ではないため、「一度当てたら終わり」ではなく、地道なメンテナンスが前提です。ここを理解せずに過度な期待をすると、がっかりする方も多いはずです。\r\n\r\nもう一つ面白い変化が、男性利用者の急増です。男性の脱毛需要は2020年以降、年率およそ20%という驚くべきペースで伸びていて、背中・胸・首まわりの施術が特に人気です。美容医療が「女性のもの」という時代は、もう終わりつつあります。\r\n\r\nそして意外な逆流現象も起きています。Z世代の一部では「全身つるつる」を目指すのではなく、あえて体毛を残す・整える選択も広がっているのです。SNSでは腕や脚の毛をあえて見せる投稿も話題になりました。\r\n\r\nつまり今の脱毛トレンドは、「毛をなくす」から「毛と自分の関係を選ぶ」への転換期にあります。\r\n\r\n私からのアドバイスはシンプルです。\r\n\r\n- 家庭用IPLは「コスパの良い減毛ツール」として賢く使う\r\n- 永久脱毛を求めるなら医療レーザーのクリニックへ\r\n- 完全につるつるにするか、整えるだけにするかは、周りの流行ではなく自分の心地よさで決める\r\n\r\n脱毛は「正解」を追い求めるものではなく、自分に合った付き合い方を見つけるプロセスだと、私は思います。",
+    visual: "<div class=\"viz\">\r\n<p class=\"viz-title\">世界の脱毛トレンド 主要データ(2026年)</p>\r\n<div class=\"viz-stats\">\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">16.1%</span><span class=\"viz-stat-label\">レーザー脱毛市場のCAGR(2025→2026)</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">80〜90%</span><span class=\"viz-stat-label\">最新家庭用IPLの減毛効果</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">84%</span><span class=\"viz-stat-label\">12週間以内に効果を実感したユーザー割合</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">+20%/年</span><span class=\"viz-stat-label\">男性利用者の年間成長率(2020年以降)</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">52%</span><span class=\"viz-stat-label\">18〜34歳が占める施術者の割合</span></div>\r\n</div>\r\n</div>",
+    sources: [
+      { label: "Business Research Insights「IPL Hair Removal Device and System Market Size & Opportunities Report, 2026」", url: "https://www.businessresearchinsights.com/blog/top-ipl-hair-removal-device-and-system-companies-10809" },
+      { label: "Skintekie「Best At-Home IPL Hair Removal Devices of 2026」", url: "https://skintekie.com/blogs/news/best-ipl-hair-removal-devices-2026" },
+      { label: "Lavish Beauty Laser「Laser Hair Removal Statistics & Facts 2026」", url: "https://www.lavishbeautylaser.com/laser-hair-removal-statistics" },
+      { label: "Beauty Independent「Young Women Are Bidding Adieu To Shorn Bodies And There Could Be Hairy Consequences For Personal Care Companies」", url: "https://www.beautyindependent.com/body-hair/" },
+      { label: "NZ Herald「Gen Z women ditching the razor and embracing their natural body hair」", url: "https://www.nzherald.co.nz/lifestyle/gen-z-women-ditching-the-razor-and-embracing-their-natural-body-hair/FZAWU6XQCVEXHM6VFSAWGLMDFY/" }
+    ]
   }
 ];
 
-// build.js（Node）から読み込むためのエクスポート。ブラウザでは無視される。
+// build.js(Node)から読み込むためのエクスポート。ブラウザでは無視される。
 if (typeof module !== "undefined") {
   module.exports = { ARTICLES };
 }
