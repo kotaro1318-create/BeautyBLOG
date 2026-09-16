@@ -82,24 +82,7 @@ function resolveClaudeExecutable() {
   return cachedClaudeExe;
 }
 
-function generateDraftWithAI(topic) {
-  const today = todayStr();
-  const prompt = `あなたは美容皮膚科学ブログ「Beauty DO ノート」の執筆者です。トピック「${topic}」についてブログ記事の下書きを作成してください。
-
-# 手順
-1. knowledge/ フォルダには以下の専門書籍の要約が入っています。トピックに関連しそうなファイルを1〜2個選んでReadツールで読み、そこにある事実を参考にしてください。
-${KNOWLEDGE_INDEX}
-2. 要約の文章をそのままコピーせず、必ず自分の言葉で言い換えて執筆してください(原文の逐語引用は禁止)。
-3. 既存記事と同じトーンで書いてください:です・ます調、専門用語はかみ砕いて説明、押し付けがましくない。
-
-# 出力する各項目
-- title: 読者の興味を引く記事タイトル(30〜45字程度)
-- date: "${today}"
-- conclusion: 記事の結論を1文で
-- body: 本文(600〜900字程度)
-- visual: 図表用のHTML。<div class="viz"><p class="viz-title">...</p> ... </div> の中に .viz-bars(棒グラフ)または .viz-table(表)または .viz-stats(統計タイル)のいずれかを使う。適切なデータがなければ空文字("")でよい
-- sources: 出典の配列。knowledge/の書籍を使った場合は url なしで { "label": "書籍名(著者)" } の形にする。存在しないURLを創作しないこと`;
-
+function runClaudeStructured(prompt, schema, allowedTools, timeoutMs) {
   const result = spawnSync(
     resolveClaudeExecutable(),
     [
@@ -107,9 +90,9 @@ ${KNOWLEDGE_INDEX}
       "--output-format",
       "json",
       "--json-schema",
-      DRAFT_SCHEMA,
+      schema,
       "--allowedTools",
-      "Read",
+      ...allowedTools,
       "--permission-prompts",
       "none",
       "--model",
@@ -120,7 +103,7 @@ ${KNOWLEDGE_INDEX}
       input: prompt,
       encoding: "utf8",
       maxBuffer: 1024 * 1024 * 20,
-      timeout: 5 * 60 * 1000,
+      timeout: timeoutMs,
     }
   );
 
@@ -143,6 +126,78 @@ ${KNOWLEDGE_INDEX}
   }
 
   return out.structured_output;
+}
+
+function generateDraftWithAI(topic) {
+  const today = todayStr();
+  const prompt = `あなたは美容皮膚科学ブログ「Beauty DO ノート」の執筆者です。トピック「${topic}」についてブログ記事の下書きを作成してください。
+
+# 手順
+1. knowledge/ フォルダには以下の専門書籍の要約が入っています。トピックに関連しそうなファイルを1〜2個選んでReadツールで読み、そこにある事実を参考にしてください。
+${KNOWLEDGE_INDEX}
+2. 要約の文章をそのままコピーせず、必ず自分の言葉で言い換えて執筆してください(原文の逐語引用は禁止)。
+3. 既存記事と同じトーンで書いてください:です・ます調、専門用語はかみ砕いて説明、押し付けがましくない。
+
+# 出力する各項目
+- title: 読者の興味を引く記事タイトル(30〜45字程度)
+- date: "${today}"
+- conclusion: 記事の結論を1文で
+- body: 本文(600〜900字程度)
+- visual: 図表用のHTML。<div class="viz"><p class="viz-title">...</p> ... </div> の中に .viz-bars(棒グラフ)または .viz-table(表)または .viz-stats(統計タイル)のいずれかを使う。適切なデータがなければ空文字("")でよい
+- sources: 出典の配列。knowledge/の書籍を使った場合は url なしで { "label": "書籍名(著者)" } の形にする。存在しないURLを創作しないこと`;
+
+  return runClaudeStructured(prompt, DRAFT_SCHEMA, ["Read"], 5 * 60 * 1000);
+}
+
+// ブログ1トンマナ.docx から抽出した文体の要点(内容は医療系だが、文体・構成の特徴を美容記事にも適用する)。
+const TONE_GUIDE = `- 冒頭は「実は〜」といった意外な事実や、読者が共感できる具体的な悩み・シーンから始める
+- 一人称的で、読者に語りかけるような口調。押し付けがましくしない
+- 強調したい一文は、あえて独立した短い段落にする(例:「重要です。」のように)
+- 情報を並べる場面では簡潔な箇条書きを使い、読みやすくする
+- 専門的な内容も、身近な例えや具体的な状況を交えてかみ砕いて説明する
+- 結びは実用的なアドバイスや気づきで締める`;
+
+const WEB_DRAFT_SCHEMA = JSON.stringify({
+  type: "object",
+  properties: {
+    title: { type: "string" },
+    date: { type: "string" },
+    conclusion: { type: "string" },
+    body: { type: "string" },
+    visual: { type: "string", minLength: 1 },
+    sources: {
+      type: "array",
+      minItems: 1,
+      items: {
+        type: "object",
+        properties: { label: { type: "string" }, url: { type: "string" } },
+        required: ["label", "url"],
+      },
+    },
+  },
+  required: ["title", "date", "conclusion", "body", "visual", "sources"],
+});
+
+function generateWebDraftWithAI(topic) {
+  const today = todayStr();
+  const prompt = `あなたは「Beauty DO ノート」というブログの執筆者であり、世界の美容トレンドを評価する美容業界のプロフェッショナルでもあります。トピック「${topic}」について、世界の最新の美容情報をWebSearchツールで調べ、その内容をもとにブログ記事の下書きを作成してください。
+
+# 手順
+1. WebSearchツールを使って、トピックに関する世界の美容業界の最新情報(市場データ・調査結果・海外の反応・トレンドの背景など)を複数の情報源から調べてください。
+2. 美容評価のプロとしての視点で、集めた情報を分析・評価してください。単なる情報の紹介にとどめず、「本当に効果的か」「今後定着しそうか」といったプロならではの評価コメントを本文に盛り込んでください。
+3. 参考程度に knowledge/ フォルダの書籍要約を読んでも構いませんが、出典としては挙げないでください(書籍は sources に含めない)。
+4. 以下の文体(トンマナ)を意識して書いてください。
+${TONE_GUIDE}
+
+# 出力する各項目
+- title: 読者の興味を引く記事タイトル(30〜45字程度)
+- date: "${today}"
+- conclusion: 記事の結論を1文で
+- body: 本文(700〜1000字程度)
+- visual: 【必須】図表用のHTML。WebSearchで見つけた数値データをもとに、<div class="viz"><p class="viz-title">...</p>...</div> の中に .viz-bars(棒グラフ)または .viz-table(表)または .viz-stats(統計タイル)のいずれかを使って必ず作成してください。空文字は不可です。
+- sources: 出典の配列。WebSearchで見つけた実在するWeb記事のみを { "label": "サイト名「記事タイトル」", "url": "実際のURL" } の形で1件以上入れてください。存在しないURLを創作しないこと。書籍(knowledge/)は出典に含めないこと`;
+
+  return runClaudeStructured(prompt, WEB_DRAFT_SCHEMA, ["WebSearch", "Read"], 8 * 60 * 1000);
 }
 
 function loadArticles() {
@@ -282,6 +337,7 @@ function renderList(articles) {
       <h1>Beauty DO ノート — 記事管理(全${articles.length}件)</h1>
       <div style="display:flex; gap:8px;">
         <a class="button secondary" href="/draft/new">✨ AI下書きを作成</a>
+        <a class="button secondary" href="/webdraft/new">🌐 Web下書きを作成</a>
         <a class="button" href="/edit/new">+ 新規記事</a>
       </div>
     </div>
@@ -308,6 +364,42 @@ function renderDraftForm(error) {
   );
 }
 
+function renderWebDraftForm(error) {
+  return layout(
+    "Web下書きを作成",
+    `<div class="top-actions">
+      <a class="button secondary" href="/">← 一覧に戻る</a>
+    </div>
+    <h1>🌐 Web下書きを作成</h1>
+    <p class="note">トピックを入力すると、AIがWebで世界の美容トレンド・データを調べ、美容評価のプロとしての視点を交えた記事下書きを作成します(図表は必ず入ります)。生成には2〜4分程度、API利用料は1回あたり数十円〜1ドル程度かかります。生成後は内容を確認・修正でき、「採用する」ボタンを押すまで公開はされません。</p>
+    ${error ? `<div class="flash" style="background:#fbe7e5; color:#a33b2d;">${escapeHtml(error)}</div>` : ""}
+    <form method="POST" action="/webdraft/generate" onsubmit="document.getElementById('genBtn').disabled=true; document.getElementById('genBtn').textContent='生成中…(2〜4分お待ちください)';">
+      <label>トピック</label>
+      <input type="text" name="topic" required placeholder="例:2026年の世界のK-beautyトレンド、海外で人気の日焼け止め成分 など">
+      <div style="margin-top:20px;">
+        <button id="genBtn" type="submit">🌐 Web下書きを生成</button>
+      </div>
+    </form>`
+  );
+}
+
+function renderWebDraftReview(article) {
+  return layout(
+    "Web下書きのレビュー",
+    `<div class="top-actions">
+      <a class="button secondary" href="/">← 一覧に戻る(採用しない)</a>
+    </div>
+    <h1>Web下書きのレビュー</h1>
+    <p class="note">内容を確認・修正してください。「採用してブログを公開する」を押すと、保存 → GitHubへコミット・push → Vercel本番デプロイまで自動で実行され、公開サイトに反映されます。</p>
+    <form method="POST" action="/webdraft/publish" onsubmit="document.getElementById('pubBtn').disabled=true; document.getElementById('pubBtn').textContent='公開処理中…(1分程度)';">
+${articleFieldsHtml(article)}
+      <div style="margin-top:24px; display:flex; gap:8px;">
+        <button id="pubBtn" type="submit">✅ 採用してブログを公開する(push + デプロイ)</button>
+      </div>
+    </form>`
+  );
+}
+
 function sourcesRowsHtml(sources) {
   const list = Array.isArray(sources) && sources.length > 0 ? sources : [{ label: "", url: "" }];
   return list
@@ -320,16 +412,8 @@ function sourcesRowsHtml(sources) {
     .join("\n");
 }
 
-function renderEdit(article, index) {
-  const isNew = index === null;
-  return layout(
-    isNew ? "新規記事" : "記事を編集",
-    `<div class="top-actions">
-      <a class="button secondary" href="/">← 一覧に戻る</a>
-    </div>
-    <h1>${isNew ? "新規記事を追加" : "記事を編集"}</h1>
-    <form method="POST" action="${isNew ? "/save/new" : `/save/${index}`}">
-      <label>タイトル</label>
+function articleFieldsHtml(article) {
+  return `      <label>タイトル</label>
       <input type="text" name="title" required value="${escapeHtml(article.title)}">
 
       <label>日付</label>
@@ -349,20 +433,31 @@ function renderEdit(article, index) {
 ${sourcesRowsHtml(article.sources)}
       </div>
       <button type="button" class="secondary" onclick="addSourceRow()">+ 出典を追加</button>
+      <script>
+        function addSourceRow() {
+          const wrap = document.getElementById('sources');
+          const row = document.createElement('div');
+          row.className = 'source-row';
+          row.innerHTML = '<input type="text" name="source_label[]" placeholder="出典名"><input type="url" name="source_url[]" placeholder="URL(任意)">';
+          wrap.appendChild(row);
+        }
+      </script>`;
+}
 
+function renderEdit(article, index) {
+  const isNew = index === null;
+  return layout(
+    isNew ? "新規記事" : "記事を編集",
+    `<div class="top-actions">
+      <a class="button secondary" href="/">← 一覧に戻る</a>
+    </div>
+    <h1>${isNew ? "新規記事を追加" : "記事を編集"}</h1>
+    <form method="POST" action="${isNew ? "/save/new" : `/save/${index}`}">
+${articleFieldsHtml(article)}
       <div style="margin-top:24px; display:flex; gap:8px;">
         <button type="submit">保存(index.htmlも自動更新されます)</button>
       </div>
-    </form>
-    <script>
-      function addSourceRow() {
-        const wrap = document.getElementById('sources');
-        const row = document.createElement('div');
-        row.className = 'source-row';
-        row.innerHTML = '<input type="text" name="source_label[]" placeholder="出典名"><input type="url" name="source_url[]" placeholder="URL(任意)">';
-        wrap.appendChild(row);
-      }
-    </script>`
+    </form>`
   );
 }
 
@@ -388,6 +483,81 @@ function articleFromForm(form) {
     visual: (form.visual || "").trim(),
     sources,
   };
+}
+
+function renderPublishResult(steps, ok) {
+  const rows = steps
+    .map((s) => `<li><strong>${s.ok ? "✅" : "❌"} ${escapeHtml(s.label)}</strong>${s.detail ? `<div class="note">${escapeHtml(s.detail)}</div>` : ""}</li>`)
+    .join("\n");
+  return layout(
+    ok ? "公開完了" : "公開処理でエラー",
+    `<div class="top-actions">
+      <a class="button secondary" href="/">← 一覧に戻る</a>
+    </div>
+    <h1>${ok ? "✅ ブログを公開しました" : "❌ 公開処理でエラーが発生しました"}</h1>
+    <ul style="line-height:2;">${rows}</ul>
+    ${ok ? `<p><a class="button" href="https://beautyblog-alpha.vercel.app" target="_blank" rel="noopener noreferrer">公開サイトを見る</a></p>` : `<p class="note">途中まで完了した処理は取り消されていません。エラー内容を確認し、必要なら手動で続きの操作(git push / vercel --prod など)を行ってください。</p>`}`
+  );
+}
+
+// 記事を保存(articles.js + build.js)した上で、GitHubへコミット・push、Vercel本番デプロイまで自動で行う。
+function publishArticle(article) {
+  const steps = [];
+
+  try {
+    const articles = loadArticles();
+    articles.push(article);
+    saveArticles(articles);
+    steps.push({ label: "articles.js に保存し、index.htmlを再生成", ok: true });
+  } catch (e) {
+    steps.push({ label: "保存(articles.js / index.html)", ok: false, detail: e.message });
+    return { ok: false, steps };
+  }
+
+  try {
+    execSync("git add articles.js index.html", { cwd: __dirname, stdio: "pipe" });
+    const commitMsg = `記事追加:${article.title}`;
+    execSync(`git commit -m ${JSON.stringify(commitMsg)}`, { cwd: __dirname, stdio: "pipe" });
+    steps.push({ label: "gitにコミット", ok: true, detail: commitMsg });
+  } catch (e) {
+    steps.push({ label: "gitコミット", ok: false, detail: (e.stderr || e.message || "").toString().slice(0, 500) });
+    return { ok: false, steps };
+  }
+
+  try {
+    try {
+      execSync("git push origin master", { cwd: __dirname, stdio: "pipe" });
+    } catch (pushErr) {
+      // リモートが進んでいる場合は一度だけ取り込んで再push
+      execSync("git pull origin master --no-edit", { cwd: __dirname, stdio: "pipe" });
+      execSync("node build.js", { cwd: __dirname, stdio: "pipe" });
+      execSync("git add index.html", { cwd: __dirname, stdio: "pipe" });
+      try {
+        execSync('git commit -m "リモートの変更を取り込んでindex.htmlを再生成"', { cwd: __dirname, stdio: "pipe" });
+      } catch (e) {
+        // マージで差分が出なければコミットするものがない(問題なし)
+      }
+      execSync("git push origin master", { cwd: __dirname, stdio: "pipe" });
+    }
+    steps.push({ label: "GitHubにpush", ok: true });
+  } catch (e) {
+    steps.push({
+      label: "GitHubへのpush",
+      ok: false,
+      detail: "コンフリクトの可能性があります。手動で `git status` を確認してください: " + (e.stderr || e.message || "").toString().slice(0, 500),
+    });
+    return { ok: false, steps };
+  }
+
+  try {
+    execSync("vercel --prod", { cwd: __dirname, encoding: "utf8" });
+    steps.push({ label: "Vercel本番デプロイ", ok: true });
+  } catch (e) {
+    steps.push({ label: "Vercel本番デプロイ", ok: false, detail: (e.stderr || e.message || "").toString().slice(0, 800) });
+    return { ok: false, steps };
+  }
+
+  return { ok: true, steps };
 }
 
 const server = http.createServer((req, res) => {
@@ -428,6 +598,42 @@ const server = http.createServer((req, res) => {
           res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
           res.end(renderDraftForm(err.message));
         }
+      });
+      return;
+    }
+
+    if (req.method === "GET" && url === "/webdraft/new") {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(renderWebDraftForm(null));
+      return;
+    }
+
+    if (req.method === "POST" && url === "/webdraft/generate") {
+      parseBody(req, (form) => {
+        const topic = (form.topic || "").trim();
+        if (!topic) {
+          res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          res.end(renderWebDraftForm("トピックを入力してください。"));
+          return;
+        }
+        try {
+          const draft = generateWebDraftWithAI(topic);
+          res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          res.end(renderWebDraftReview(draft));
+        } catch (err) {
+          res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          res.end(renderWebDraftForm(err.message));
+        }
+      });
+      return;
+    }
+
+    if (req.method === "POST" && url === "/webdraft/publish") {
+      parseBody(req, (form) => {
+        const article = articleFromForm(form);
+        const { ok, steps } = publishArticle(article);
+        res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+        res.end(renderPublishResult(steps, ok));
       });
       return;
     }
