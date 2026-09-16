@@ -10,8 +10,11 @@
 const fs = require("fs");
 const path = require("path");
 
-const { ARTICLES } = require("./articles.js");
+const { ARTICLES: ARTICLES_RAW } = require("./articles.js");
 const { formatDate } = require("./config.js");
+
+// 新しい記事が上に来るよう、日付の新しい順に並べ替える(同日なら articles.js での並び順を維持)。
+const ARTICLES = [...ARTICLES_RAW].sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
 
 function escapeJs(str) {
   return String(str).replace(/</g, "\\u003c");

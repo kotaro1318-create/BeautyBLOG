@@ -120,9 +120,14 @@ ${content}
 }
 
 function renderList(articles) {
-  const rows = articles
+  // 新しい記事が上に来るよう並べ替える(編集・削除は元の articles.js 上のインデックスを使う)。
+  const sorted = articles
+    .map((a, i) => ({ article: a, index: i }))
+    .sort((x, y) => (x.article.date < y.article.date ? 1 : x.article.date > y.article.date ? -1 : 0));
+
+  const rows = sorted
     .map(
-      (a, i) => `      <div class="list-item">
+      ({ article: a, index: i }) => `      <div class="list-item">
         <div>
           <div class="title">${escapeHtml(a.title)}</div>
           <div class="meta">${escapeHtml(a.date)}</div>
