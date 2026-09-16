@@ -711,7 +711,11 @@ server.headersTimeout = 0;
 // Windows では既定ブラウザのURLプロトコル関連付け経由の起動("start"コマンド)が
 // 環境によっては何も起きずに失敗することがあるため、既知のブラウザの実行ファイルを
 // 直接指定して起動する(見つからない場合のみ従来の "start" にフォールバック)。
+// また、ブラウザが既に起動中だと新しいタブが背面で開き前面に出てこないことがあるため、
+// --new-window を付けて新しいウィンドウとして開き、前面に出やすくする。
 function openBrowser(url) {
+  console.log(`ブラウザで ${url} を開いています…(自動で開かない場合は、このURLを手動でブラウザのアドレス欄に貼り付けてください)`);
+
   if (process.platform === "win32") {
     const candidates = [
       `${process.env["ProgramFiles(x86)"]}\\Microsoft\\Edge\\Application\\msedge.exe`,
@@ -721,8 +725,17 @@ function openBrowser(url) {
     ];
     const browserPath = candidates.find((p) => p && fs.existsSync(p));
     if (browserPath) {
-      spawn(browserPath, [url], { detached: true, stdio: "ignore" }).unref();
-      return;
+      try {
+        const child = spawn(browserPath, ["--new-window", url], { detached: true, stdio: "ignore" });
+        child.on("error", (err) => {
+          console.log("ブラウザの起動に失敗しました: " + err.message + " — 上記URLを手動で開いてください。");
+        });
+        child.unref();
+        return;
+      } catch (err) {
+        console.log("ブラウザの起動に失敗しました: " + err.message + " — 上記URLを手動で開いてください。");
+        return;
+      }
     }
     exec(`start "" "${url}"`);
     return;
