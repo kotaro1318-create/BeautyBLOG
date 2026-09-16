@@ -5,7 +5,7 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const { execSync, exec, spawnSync } = require("child_process");
+const { execSync, exec, spawn, spawnSync } = require("child_process");
 const querystring = require("querystring");
 
 const PORT = 5055;
@@ -708,10 +708,44 @@ const server = http.createServer((req, res) => {
 server.requestTimeout = 0; // AI下書き生成が数分かかることがあるためタイムアウトを無効化
 server.headersTimeout = 0;
 
+// Windows では既定ブラウザのURLプロトコル関連付け経由の起動("start"コマンド)が
+// 環境によっては何も起きずに失敗することがあるため、既知のブラウザの実行ファイルを
+// 直接指定して起動する(見つからない場合のみ従来の "start" にフォールバック)。
+function openBrowser(url) {
+  if (process.platform === "win32") {
+    const candidates = [
+      `${process.env["ProgramFiles(x86)"]}\\Microsoft\\Edge\\Application\\msedge.exe`,
+      `${process.env["ProgramFiles"]}\\Microsoft\\Edge\\Application\\msedge.exe`,
+      `${process.env["ProgramFiles"]}\\Google\\Chrome\\Application\\chrome.exe`,
+      `${process.env["ProgramFiles(x86)"]}\\Google\\Chrome\\Application\\chrome.exe`,
+    ];
+    const browserPath = candidates.find((p) => p && fs.existsSync(p));
+    if (browserPath) {
+      spawn(browserPath, [url], { detached: true, stdio: "ignore" }).unref();
+      return;
+    }
+    exec(`start "" "${url}"`);
+    return;
+  }
+  exec(`open "${url}"`);
+}
+
+server.on("error", (err) => {
+  const url = `http://localhost:${PORT}/`;
+  if (err.code === "EADDRINUSE") {
+    console.log(`管理画面はすでに起動しています。ブラウザで ${url} を開きます。`);
+    openBrowser(url);
+    setTimeout(() => process.exit(0), 500);
+    return;
+  }
+  console.error("サーバー起動エラー:", err);
+  process.exit(1);
+});
+
 server.listen(PORT, "127.0.0.1", () => {
   const url = `http://localhost:${PORT}/`;
   console.log(`Beauty DO ノート 記事編集画面を起動しました: ${url}`);
+  console.log("ブラウザが自動で開かない場合は、上記URLを手動でブラウザに貼り付けてください。");
   console.log("このウィンドウを閉じると管理画面は終了します。");
-  const openCmd = process.platform === "win32" ? `start "" "${url}"` : `open "${url}"`;
-  exec(openCmd);
+  openBrowser(url);
 });
