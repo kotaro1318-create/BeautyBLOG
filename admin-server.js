@@ -5,11 +5,145 @@
 const http = require("http");
 const fs = require("fs");
 const path = require("path");
-const { execSync, exec } = require("child_process");
+const { execSync, exec, spawnSync } = require("child_process");
 const querystring = require("querystring");
 
 const PORT = 5055;
 const ARTICLES_PATH = path.join(__dirname, "articles.js");
+
+const KNOWLEDGE_INDEX = `01-biyou-no-kagaku.md: 『美容の科学』(日本コスメティック協会) — 化粧品科学全般
+02-atarashii-biyou-hifuka.md: 『あたらしい美容皮膚科学』(日本美容皮膚科学会) — 皮膚の構造・老化・美容医療の基礎
+03-cosme-kentei-kyokasho.md: 『コスメの教科書』(日本化粧品検定協会) — スキンケア・メイク・ヘアケアの誤解と基礎知識
+04-skincare-jissen-guide.md: 『やさしく伝えるスキンケア実践ガイド』(野村有子) — 患者の疑問Q&A形式
+05-biyou-no-hifu-kagaku.md: 『美容のヒフ科学』(安田利顕) — 皮膚生理・老化メカニズム
+06-biyou-hifu-qa.md: 『美容皮膚Q&A』(川田暁) — 56件の患者質問Q&A
+07-mbderma-no262.md: 『MB Derma No.262 再考!美容皮膚診療』 — 若返り治療13編
+08-beauty-vol41-skincare.md: 『美容皮膚医学BEAUTY 第41号』特集:スキンケア`;
+
+const DRAFT_SCHEMA = JSON.stringify({
+  type: "object",
+  properties: {
+    title: { type: "string" },
+    date: { type: "string" },
+    conclusion: { type: "string" },
+    body: { type: "string" },
+    visual: { type: "string" },
+    sources: {
+      type: "array",
+      items: {
+        type: "object",
+        properties: { label: { type: "string" }, url: { type: "string" } },
+        required: ["label"],
+      },
+    },
+  },
+  required: ["title", "date", "conclusion", "body", "visual", "sources"],
+});
+
+function todayStr() {
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}-${String(d.getDate()).padStart(2, "0")}`;
+}
+
+let cachedClaudeExe = null;
+
+// Windows では claude は claude.cmd (バッチファイル)としてインストールされており、
+// spawnSync に shell なしで渡すと ENOENT になる。shell:true は引数が正しくエスケープ
+// されず壊れるため、.cmd が指す実体の claude.exe を直接解決して呼び出す。
+function resolveClaudeExecutable() {
+  if (cachedClaudeExe) return cachedClaudeExe;
+  if (process.platform !== "win32") {
+    cachedClaudeExe = "claude";
+    return cachedClaudeExe;
+  }
+
+  try {
+    const whereOut = execSync("where claude", { encoding: "utf8" });
+    const lines = whereOut.split(/\r?\n/).map((l) => l.trim()).filter(Boolean);
+    const exeLine = lines.find((l) => l.toLowerCase().endsWith(".exe"));
+    if (exeLine) {
+      cachedClaudeExe = exeLine;
+      return cachedClaudeExe;
+    }
+    const cmdLine = lines.find((l) => l.toLowerCase().endsWith(".cmd"));
+    if (cmdLine) {
+      const npmDir = path.dirname(cmdLine);
+      const candidate = path.join(npmDir, "node_modules", "@anthropic-ai", "claude-code", "bin", "claude.exe");
+      if (fs.existsSync(candidate)) {
+        cachedClaudeExe = candidate;
+        return cachedClaudeExe;
+      }
+    }
+  } catch (e) {
+    // where が失敗した場合は "claude" にフォールバック(後段でエラーになる)
+  }
+
+  cachedClaudeExe = "claude";
+  return cachedClaudeExe;
+}
+
+function generateDraftWithAI(topic) {
+  const today = todayStr();
+  const prompt = `あなたは美容皮膚科学ブログ「Beauty DO ノート」の執筆者です。トピック「${topic}」についてブログ記事の下書きを作成してください。
+
+# 手順
+1. knowledge/ フォルダには以下の専門書籍の要約が入っています。トピックに関連しそうなファイルを1〜2個選んでReadツールで読み、そこにある事実を参考にしてください。
+${KNOWLEDGE_INDEX}
+2. 要約の文章をそのままコピーせず、必ず自分の言葉で言い換えて執筆してください(原文の逐語引用は禁止)。
+3. 既存記事と同じトーンで書いてください:です・ます調、専門用語はかみ砕いて説明、押し付けがましくない。
+
+# 出力する各項目
+- title: 読者の興味を引く記事タイトル(30〜45字程度)
+- date: "${today}"
+- conclusion: 記事の結論を1文で
+- body: 本文(600〜900字程度)
+- visual: 図表用のHTML。<div class="viz"><p class="viz-title">...</p> ... </div> の中に .viz-bars(棒グラフ)または .viz-table(表)または .viz-stats(統計タイル)のいずれかを使う。適切なデータがなければ空文字("")でよい
+- sources: 出典の配列。knowledge/の書籍を使った場合は url なしで { "label": "書籍名(著者)" } の形にする。存在しないURLを創作しないこと`;
+
+  const result = spawnSync(
+    resolveClaudeExecutable(),
+    [
+      "-p",
+      "--output-format",
+      "json",
+      "--json-schema",
+      DRAFT_SCHEMA,
+      "--allowedTools",
+      "Read",
+      "--permission-prompts",
+      "none",
+      "--model",
+      "sonnet",
+    ],
+    {
+      cwd: __dirname,
+      input: prompt,
+      encoding: "utf8",
+      maxBuffer: 1024 * 1024 * 20,
+      timeout: 5 * 60 * 1000,
+    }
+  );
+
+  if (result.error) {
+    throw new Error("claude CLIの起動に失敗しました: " + result.error.message);
+  }
+  if (result.status !== 0) {
+    throw new Error("claude CLIがエラー終了しました: " + (result.stderr || result.stdout || "詳細不明"));
+  }
+
+  let out;
+  try {
+    out = JSON.parse(result.stdout);
+  } catch (e) {
+    throw new Error("claude CLIの出力を解析できませんでした: " + result.stdout.slice(0, 500));
+  }
+
+  if (out.is_error || !out.structured_output) {
+    throw new Error("AI生成に失敗しました: " + (out.result || JSON.stringify(out)).slice(0, 500));
+  }
+
+  return out.structured_output;
+}
 
 function loadArticles() {
   const resolved = require.resolve(ARTICLES_PATH);
@@ -146,9 +280,31 @@ function renderList(articles) {
     "記事一覧",
     `<div class="toolbar">
       <h1>Beauty DO ノート — 記事管理(全${articles.length}件)</h1>
-      <a class="button" href="/edit/new">+ 新規記事</a>
+      <div style="display:flex; gap:8px;">
+        <a class="button secondary" href="/draft/new">✨ AI下書きを作成</a>
+        <a class="button" href="/edit/new">+ 新規記事</a>
+      </div>
     </div>
 ${rows}`
+  );
+}
+
+function renderDraftForm(error) {
+  return layout(
+    "AI下書きを作成",
+    `<div class="top-actions">
+      <a class="button secondary" href="/">← 一覧に戻る</a>
+    </div>
+    <h1>AI下書きを作成</h1>
+    <p class="note">トピック(キーワード)を入力すると、knowledge/フォルダの書籍要約をもとにAIが本文・図表・出典を自動生成します。生成には1〜2分程度かかり、実行のたびにAPI利用料(目安:1回あたり数十円〜1ドル程度)がかかります。生成結果はまだ保存されていません。編集画面で内容を確認・修正してから保存してください。</p>
+    ${error ? `<div class="flash" style="background:#fbe7e5; color:#a33b2d;">${escapeHtml(error)}</div>` : ""}
+    <form method="POST" action="/draft/generate" onsubmit="document.getElementById('genBtn').disabled=true; document.getElementById('genBtn').textContent='生成中…(1〜2分お待ちください)';">
+      <label>トピック</label>
+      <input type="text" name="topic" required placeholder="例:毛穴の黒ずみ、紫外線とビタミンD、敏感肌の洗顔料の選び方 など">
+      <div style="margin-top:20px;">
+        <button id="genBtn" type="submit">✨ AI下書きを生成</button>
+      </div>
+    </form>`
   );
 }
 
@@ -250,6 +406,32 @@ const server = http.createServer((req, res) => {
       return;
     }
 
+    if (req.method === "GET" && url === "/draft/new") {
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(renderDraftForm(null));
+      return;
+    }
+
+    if (req.method === "POST" && url === "/draft/generate") {
+      parseBody(req, (form) => {
+        const topic = (form.topic || "").trim();
+        if (!topic) {
+          res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          res.end(renderDraftForm("トピックを入力してください。"));
+          return;
+        }
+        try {
+          const draft = generateDraftWithAI(topic);
+          res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          res.end(renderEdit(draft, null));
+        } catch (err) {
+          res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+          res.end(renderDraftForm(err.message));
+        }
+      });
+      return;
+    }
+
     const editMatch = url.match(/^\/edit\/(\d+)$/);
     if (req.method === "GET" && editMatch) {
       const articles = loadArticles();
@@ -316,6 +498,9 @@ const server = http.createServer((req, res) => {
     res.end("エラーが発生しました: " + err.message);
   }
 });
+
+server.requestTimeout = 0; // AI下書き生成が数分かかることがあるためタイムアウトを無効化
+server.headersTimeout = 0;
 
 server.listen(PORT, "127.0.0.1", () => {
   const url = `http://localhost:${PORT}/`;
