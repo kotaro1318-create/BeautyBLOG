@@ -249,20 +249,6 @@ const ARTICLES = [
       { label: "『MB Derma No.262 再考!美容皮膚診療』" },
       { label: "『美容皮膚Q&A』(川田暁)" }
     ]
-  },
-  {
-    title: "脱毛の常識が変わる:家庭用IPL急進化とZ世代の新しい体毛観",
-    date: "2026-09-16",
-    conclusion: "家庭用IPLの進化と多様化する脱毛観により、脱毛は「全身つるつるを目指す画一的なケア」から「自分に合った付き合い方を選ぶパーソナルな美容習慣」へと変化している。",
-    body: "実は、脱毛サロンに通う人よりも「家で自分でレーザーを当てる人」の方が、いま世界的に増えているのをご存知でしょうか。\r\n\r\n私は美容業界のトレンドを日々ウォッチしていますが、この数年で脱毛の景色は大きく変わりました。かつては「サロンでお金をかけてやってもらうもの」でしたが、今は家庭用IPL(光美容器)の性能がぐんと上がり、サロン施術の10〜15%ほどのコストで、80〜90%の減毛効果を謳う機種まで登場しています。しかも肌センサーやサファイア冷却機能がついていて、「痛くて怖い」というかつてのイメージも薄れつつあります。\r\n\r\nこれ、プロの目線で見ても「ハリボテ」ではありません。\r\n\r\n実際に12週間以内に効果を実感するユーザーが8割を超えるというデータもあり、継続すれば一定の減毛効果は期待できます。ただし誤解してほしくないのは、これは永久脱毛ではなく「減毛」だということ。クリニックのレーザーのような医療機器レベルの出力ではないため、「一度当てたら終わり」ではなく、地道なメンテナンスが前提です。ここを理解せずに過度な期待をすると、がっかりする方も多いはずです。\r\n\r\nもう一つ面白い変化が、男性利用者の急増です。男性の脱毛需要は2020年以降、年率およそ20%という驚くべきペースで伸びていて、背中・胸・首まわりの施術が特に人気です。美容医療が「女性のもの」という時代は、もう終わりつつあります。\r\n\r\nそして意外な逆流現象も起きています。Z世代の一部では「全身つるつる」を目指すのではなく、あえて体毛を残す・整える選択も広がっているのです。SNSでは腕や脚の毛をあえて見せる投稿も話題になりました。\r\n\r\nつまり今の脱毛トレンドは、「毛をなくす」から「毛と自分の関係を選ぶ」への転換期にあります。\r\n\r\n私からのアドバイスはシンプルです。\r\n\r\n- 家庭用IPLは「コスパの良い減毛ツール」として賢く使う\r\n- 永久脱毛を求めるなら医療レーザーのクリニックへ\r\n- 完全につるつるにするか、整えるだけにするかは、周りの流行ではなく自分の心地よさで決める\r\n\r\n脱毛は「正解」を追い求めるものではなく、自分に合った付き合い方を見つけるプロセスだと、私は思います。",
-    visual: "<div class=\"viz\">\r\n<p class=\"viz-title\">世界の脱毛トレンド 主要データ(2026年)</p>\r\n<div class=\"viz-stats\">\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">16.1%</span><span class=\"viz-stat-label\">レーザー脱毛市場のCAGR(2025→2026)</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">80〜90%</span><span class=\"viz-stat-label\">最新家庭用IPLの減毛効果</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">84%</span><span class=\"viz-stat-label\">12週間以内に効果を実感したユーザー割合</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">+20%/年</span><span class=\"viz-stat-label\">男性利用者の年間成長率(2020年以降)</span></div>\r\n  <div class=\"viz-stat\"><span class=\"viz-stat-value\">52%</span><span class=\"viz-stat-label\">18〜34歳が占める施術者の割合</span></div>\r\n</div>\r\n</div>",
-    sources: [
-      { label: "Business Research Insights「IPL Hair Removal Device and System Market Size & Opportunities Report, 2026」", url: "https://www.businessresearchinsights.com/blog/top-ipl-hair-removal-device-and-system-companies-10809" },
-      { label: "Skintekie「Best At-Home IPL Hair Removal Devices of 2026」", url: "https://skintekie.com/blogs/news/best-ipl-hair-removal-devices-2026" },
-      { label: "Lavish Beauty Laser「Laser Hair Removal Statistics & Facts 2026」", url: "https://www.lavishbeautylaser.com/laser-hair-removal-statistics" },
-      { label: "Beauty Independent「Young Women Are Bidding Adieu To Shorn Bodies And There Could Be Hairy Consequences For Personal Care Companies」", url: "https://www.beautyindependent.com/body-hair/" },
-      { label: "NZ Herald「Gen Z women ditching the razor and embracing their natural body hair」", url: "https://www.nzherald.co.nz/lifestyle/gen-z-women-ditching-the-razor-and-embracing-their-natural-body-hair/FZAWU6XQCVEXHM6VFSAWGLMDFY/" }
-    ]
   }
 ];
 
