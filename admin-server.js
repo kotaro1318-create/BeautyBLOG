@@ -281,13 +281,14 @@ function layout(title, content) {
   body { font-family: -apple-system, "Segoe UI", "Hiragino Kaku Gothic ProN", sans-serif; background:#faf8f6; color:#2b2320; margin:0; padding:24px; }
   .wrap { max-width: 860px; margin: 0 auto; }
   h1 { font-size: 20px; }
-  a.button, button { display:inline-block; background:#b8895f; color:#fff; border:none; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px; cursor:pointer; }
+  a.button, button { display:inline-block; background:#b8895f; color:#fff; border:none; padding:8px 16px; border-radius:6px; text-decoration:none; font-size:14px; cursor:pointer; white-space:nowrap; line-height:1.4; }
   a.button.secondary, button.secondary { background:#8a8078; }
   a.button.danger, button.danger { background:#b04b3f; }
-  .list-item { display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px solid #e8e0d8; border-radius:8px; padding:12px 16px; margin-bottom:8px; }
+  .list-item { display:flex; align-items:center; justify-content:space-between; background:#fff; border:1px solid #e8e0d8; border-radius:8px; padding:12px 16px; margin-bottom:8px; gap:16px; }
   .list-item .meta { font-size:12px; color:#8a8078; }
   .list-item .title { font-weight:600; }
-  .actions { display:flex; gap:8px; }
+  .actions { display:flex; align-items:center; gap:8px; flex-shrink:0; }
+  .actions form { display:inline-flex; background:none; border:none; padding:0; margin:0; }
   form { background:#fff; border:1px solid #e8e0d8; border-radius:8px; padding:20px; }
   label { display:block; font-size:13px; font-weight:600; margin:16px 0 6px; }
   input[type=text], input[type=date], input[type=url], textarea { width:100%; box-sizing:border-box; padding:8px 10px; border:1px solid #d8cfc4; border-radius:6px; font-size:14px; font-family:inherit; }
@@ -323,8 +324,8 @@ function renderList(articles) {
         </div>
         <div class="actions">
           <a class="button" href="/edit/${i}">編集</a>
-          <form method="POST" action="/delete/${i}" onsubmit="return confirm('この記事を削除しますか?');" style="display:inline">
-            <button class="danger" type="submit">削除</button>
+          <form method="POST" action="/delete/${i}" onsubmit="return confirm('この記事を削除しますか?\\n公開サイトからも削除され、GitHubへのpush・Vercel本番デプロイが自動で実行されます。');" style="display:inline">
+            <button class="danger" type="submit">🗑 削除</button>
           </form>
         </div>
       </div>`
@@ -485,43 +486,32 @@ function articleFromForm(form) {
   };
 }
 
-function renderPublishResult(steps, ok) {
+function renderPublishResult(steps, ok, action) {
+  const label = action === "delete" ? "削除" : "公開";
   const rows = steps
     .map((s) => `<li><strong>${s.ok ? "✅" : "❌"} ${escapeHtml(s.label)}</strong>${s.detail ? `<div class="note">${escapeHtml(s.detail)}</div>` : ""}</li>`)
     .join("\n");
   return layout(
-    ok ? "公開完了" : "公開処理でエラー",
+    ok ? `${label}完了` : `${label}処理でエラー`,
     `<div class="top-actions">
       <a class="button secondary" href="/">← 一覧に戻る</a>
     </div>
-    <h1>${ok ? "✅ ブログを公開しました" : "❌ 公開処理でエラーが発生しました"}</h1>
+    <h1>${ok ? `✅ ${label}処理が完了しました` : `❌ ${label}処理でエラーが発生しました`}</h1>
     <ul style="line-height:2;">${rows}</ul>
     ${ok ? `<p><a class="button" href="https://beautyblog-alpha.vercel.app" target="_blank" rel="noopener noreferrer">公開サイトを見る</a></p>` : `<p class="note">途中まで完了した処理は取り消されていません。エラー内容を確認し、必要なら手動で続きの操作(git push / vercel --prod など)を行ってください。</p>`}`
   );
 }
 
-// 記事を保存(articles.js + build.js)した上で、GitHubへコミット・push、Vercel本番デプロイまで自動で行う。
-function publishArticle(article) {
-  const steps = [];
-
-  try {
-    const articles = loadArticles();
-    articles.push(article);
-    saveArticles(articles);
-    steps.push({ label: "articles.js に保存し、index.htmlを再生成", ok: true });
-  } catch (e) {
-    steps.push({ label: "保存(articles.js / index.html)", ok: false, detail: e.message });
-    return { ok: false, steps };
-  }
-
+// articles.js / index.html の変更をGitHubへコミット・push、Vercel本番デプロイまで自動で行う。
+// steps配列に各段階の結果を追記していく。途中で失敗したら false を返す。
+function gitCommitPushDeploy(commitMsg, steps) {
   try {
     execSync("git add articles.js index.html", { cwd: __dirname, stdio: "pipe" });
-    const commitMsg = `記事追加:${article.title}`;
     execSync(`git commit -m ${JSON.stringify(commitMsg)}`, { cwd: __dirname, stdio: "pipe" });
     steps.push({ label: "gitにコミット", ok: true, detail: commitMsg });
   } catch (e) {
     steps.push({ label: "gitコミット", ok: false, detail: (e.stderr || e.message || "").toString().slice(0, 500) });
-    return { ok: false, steps };
+    return false;
   }
 
   try {
@@ -546,7 +536,7 @@ function publishArticle(article) {
       ok: false,
       detail: "コンフリクトの可能性があります。手動で `git status` を確認してください: " + (e.stderr || e.message || "").toString().slice(0, 500),
     });
-    return { ok: false, steps };
+    return false;
   }
 
   try {
@@ -554,10 +544,51 @@ function publishArticle(article) {
     steps.push({ label: "Vercel本番デプロイ", ok: true });
   } catch (e) {
     steps.push({ label: "Vercel本番デプロイ", ok: false, detail: (e.stderr || e.message || "").toString().slice(0, 800) });
+    return false;
+  }
+
+  return true;
+}
+
+// 記事を保存(articles.js + build.js)した上で、GitHubへコミット・push、Vercel本番デプロイまで自動で行う。
+function publishArticle(article) {
+  const steps = [];
+
+  try {
+    const articles = loadArticles();
+    articles.push(article);
+    saveArticles(articles);
+    steps.push({ label: "articles.js に保存し、index.htmlを再生成", ok: true });
+  } catch (e) {
+    steps.push({ label: "保存(articles.js / index.html)", ok: false, detail: e.message });
     return { ok: false, steps };
   }
 
-  return { ok: true, steps };
+  const ok = gitCommitPushDeploy(`記事追加:${article.title}`, steps);
+  return { ok, steps };
+}
+
+// 記事を削除(articles.js + build.js)した上で、GitHubへコミット・push、Vercel本番デプロイまで自動で行う。
+function unpublishArticle(index) {
+  const steps = [];
+  let removedTitle = "";
+
+  try {
+    const articles = loadArticles();
+    if (!articles[index]) {
+      throw new Error("記事が見つかりません");
+    }
+    removedTitle = articles[index].title;
+    articles.splice(index, 1);
+    saveArticles(articles);
+    steps.push({ label: `記事を削除し、articles.js / index.htmlを更新(「${removedTitle}」)`, ok: true });
+  } catch (e) {
+    steps.push({ label: "削除処理", ok: false, detail: e.message });
+    return { ok: false, steps };
+  }
+
+  const ok = gitCommitPushDeploy(`記事削除:${removedTitle}`, steps);
+  return { ok, steps };
 }
 
 const server = http.createServer((req, res) => {
@@ -633,7 +664,7 @@ const server = http.createServer((req, res) => {
         const article = articleFromForm(form);
         const { ok, steps } = publishArticle(article);
         res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
-        res.end(renderPublishResult(steps, ok));
+        res.end(renderPublishResult(steps, ok, "publish"));
       });
       return;
     }
@@ -683,17 +714,10 @@ const server = http.createServer((req, res) => {
 
     const deleteMatch = url.match(/^\/delete\/(\d+)$/);
     if (req.method === "POST" && deleteMatch) {
-      const articles = loadArticles();
       const i = Number(deleteMatch[1]);
-      if (!articles[i]) {
-        res.writeHead(404);
-        res.end("記事が見つかりません");
-        return;
-      }
-      articles.splice(i, 1);
-      saveArticles(articles);
-      res.writeHead(302, { Location: "/" });
-      res.end();
+      const { ok, steps } = unpublishArticle(i);
+      res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
+      res.end(renderPublishResult(steps, ok, "delete"));
       return;
     }
 
