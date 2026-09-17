@@ -249,6 +249,31 @@ const ARTICLES = [
       { label: "『MB Derma No.262 再考!美容皮膚診療』" },
       { label: "『美容皮膚Q&A』(川田暁)" }
     ]
+  },
+  {
+    title: "「すぐ治らない」は普通です。ニキビ治療の効果が出るまでの時間の目安",
+    date: "2026-09-16",
+    conclusion: "ニキビ治療は始めてすぐに結果が出るものではなく、炎症を抑えるまでには1〜3カ月ほどの継続が目安とされています。",
+    body: "「ニキビ用の薬を使っているのになかなか治らない」と感じて、自己判断でやめてしまう人は少なくありません。実はニキビ(医学的には尋常性ざ瘡)は、治療を始めてすぐに消えるものではなく、改善には一定の時間がかかることが分かっています。思春期以降にホルモンの影響で皮脂の分泌が増えると毛穴の出口がふさがれて「面皰(コメド)」ができ、そこに肌の常在菌であるアクネ菌が増殖して炎症を起こすことで、赤く腫れたニキビへと進行していきます。悪化すると膿を持ったニキビになり、跡(瘢痕)が残ってしまうこともあるため、軽いうちからのケアが望ましいとされています。\r\n\r\n治療は、毛穴の詰まりを改善する外用薬や殺菌作用のある外用薬を中心に、必要に応じて内服薬や皮膚科での面皰除去を組み合わせて行われます。皮膚科診療のガイドラインでは、炎症の強い最初の3カ月ほどを「急性期」、その後を「維持期」と位置づけ、時期によってケアの力点を変えることが推奨されています。目安として、こうした治療を続けると赤く炎症を起こしたニキビは1カ月ほどで約7割、3カ月ほどで約9割減少するというデータもあり、効果が見えにくい最初の数週間を乗り越えられるかどうかが、治療を続けられるかの分かれ目になりそうです。\r\n\r\n自己判断で潰したり、ニキビ用ではない油分の多いクリームを重ねたりすると、かえって悪化や色素沈着を招くこともあります。焦らず、選んだケアを一定期間続けてみる姿勢が、回復への近道といえそうです。",
+    visual: "<div class=\"viz\">\r\n        <p class=\"viz-title\">図:治療継続による炎症性ニキビの減少目安</p>\r\n        <div class=\"viz-bars\">\r\n          <div class=\"bar-row\">\r\n            <span class=\"bar-label\">治療前</span>\r\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\r\n            <span class=\"bar-value\">100%</span>\r\n          </div>\r\n          <div class=\"bar-row\">\r\n            <span class=\"bar-label\">1カ月後</span>\r\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:30%\"></span></span>\r\n            <span class=\"bar-value\">約3割まで減少</span>\r\n          </div>\r\n          <div class=\"bar-row\">\r\n            <span class=\"bar-label\">3カ月後</span>\r\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:10%\"></span></span>\r\n            <span class=\"bar-value\">約1割まで減少</span>\r\n          </div>\r\n        </div>\r\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\r\n      </div>",
+    sources: [
+      { label: "『美容皮膚Q&A』(川田暁 編著)" },
+      { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)" }
+    ]
+  },
+  {
+    title: "「バリア機能」が世界の美容キーワードに。でもやりすぎ注意という話",
+    date: "2026-09-17",
+    conclusion: "世界の美容市場は今、肌のバリア機能と微生物叢(マイクロバイオーム)を軸に急成長しているが、「足しすぎるケア」が逆に皮膚を傷つけている実態もあり、成分選びより肌そのものの土台を守る視点が重要になっている。",
+    body: "実は今、世界の美容業界でいちばん熱いキーワードは「新成分」でも「新デバイス」でもなく、地味な響きの「肌のバリア機能」だったりします。\r\n\r\n皮膚の表面には、水分の蒸発を防ぎ、外部刺激から体を守るバリアがあります。これがスキンケア成分の宣伝文句から、皮膚科医が語る「本丸」のテーマへと格上げされたのがここ数年の動きです。数字で見てもそれは明らかで、世界のスキンケア市場は2026年の約2154億ドルから2036年には4678億ドルへ、年8.1%前後の成長が見込まれています。さらに細かく見ると、皮膚の常在菌に着目した「マイクロバイオームスキンケア」市場は2026年の約16億ドルから、年18%を超えるペースで拡大中。皮膚の上に暮らす目に見えない菌たちの存在が、バリア機能の維持に一役買っているという研究が後押ししています。\r\n\r\n重要です。\r\n\r\nこれは「新しい流行り成分」ではなく、皮膚科学そのものへの理解が消費者レベルまで降りてきたという変化です。セラミドやビタミンB3(ナイアシンアミド)配合の製品が、マス向けブランドにまで一気に広がったのもこの流れの一部。\r\n\r\n一方で、プロとして気になる動きもあります。\r\n\r\n- SNSで話題の「10ステップ以上」の重ねづけルーティン\r\n- レチノール・酸・ビタミンCなどの活性成分を同時に大量投入\r\n- 毎日の過度な角質ケア(オーバー・エクスフォリエーション)\r\n\r\nこうした行動が原因で、皮膚科に駆け込む患者が実際に増えているという報告が海外で相次いでいます。皮膚を「攻める」ケアが加速するほど、逆にバリアを壊してしまうという皮肉な構図です。\r\n\r\n私の評価としては、バリア機能・マイクロバイオームへの注目そのものは今後も定着していくと見ています。科学的根拠が積み上がってきている分野だからです。ただし「バリアケア製品を足す」だけでは本末転倒。まずは今使っている製品の数と頻度を見直すこと、そして「治す」より先に「壊さない」を意識すること。それが、遠回りのようでいちばん確実な近道です。",
+    visual: "<div class=\"viz\">\r\n        <p class=\"viz-title\">図:バリア関連市場の成長スピード比較(年平均成長率)</p>\r\n        <div class=\"viz-bars\">\r\n          <div class=\"bar-row\">\r\n            <span class=\"bar-label\">スキンケア市場全体</span>\r\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:44%\"></span></span>\r\n            <span class=\"bar-value\">年8.1%成長</span>\r\n          </div>\r\n          <div class=\"bar-row\">\r\n            <span class=\"bar-label\">皮膚バリア市場</span>\r\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:37%\"></span></span>\r\n            <span class=\"bar-value\">年6.8%成長</span>\r\n          </div>\r\n          <div class=\"bar-row\">\r\n            <span class=\"bar-label\">マイクロバイオームスキンケア</span>\r\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\r\n            <span class=\"bar-value\">年18.7%成長</span>\r\n          </div>\r\n        </div>\r\n        <p class=\"viz-note\">出典:Future Market Insights「Skincare Market」、MarkWide Research「Skin Barrier Market」、Research and Markets「Microbiome Skincare Product Market Report」</p>\r\n      </div>\r\n      <div class=\"viz\">\r\n        <p class=\"viz-title\">統計:知っておきたい肌バリアの数字</p>\r\n        <div class=\"viz-stats\">\r\n          <div class=\"stat-tile\">\r\n            <span class=\"stat-value\">62%</span>\r\n            <span class=\"stat-label\">マイクロバイオーム配合製品を認知する消費者の割合(2025年、2020年は38%)</span>\r\n          </div>\r\n          <div class=\"stat-tile\">\r\n            <span class=\"stat-value\">467.8億ドル</span>\r\n            <span class=\"stat-label\">→ 2036年の世界スキンケア市場予測(2026年は215.4億ドル)</span>\r\n          </div>\r\n          <div class=\"stat-tile\">\r\n            <span class=\"stat-value\">毎日の角質ケア</span>\r\n            <span class=\"stat-label\">米国の皮膚科でバリア損傷の主因とされる行動の一つ</span>\r\n          </div>\r\n        </div>\r\n      </div>",
+    sources: [
+      { label: "Future Market Insights「Explore the Global Skincare Market — Analysis of Key Trends, Regional Growth, Top Players, and a 10-Year Forecast from 2026 to 2036」", url: "https://www.futuremarketinsights.com/reports/skincare-market" },
+      { label: "MarkWide Research「Skin Barrier Market Size, Share, and Industry Trends Forecast 2026-2036」", url: "https://markwideresearch.com/skin-barrier-market" },
+      { label: "Research and Markets「Microbiome Skincare Product Market Report 2026」", url: "https://www.researchandmarkets.com/reports/6215713/microbiome-skincare-product-market-report" },
+      { label: "Skinobs Cosmetics Testing News「Skin barrier claims in 2026: market trends and testing standards」", url: "https://news.skinobs.com/en/skin-barrier-claims-in-2026-market-trends-and-testing-standards/" },
+      { label: "Forefront Dermatology「TikTok Skincare Routines Are Filling Dermatology Offices — Here's Why」", url: "https://forefrontdermatology.com/tiktok-skincare-routines-are-filling-dermatology-offices/" }
+    ]
   }
 ];
 
