@@ -296,6 +296,17 @@ const ARTICLES = [
       { label: "『コスメの教科書』(日本化粧品検定協会)" },
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" }
     ]
+  },
+  {
+    title: "男性の肌、実は「厚いのに紫外線に弱い」ってご存知でしたか?",
+    date: "2026-09-18",
+    conclusion: "男性の肌は女性より角層が厚く皮脂も多い一方で紫外線への感受性はむしろ高く、スキンケア習慣の差がシミ・シワの早期化につながっている可能性があります。",
+    body: "「男性の肌は厚くて丈夫だから紫外線対策なんて要らない」というイメージ、実はちょっと危ういかもしれません。男性の表皮や角層は女性より厚みがあり、皮脂の分泌量も思春期以降で女性のおよそ2倍、20〜30代でピークを迎えたあとも高い水準が続くとされています。ところが紫外線に対しては事情が逆で、肌が赤くなり始める紫外線量の目安である最小紅斑量(MED)は男性が111mJ/cm²、女性が143mJ/cm²というデータがあり、数値が小さいほど少ない紫外線量でも赤みが出やすいことを意味します。つまり「厚い肌」であっても、紫外線への感受性はむしろ女性より高いというわけです。それにもかかわらず、基礎化粧品を習慣的に使っていると答えた男性はわずか2.5%(女性は39.9%)という調査もあり、関心の低さが数字にはっきり表れています。男性のシミ・シワは女性より早い30〜40代で目立ち始めやすいという指摘もあるので、この差は軽視できません。さらに毎日のヒゲ剃りは肌に細かな傷をつくり、水分の蒸発量を増やしてきめを乱す一因にもなるとされています。電気シェーバーとカミソリで肌への負担にほぼ差はないという報告もあるので、道具選びより剃った後の保湿を習慣にする方が近道かもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:男女の肌の違い(傾向)</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>項目</th><th>男性</th><th>女性</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>皮脂分泌量(思春期以降)</td><td>女性の約2倍</td><td>基準</td></tr>\n              <tr><td>最小紅斑量(MED)</td><td>111 mJ/cm²</td><td>143 mJ/cm²</td></tr>\n              <tr><td>基礎化粧品の習慣的使用率</td><td class=\"num\">2.5%</td><td class=\"num\">39.9%</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:紫外線で赤くなり始める量(MED)の男女差</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">男性</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:78%\"></span></span>\n            <span class=\"bar-value\">111 mJ/cm²</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">女性</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">143 mJ/cm²</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">数値が小さいほど、少ない紫外線量で赤みが出やすい(=感受性が高い)ことを示す。出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容の科学』(日本コスメティック協会)" },
+      { label: "『美容のヒフ科学』(安田利顕)" }
+    ]
   }
 ];
 
