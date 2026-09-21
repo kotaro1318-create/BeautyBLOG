@@ -329,6 +329,17 @@ const ARTICLES = [
       { label: "『美容の科学』(日本コスメティック協会)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
     ]
+  },
+  {
+    title: "妊娠線、できてから消える?「予防クリーム神話」と現実的な向き合い方",
+    date: "2026-09-21",
+    conclusion: "妊娠線は一度できると完全には消えないため、予防クリームに頼り切るより「できたらどう付き合うか」まで含めて知っておく方が現実的とされています。",
+    body: "妊娠後期、お腹が短期間でぐっと大きくなるころ、下腹部や胸、太もも、お尻に赤紫っぽい線が現れることがあります。いわゆる妊娠線です。これは皮膚が急激に伸ばされることに加え、妊娠中に増えるホルモンの影響で、皮膚を内側から支える弾力線維が引き伸ばされて断裂してしまうために生じるとされています。発生率には体質差があり、欧米では70〜90%程度とかなり高い一方、日本人は初産婦で約28%、経産婦で約52%程度と報告されており、海外に比べるとやや低めのようです。「保湿すればできない」というイメージを持つ人も多いかもしれませんが、妊娠線予防クリームやオイルの効果については、実は十分な医学的根拠が示されているとは言い難いという指摘もあります。そして見過ごされがちなのが、一度できてしまった妊娠線は、赤みが落ち着いて白っぽくなっても完全には消えないという点。それでも目立たなくする方法はあり、高周波(RF)によるタイトニングや、熱ダメージを抑えたノンアブレイティブフラクショナルレーザーが用いられることがあります。いずれも低出力から少しずつ出力を上げていくのが安全とされ、「予防」と「できてからのケア」、両方を知っておくことが、必要以上に自分を責めずに済む助けになるかもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:妊娠線の発生率(地域・出産経験による違い)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">日本・初産婦</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:31%\"></span></span>\n            <span class=\"bar-value\">約28%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">日本・経産婦</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:58%\"></span></span>\n            <span class=\"bar-value\">約52%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">欧米</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">70〜90%程度</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:妊娠線をめぐる基礎知識</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">弾力線維の断裂</span>\n            <span class=\"stat-label\">急激な皮膚の伸展とホルモン変化で真皮の線維組織が壊れる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">予防効果は根拠乏しい</span>\n            <span class=\"stat-label\">保湿剤・予防クリームの効果は医学的根拠が乏しいとされる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">完全には消えない</span>\n            <span class=\"stat-label\">RFタイトニングやレーザーで目立たなくすることは可能</span>\n          </div>\n        </div>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚Q&A』(川田暁)" },
+      { label: "『美容のヒフ科学』(安田利顕)" }
+    ]
   }
 ];
 
