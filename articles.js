@@ -395,6 +395,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
     ]
+  },
+  {
+    title: "AGA治療、効果が出るまでの正しい目安。「初期脱毛」は悪化のサインではないかもしれません",
+    date: "2026-09-27",
+    conclusion: "AGA治療薬は抜け毛の減少を実感するまでに2〜3カ月、毛量の変化を実感するには半年〜1年ほどかかるとされ、開始直後の一時的な抜け毛増加も想定内の反応と考えられています。",
+    body: "AGA(男性型脱毛症)の治療というと、飲み始めればすぐに髪が増えるイメージを持たれがちですが、実際のペースはもう少しゆっくりです。治療の中心はフィナステリド(1日1mgの内服)またはデュタステリド(1日0.5mgの内服)で、抜け毛が減ってきたと実感できるまでにはおよそ2〜3カ月、毛量が増えたと感じられるまでには半年〜1年ほどかかるとされています。この期間の長さを知らずに自己判断でやめてしまう人も少なくないようです。また治療開始直後に一時的に抜け毛が増える「初期脱毛」が起こることがありますが、これは休止期の毛から新しい成長期の毛へ生え替わる過程で起こる現象とされ、悪化のサインではなくむしろ薬が効き始めている兆候と説明されることがあります。副作用として性機能への影響を心配する声も根強いですが、これらの薬は性機能に関わるテストステロンの量自体を減らす仕組みではないため、理論上は起こりにくいとされています。一方でデュタステリドはフィナステリドよりやや効果が高いとされる反面、2025年に報告された研究では精子の運動率や精液量など精液パラメーターへの持続的な悪影響も指摘されており、将来子どもを望む場合は医師との相談が欠かせないようです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:AGA治療薬の効果を実感できるまでの目安</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">2〜3カ月</span>\n            <span class=\"stat-label\">抜け毛の減少を実感し始める目安の期間</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">半年〜1年</span>\n            <span class=\"stat-label\">毛量の増加を実感できるまでの目安の期間</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">初期脱毛</span>\n            <span class=\"stat-label\">開始直後の一時的な脱毛増加。生え替わり過程とされ悪化ではないことが多い</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:フィナステリドとデュタステリドの違い</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th></th><th>フィナステリド</th><th>デュタステリド</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>用量の目安</td><td>1日1mg</td><td>1日0.5mg</td></tr>\n              <tr><td>効果の傾向</td><td>標準的</td><td>やや高いとされる</td></tr>\n              <tr><td>妊活への配慮</td><td>比較的影響は小さいとされる</td><td>精液パラメーターへの持続的な影響が報告</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)、PubMed(2025年)掲載論文</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚Q&A』(川田暁 編著)" },
+      { label: "PubMed「Long-term use of dutasteride to treat androgenic alopecia in young men may lead to persistent abnormalities in semen parameters」(2025)", url: "https://pubmed.ncbi.nlm.nih.gov/40114308/" }
+    ]
   }
 ];
 
