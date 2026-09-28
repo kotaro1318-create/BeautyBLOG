@@ -406,6 +406,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "PubMed「Long-term use of dutasteride to treat androgenic alopecia in young men may lead to persistent abnormalities in semen parameters」(2025)", url: "https://pubmed.ncbi.nlm.nih.gov/40114308/" }
     ]
+  },
+  {
+    title: "美白のつもりが、まだらに白く。「ロドデノール白斑問題」が教えてくれること",
+    date: "2026-09-28",
+    conclusion: "化粧品による白斑は自己免疫性の尋常性白斑とは異なる仕組みで起こり得ることが、国内で実際に起きた事例から報告されています。",
+    body: "「美白ケアをしていたら、逆に肌がまだらに白く抜けてしまった」。2013年に日本で表面化し、2014年1月時点で被害報告が17,893人にのぼったとされるこの出来事は、美白成分選びの奥深さを考えさせてくれる出来事です。実はこの「白く抜ける」症状、もともと人口の約1%に見られる自己免疫性の疾患『尋常性白斑』とは、成り立ちが違うと考えられています。尋常性白斑は免疫の働きがメラニンを作る細胞(メラノサイト)を誤って攻撃してしまう病気ですが、この化粧品トラブルでは特定のフェノール系の化学構造を持つ成分がメラノサイトそのものに直接ダメージを与えた可能性が指摘されました。原因は違っても、見た目の変化がもたらす心理的な負担は共通しており、資生堂は2006年から白斑をカバーする専用ファンデーションを発売するなど、メディカルメイクの分野も発展してきました。専門のカバーメイクでは基本色12色・調整色6色の計18色を使い分け、汗や紫外線にも強い処方で自然な肌色を再現するそうです。美白ケアを選ぶときは効果の高さだけでなく、こうした過去の教訓を踏まえて成分の安全性データにも目を向けておきたいところです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:2種類の「白斑」、原因の違い</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>分類</th><th>主なメカニズム</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>尋常性白斑</td><td>自己免疫がメラノサイトを誤って攻撃</td></tr>\n              <tr><td>化粧品による白斑(化学性)</td><td>特定成分がメラノサイトに直接ダメージ</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:数字で見るロドデノール白斑問題とその後</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">17,893人</span>\n            <span class=\"stat-label\">2014年1月時点で報告された被害件数</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約1%</span>\n            <span class=\"stat-label\">人口に占める尋常性白斑の割合</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">18色</span>\n            <span class=\"stat-label\">専門カバーメイクの基本色12+調整色6の色数</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容の科学』(日本コスメティック協会)" },
+      { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" }
+    ]
   }
 ];
 
