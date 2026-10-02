@@ -450,6 +450,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
     ]
+  },
+  {
+    title: "赤ちゃんの赤いふくらみ「苺状血管腫」、「様子見でいい」とは限らない理由",
+    date: "2026-10-02",
+    conclusion: "生後にできる赤い腫瘤「苺状血管腫」は自然に縮小することが多い一方、できる部位や治療を始めるタイミングによっては早めの受診が望ましいと考えられています。",
+    body: "生まれて数日〜10日ほどで気づく赤いふくらみ、それは「苺状血管腫」、正式には乳児血管腫と呼ばれるものかもしれません。乳児期に最もよくみられる良性の腫瘍で、生後半年前後に大きさのピークを迎えたあと、ゆっくり自然に縮小していくのが特徴です。「どうせ消えるから様子を見ればいい」と思われがちですが、できる場所によっては注意が必要とされています。まぶたにできると弱視、唇にできると哺乳障害につながることがあり、腫瘤がぐんぐん大きくなる「増殖期」のうちに治療を始められるかどうかで、残る跡の程度が変わってくるといわれています。治療の選択肢は色素レーザーと、2016年に承認された内服薬プロプラノロールの2つで、どちらも保険診療の対象です。経過の目安としてよく使われるのが「7-5-3の法則」で、7歳までに約70%、5歳までに約50%、3歳までに約30%の割合で赤みやふくらみが消えていくとされています。似た見た目の「単純性血管腫」は自然には消えないタイプのため、自己判断せず早めに皮膚科で見分けてもらうことが勧められています。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:苺状血管腫と単純性血管腫の違い</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th></th><th>苺状血管腫(乳児血管腫)</th><th>単純性血管腫(毛細血管奇形)</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>見た目</td><td>盛り上がった赤い腫瘤</td><td>平坦な赤いアザ</td></tr>\n              <tr><td>自然経過</td><td>増殖後にゆっくり縮小</td><td>自然には消えない</td></tr>\n              <tr><td>主な治療</td><td>色素レーザー・プロプラノロール内服</td><td>ロングパルス色素レーザー</td></tr>\n              <tr><td>保険適用</td><td>対象</td><td>対象(部位により異なる)</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:「7-5-3の法則」―年齢と自然消退の目安</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">3歳</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:30%\"></span></span>\n            <span class=\"bar-value\">約30%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">5歳</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:50%\"></span></span>\n            <span class=\"bar-value\">約50%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">7歳</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:70%\"></span></span>\n            <span class=\"bar-value\">約70%</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚Q&A』(川田暁 編著)" },
+      { label: "『美容の科学』(日本コスメティック協会)" }
+    ]
   }
 ];
 
