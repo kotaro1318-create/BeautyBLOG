@@ -461,6 +461,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容の科学』(日本コスメティック協会)" }
     ]
+  },
+  {
+    title: "抗がん剤で肌や爪が変わるのは、薬のタイプで症状が違うからでした",
+    date: "2026-10-03",
+    conclusion: "がん治療中に起こる肌・爪・毛髪の変化は原因となる薬剤の種類によって症状の出方が異なり、保清・保湿・保護を基本としたケアで日々の負担を減らせる可能性があります。",
+    body: "がん治療をしていると肌や爪にトラブルが出ることがありますが、その症状が薬のタイプによってかなり違うことはあまり知られていません。殺細胞性の抗がん薬では、日光が当たる部分や爪に色素が沈着しやすく、なかでもタキサン系の薬剤は爪への影響が大きいとされ、パクリタキセルで約44%、ドセタキセルで約35%という頻度の報告もあります。分子標的薬のひとつ、EGFR阻害薬では治療開始から1〜4週間ほどでニキビに似た発疹が出やすく、顔や頭頸部、胸や背中の中心など皮脂の多い部位に集中して現れるのが特徴です。免疫チェックポイント阻害薬では白斑が起きることがあり、悪性黒色腫の治療中では約1割の患者にみられ、しかも早い時期に白斑が出た人ほど治療の効き目が良い傾向があるという報告まであるのは興味深いところです。手足症候群はカペシタビンで目立ちやすく、ピリピリした違和感から赤みへと進むことが報告されています。共通して大切なのは「保清・保湿・保護」。熱いお風呂や締め付けの強い靴下・靴は避け、爪は除光液の刺激が少ないフィルムタイプのマニキュアで保護するなど、負担の少ない工夫を積み重ねることが、治療中の暮らしを支える土台になりそうです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:がん治療でみられる主な皮膚・爪トラブル</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>症状</th><th>主な原因薬剤</th><th>特徴</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>色素沈着・脱色</td><td>殺細胞性抗がん薬・マルチキナーゼ阻害薬</td><td>日光曝露部や爪に出やすい</td></tr>\n              <tr><td>痤瘡様皮疹</td><td>EGFR阻害薬</td><td>開始1〜4週で脂漏部位に出現</td></tr>\n              <tr><td>手足症候群</td><td>カペシタビンなど</td><td>しびれ感から紅斑へ進行</td></tr>\n              <tr><td>爪障害</td><td>タキサン系薬剤</td><td>色調変化・横溝・爪甲剥離</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:報告されている発現頻度の目安</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約44%</span>\n            <span class=\"stat-label\">パクリタキセル使用時の爪障害の報告頻度</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約35%</span>\n            <span class=\"stat-label\">ドセタキセル使用時の爪障害の報告頻度</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約10%</span>\n            <span class=\"stat-label\">免疫チェックポイント阻害薬による白斑(悪性黒色腫治療中)</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:American Cancer Society「Nail Changes」</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" },
+      { label: "American Cancer Society「Nail Changes」", url: "https://www.cancer.org/cancer/managing-cancer/side-effects/hair-skin-nails/nail-changes.html" }
+    ]
   }
 ];
 
