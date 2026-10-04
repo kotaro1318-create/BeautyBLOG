@@ -472,6 +472,17 @@ const ARTICLES = [
       { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" },
       { label: "American Cancer Society「Nail Changes」", url: "https://www.cancer.org/cancer/managing-cancer/side-effects/hair-skin-nails/nail-changes.html" }
     ]
+  },
+  {
+    title: "パーマもカラーも紫外線も。髪が傷むのは全部「キューティクルが開く」から",
+    date: "2026-10-04",
+    conclusion: "パーマ・カラーリング・紫外線による髪のダメージは、最外層のキューティクルが開いて内部のタンパク質が傷つくという共通のメカニズムで進むと考えられています。",
+    body: "「パーマをかけた後、なんだか髪がパサつく」「カラーを繰り返すうちに指通りが悪くなった」。そんな経験はありませんか。髪の毛は中心から毛髄質・毛皮質・毛小皮(キューティクル)という3層構造になっていて、最外層のキューティクルが外からの刺激を受け止める最初の防御ラインになっています。パーマ剤に含まれるアルカリ成分は、このキューティクルを一時的に開かせて薬剤を内部に浸透させ、毛皮質の中にあるタンパク質同士の結合(ジスルフィド結合、S-S結合)を還元剤で切ってから酸化剤でつなぎ直すことで髪の形をキープします。この仕組みは1905年にドイツのチャールズ・ネスラーが考案し、1940年に米国のマクドノーが常温でかけられる「コールドパーマ」を発明したことで広まったそうです。便利な反面、繰り返しすぎるとキューティクルが開いたままになり、内部の脂質(CMC)まで流出して髪の強度やツヤが落ちてしまいます。カラーリングや脱色もメラニン色素を分解する過程でタンパク質を酸化させるため似た構図でダメージが蓄積し、紫外線もタンパク質の変性やメラニンの退色を引き起こします。パーマ・カラー・紫外線、どれも「開いたキューティクルから内部が傷む」という共通点があるのは覚えておきたいポイントです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:髪の3層構造とダメージの受け方</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>層</th><th>位置・役割</th><th>ダメージの影響</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>毛小皮(キューティクル)</td><td>最外層、うろこ状に重なり内部を保護</td><td>アルカリ・紫外線で開き、損傷すると内部が露出</td></tr>\n              <tr><td>毛皮質(コルテックス)</td><td>S-S結合がハリ・強度を保持</td><td>パーマで結合が組み替えられ形状が変化</td></tr>\n              <tr><td>毛髄質(メデュラ)</td><td>最も内側の層</td><td>役割は未解明な部分が多い</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:パーマの化学を支える歴史と仕組み</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">1905年</span>\n            <span class=\"stat-label\">ドイツのチャールズ・ネスラーがパーマネントウェーブを考案</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">1940年</span>\n            <span class=\"stat-label\">米国のマクドノーが常温でかけられる「コールドパーマ」を発明</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">還元→酸化</span>\n            <span class=\"stat-label\">S-S結合を還元剤で切り、酸化剤でつなぎ直して形をキープする仕組み</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" },
+      { label: "『美容の科学』(日本コスメティック協会)" }
+    ]
   }
 ];
 
