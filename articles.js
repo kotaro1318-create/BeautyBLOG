@@ -571,6 +571,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "MedlinePlus (NIH)「Port-wine stain」", url: "https://medlineplus.gov/ency/article/001475.htm" }
     ]
+  },
+  {
+    title: "そのホクロ、本当にホクロ?「ABCDE」で覚える悪性黒色腫との見分け方",
+    date: "2026-10-13",
+    conclusion: "多くのホクロは良性の色素性母斑ですが、非対称・輪郭不整・色むら・直径6mm以上・変化という5つの特徴が当てはまる場合は、悪性黒色腫との鑑別のために皮膚科への相談が勧められています。",
+    body: "子どものころからあるホクロ、特に気にせず過ごしている人も多いと思いますが、医学的には色素性母斑(母斑細胞性母斑)という名前がついた、生まれつきの良性のできものです。色は褐色から黒色まで幅があり、ゆっくり時間をかけて大きくなっていくのが特徴とされています。母斑細胞が皮膚のどの層にあるかによって「境界母斑」「複合母斑」「真皮内母斑」の3タイプに分かれ、見た目の色調やレーザーなど治療への反応も変わってくるようです。やや特殊なタイプとして、悪性黒色腫と見分けが難しいSpitz母斑、周囲に白い輪ができるSutton母斑、生まれつき大きく将来的なリスクを伴う巨大色素性母斑(先天性で20cm以上の場合、5〜6%に悪性黒色腫が生じる可能性があるとされる)も知られています。診療で何より重視されるのは、皮膚がんの一種である悪性黒色腫との鑑別です。左右非対称、輪郭がギザギザ、色にムラがある、直径6mm以上、さらに形や大きさが変化してきた、といった特徴が当てはまる場合は、ダーモスコピーという拡大鏡での観察が行われ、疑わしいときは専門施設への紹介が検討されるとされています。なお、レーザー治療では母斑細胞を取りきれないことが多く、確実に除去したい場合は皮膚の切除が選ばれることが多いようです。「昔からあるから安全」と思い込まず、変化に気づいたときは一度相談してみるのが良さそうです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:ホクロ(色素性母斑)の3タイプ</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>タイプ</th><th>母斑細胞のある層</th><th>傾向</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>境界母斑</td><td>表皮と真皮の境界</td><td>比較的平坦なものが多い</td></tr>\n              <tr><td>複合母斑</td><td>境界〜真皮にまたがる</td><td>やや盛り上がることがある</td></tr>\n              <tr><td>真皮内母斑</td><td>真皮内</td><td>ドーム状に盛り上がりやすい</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:悪性黒色腫を疑うときの5つのサイン(ABCDE)</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">A</span>\n            <span class=\"stat-label\">Asymmetry 左右非対称な形</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">B</span>\n            <span class=\"stat-label\">Border 輪郭がギザギザ・不整</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">C</span>\n            <span class=\"stat-label\">Color 色むら・濃淡の混在</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">D</span>\n            <span class=\"stat-label\">Diameter 直径6mm以上</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">E</span>\n            <span class=\"stat-label\">Evolving 大きさ・形・色の変化</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚Q&A』(川田暁 編著)" },
+      { label: "『美容の科学』(日本コスメティック協会)" }
+    ]
   }
 ];
 
