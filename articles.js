@@ -582,6 +582,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁 編著)" },
       { label: "『美容の科学』(日本コスメティック協会)" }
     ]
+  },
+  {
+    title: "乾癬の肌、こすると広がるかも。「ケブネル現象」から考える日常ケアの工夫",
+    date: "2026-10-14",
+    conclusion: "乾癬は皮膚を強くこすると同じ場所に新しい皮疹ができやすい「ケブネル現象」があるため、洗い方・衣類・入浴・保湿のタイミングを工夫することが日常ケアの基本とされています。",
+    body: "乾癬は、皮膚のターンオーバーが異常に速くなり、赤みと白っぽい鱗屑を伴う盛り上がった発疹が繰り返しできる慢性の皮膚疾患です。特徴の一つが「ケブネル現象」と呼ばれる反応で、健康に見える部分の皮膚を強くこすったり傷つけたりすると、同じ場所に新しい皮疹が誘発されやすいと報告されています。そのため石けんでのごしごし洗いやナイロンタオルの使用は避けたいところで、海外の解説でも、ぬるめのお湯で済ませたあとは香料無添加の保湿剤をすぐに重ねることが勧められています。国内の皮膚科の実践ガイドでも、入浴は38℃程度・5〜10分を目安にし、熱すぎるお湯や長湯は皮脂を奪ってかゆみを強め、角質がふやける「浸軟現象」まで招くことがあると指摘されています。衣類も綿・絹・麻など肌あたりの柔らかい素材が勧められ、ナイロンやポリエステルは汗や摩擦によるかゆみを誘発しやすいため避けたほうが良いとされています。保湿剤は症状の重さによって剤形を選ぶのもポイントで、軽い乾燥にはローション、中等度にはクリーム、角層が厚くなった部分には軟膏やワセリンが使い分けられるようです。頭皮の乾癬には、専用シャンプーを短時間だけなじませて洗い流す「ショートコンタクトセラピー」という方法も使われているとのことです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:重症度で選ぶ、乾癬の保湿剤の剤形</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>症状の程度</th><th>向いている剤形</th><th>特徴</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>軽度の乾燥</td><td>ローション</td><td>のびがよく頭皮にも使いやすい</td></tr>\n              <tr><td>中等度</td><td>クリーム</td><td>保湿力と使用感のバランスがよい</td></tr>\n              <tr><td>重度・角層が厚い部分</td><td>軟膏・ワセリン</td><td>油分が多く密閉効果が高い</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:ケブネル現象を避けるための3つの工夫</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">洗い方</span>\n            <span class=\"stat-label\">石けんでのこすり洗いやナイロンタオルは避け、手で優しく洗う</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">衣類</span>\n            <span class=\"stat-label\">綿・絹・麻など肌あたりの柔らかい素材を選び、ナイロン・ポリエステルは避ける</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">入浴</span>\n            <span class=\"stat-label\">38℃前後・5〜10分を目安に、熱すぎるお湯や長湯は避ける</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:Mayo Clinic「Psoriasis - Diagnosis and treatment」</p>\n      </div>\n    ",
+    sources: [
+      { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)" },
+      { label: "Mayo Clinic「Psoriasis - Diagnosis and treatment」", url: "https://www.mayoclinic.org/diseases-conditions/psoriasis/diagnosis-treatment/drc-20355849" }
+    ]
   }
 ];
 
