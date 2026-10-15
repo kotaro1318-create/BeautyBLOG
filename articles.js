@@ -593,6 +593,17 @@ const ARTICLES = [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)" },
       { label: "Mayo Clinic「Psoriasis - Diagnosis and treatment」", url: "https://www.mayoclinic.org/diseases-conditions/psoriasis/diagnosis-treatment/drc-20355849" }
     ]
+  },
+  {
+    title: "冬の『しもやけ』、原因は寒さそのものより寒暖差。帰宅後のひと手間が予防の鍵かもしれません",
+    date: "2026-10-15",
+    conclusion: "しもやけは寒さだけでなく、冷えと急な温まりを繰り返す『寒暖差』によって血行が乱れることで起こりやすく、帰宅後や入浴時の温め方を工夫することが予防の第一歩とされています。",
+    body: "「手足の指先が赤紫色に腫れてかゆい」というしもやけ(凍瘡)、実は厳しい寒さそのものより「冷え」と「急な温まり」を繰り返す寒暖差の大きい環境で起こりやすいと言われています。外で冷えて縮んだ血管が、暖かい室内に入って急に広がる、という変化が繰り返されるうちに血行不良が進んでしまうためです。親がしもやけ体質だと子どもも生じやすいという、遺伝的な傾向があるとも指摘されています。対策の基本は「冷えたら一気に温めない」こと。帰宅時は濡れた靴下や手袋をすぐ脱いでぬるま湯で洗い、乾いたタオルで水分をしっかり拭き取るのがポイントとされています。入浴もいきなり湯船に浸からず、かけ湯で少しずつ体を慣らし、風呂上がりは足元の水分を早めに拭き取ると良いようです。できはじめはビタミンE入りの軟膏をマッサージしながら塗ると血行促進に役立つとされ、食事では熱に変わりやすいタンパク質、血流を助けるとされる生姜やねぎ類、ビタミンEなどが良いと言われています。ただし暖かくなっても治らず痛みが強い場合は、別の病気が隠れていることもあるため、自己判断せず早めに相談するほうが安心かもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:しもやけを防ぐ、場面別の対策</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>場面</th><th>具体的な対策</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>外出先からの帰宅時</td><td>濡れた靴下・手袋をすぐ脱ぎ、ぬるま湯で洗って乾いたタオルで拭く</td></tr>\n              <tr><td>入浴時</td><td>湯船にいきなり入らず、かけ湯で徐々に体を温める</td></tr>\n              <tr><td>入浴後</td><td>足拭きマットなどで水分をすぐに拭き取る</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:しもやけ予防に役立つとされる食事のポイント</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">タンパク質</span>\n            <span class=\"stat-label\">肉・魚・卵・大豆製品。摂取時に熱へ変わりやすく冷え対策に良いとされる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">生姜・ねぎ類</span>\n            <span class=\"stat-label\">ジンゲロールやアリシンが血流を助けるとされる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">ビタミンE</span>\n            <span class=\"stat-label\">うなぎ・アーモンド・卵黄など。血行促進に役立つとされる</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:Mayo Clinic「Chilblains - Symptoms and causes」</p>\n      </div>\n    ",
+    sources: [
+      { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)" },
+      { label: "Mayo Clinic「Chilblains - Symptoms and causes」", url: "https://www.mayoclinic.org/diseases-conditions/chilblains/symptoms-causes/syc-20351097" }
+    ]
   }
 ];
 
