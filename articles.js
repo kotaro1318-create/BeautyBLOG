@@ -604,6 +604,17 @@ const ARTICLES = [
       { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子・西本周平)" },
       { label: "Mayo Clinic「Chilblains - Symptoms and causes」", url: "https://www.mayoclinic.org/diseases-conditions/chilblains/symptoms-causes/syc-20351097" }
     ]
+  },
+  {
+    title: "あざや白斑、「隠せない」とあきらめなくていい。専門医療の現場の「メディカルメイク」とは",
+    date: "2026-10-16",
+    conclusion: "あざや白斑など肌の色の変化は、治療と並行して専門のカバーメイク「メディカルメイク」を使うことで、見た目の負担を軽くする選択肢があります。",
+    body: "太田母斑や尋常性白斑、やけどの痕といった肌の色の変化は、レーザー治療や手術で根本的な改善を目指せる一方、効果が出るまでに時間がかかったり、通院や痛みの負担が伴うこともあります。そこで治療と並行して使われているのが「メディカルメイク」と呼ばれる専門のカバーメイクです。普通のファンデーションとは目的が違い、傷やあざ、色素異常を目立たなくしつつ元の肌色を再現することを目指して作られているとされ、基本色12色・調整色6色の計18色を組み合わせて一人ひとりの肌色に近づけていく方法が紹介されています。太田母斑のように色素が皮膚の深い層にあるタイプは、表面的なシミよりもファンデーションで隠しづらいため、こうした専門技術が特に役立つと言われています。白斑には肌の色に発色する着色料が使われることもあり、塗ってから発色するまで約3時間、色が定着するまで約6時間かかるものの、洗顔しても2〜3日は色落ちしにくいという特徴があるようです。医療機関によっては、皮膚科医の診察のあと専門インストラクターがマンツーマンで塗り方を指導する体制もあり、見た目の負担を減らす手段の一つとして広がりつつあると報告されています。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:治療とメディカルメイクの役割分担</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th></th><th>レーザー・手術治療</th><th>メディカルメイク</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>効果が出るまで</td><td>時間がかかる(根治的)</td><td>その場で即効</td></tr>\n              <tr><td>負担</td><td>痛みや通院が伴うことも</td><td>塗るだけの対症療法</td></tr>\n              <tr><td>向いているケース</td><td>色素そのものを減らしたい場合</td><td>すぐに見た目を整えたい場合</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:白斑用カラーリング剤が肌になじむまでの時間</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">発色まで</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:33%\"></span></span>\n            <span class=\"bar-value\">約3時間</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">色の定着まで</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:67%\"></span></span>\n            <span class=\"bar-value\">約6時間</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">洗顔しても色落ちしにくい期間</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">2〜3日</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容の科学』(日本コスメティック協会)" },
+      { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" }
+    ]
   }
 ];
 
