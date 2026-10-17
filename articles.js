@@ -615,6 +615,17 @@ const ARTICLES = [
       { label: "『美容の科学』(日本コスメティック協会)" },
       { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" }
     ]
+  },
+  {
+    title: "シワ治療だけじゃない「ボツリヌストキシン注射」、エラや多汗症にも使われる理由",
+    date: "2026-10-17",
+    conclusion: "ボツリヌストキシン注射は眉間や目尻のシワ治療として知られていますが、咬筋や汗腺にも作用するため、フェイスラインの調整や多汗症の治療など応用範囲の広い治療として使われています。",
+    body: "「ボトックス」という名前でよく知られるボツリヌストキシン注射、実はシワ治療専用の技術ではありません。もともとはボツリヌス菌から作られる蛋白質で、筋肉への指令を伝える神経伝達物質の放出を抑えて過剰な収縮を和らげる、という仕組みを利用した治療です。日本では眼瞼痙攣などの医療用途として長年使われてきた実績があり、2009年以降は成人の眉間・目尻の表情ジワに対しても厚生労働省の承認を得た製剤が登場したそうです。\r\n\r\nこの「筋肉の収縮を和らげる」という性質を活かせば、応用先はシワだけにとどまりません。エラの筋肉(咬筋)に注射すればフェイスラインがすっきりして見えやすくなり、同じ筋肉への作用で歯の食いしばりを軽くする目的にも使われているとされています。さらに汗腺の近くに注射すれば汗の分泌そのものを抑えられるため、多汗症治療としても応用されており、ふくらはぎの筋肉を柔らかくする目的で使われる例も報告されています。\r\n\r\n効果の出方にも特徴があり、注射後すぐにというよりは2〜3日かけて効果が出始め、2〜3週間ほどでピークに達し、そこから4〜6カ月ほど持続するというのが大まかな目安とされています。ただし妊娠中・授乳中の人や閉塞隅角緑内障がある人は注意が必要とされ、短期間に大量・頻回に注射を繰り返すと効きにくくなる抗体ができるリスクも指摘されています。血管内への誤注入による皮膚壊死リスクも専門書で触れられており、量や間隔、施術者の技術を含めて慎重に選びたい治療のひとつといえそうです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:ボツリヌストキシン注射、部位別の主な使われ方</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>注射する部位</th><th>主な目的</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>眉間・目尻</td><td>表情ジワを目立たなくする(厚労省承認の適応)</td></tr>\n              <tr><td>咬筋(エラ)</td><td>フェイスラインの調整/食いしばりの軽減</td></tr>\n              <tr><td>汗腺付近</td><td>多汗症治療(汗の分泌を抑える)</td></tr>\n              <tr><td>ふくらはぎ</td><td>筋肉を柔らかくする目的で使われる例も</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁 編著)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:効果が出るまで・続く期間の目安</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">注射直後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:5%\"></span></span>\n            <span class=\"bar-value\">まだ変化なし</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2〜3日後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:35%\"></span></span>\n            <span class=\"bar-value\">効果が出始める</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">2〜3週間後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">効果のピーク</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">4〜6カ月後</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:15%\"></span></span>\n            <span class=\"bar-value\">効果が徐々に消失</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容のヒフ科学』(安田利顕)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚Q&A』(川田暁 編著)" },
+      { label: "『美容のヒフ科学』(安田利顕)" }
+    ]
   }
 ];
 
