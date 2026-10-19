@@ -637,6 +637,17 @@ const ARTICLES = [
       { label: "Monthly Book Derma. No.262「再考!美容皮膚診療-自然な若返りを望む患者への治療のコツ-」(森脇真一 編集企画)" },
       { label: "『美容のヒフ科学』(安田利顕)" }
     ]
+  },
+  {
+    title: "シミ取りクリームの「切り札」、レーザーが苦手な色素斑にはトレチノイン+ハイドロキノンという選択肢も",
+    date: "2026-10-19",
+    conclusion: "トレチノインとハイドロキノンを組み合わせた外用治療は、メラニンの生成を抑えつつ排出も早めることで、レーザーが効きにくい表皮の色素斑に対する選択肢として使われているようです。",
+    body: "シミ治療といえばレーザーのイメージが強いかもしれませんが、実はレーザーが苦手なシミも存在します。炎症後色素沈着のように色が肌の表皮部分にとどまっているタイプは、レーザーで熱を加えるとむしろ悪化しかねないためです。そこで切り札として使われるのが、トレチノイン(レチノイン酸)とハイドロキノンを組み合わせた外用治療。ハイドロキノンはメラニンそのものが作られる量を抑える役目を持ち、トレチノインは表皮の生まれ変わり(ターンオーバー)を早めて、すでにできたメラニンを排出するスピードを速める役目を担うとされています。生成を抑える薬と排出を早める薬を同時に使うことで、表皮にとどまる色素を効率よく薄くできるというわけです。この治療でまず大事なのは、シミの正確な見極め。老人性色素斑か肝斑か、そばかすか、あるいは色素が真皮まで及ぶ太田母斑なのかによって、外用だけで良いのか、レーザーが必要なのかが変わってくるためです。トレチノインは国内未承認薬で、使用中は赤みなどの皮膚炎を伴うのがほぼ前提とされ、医師の指導のもとシミの部分だけに少量を塗り、連続使用は長くても8週間ほどにとどめるといった細かな管理が必要なようです。また摩擦や紫外線による日常の小さな炎症の積み重ねも色素沈着の一因になりうるとされ、薬だけでなく生活習慣の見直しも治療の一部と言えそうです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:トレチノインとハイドロキノンの役割の違い</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>成分</th><th>主な作用</th><th>担う役割</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>ハイドロキノン</td><td>メラニンの生成を抑える</td><td>「作られる量」を減らす</td></tr>\n              <tr><td>トレチノイン</td><td>表皮のターンオーバーを促進</td><td>「排出のスピード」を速める</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:Monthly Book Derma. No.262「再考!美容皮膚診療」</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:色素斑のタイプと治療の向き・不向き</p>\n        <div class=\"viz-diagram-wrap\">\n          <svg viewBox=\"0 0 600 200\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"色素が表皮にとどまる場合は外用薬、真皮まで及ぶ場合は外用薬とレーザーを併用する図\">\n            <rect x=\"20\" y=\"30\" width=\"260\" height=\"140\" rx=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-opacity=\"0.35\"/>\n            <text x=\"150\" y=\"55\" text-anchor=\"middle\" font-size=\"15\" fill=\"currentColor\">表皮にとどまる色素斑</text>\n            <text x=\"150\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\" opacity=\"0.75\">(そばかす・扁平母斑など)</text>\n            <text x=\"150\" y=\"120\" text-anchor=\"middle\" font-size=\"14\" fill=\"currentColor\">外用薬のみで改善を期待</text>\n            <rect x=\"320\" y=\"30\" width=\"260\" height=\"140\" rx=\"12\" fill=\"none\" stroke=\"currentColor\" stroke-opacity=\"0.35\"/>\n            <text x=\"450\" y=\"55\" text-anchor=\"middle\" font-size=\"15\" fill=\"currentColor\">真皮まで及ぶ色素斑</text>\n            <text x=\"450\" y=\"80\" text-anchor=\"middle\" font-size=\"12\" fill=\"currentColor\" opacity=\"0.75\">(太田母斑・ADMなど)</text>\n            <text x=\"450\" y=\"112\" text-anchor=\"middle\" font-size=\"14\" fill=\"currentColor\">外用薬で表皮側を先に整え</text>\n            <text x=\"450\" y=\"134\" text-anchor=\"middle\" font-size=\"14\" fill=\"currentColor\">その後レーザーを併用</text>\n          </svg>\n        </div>\n        <p class=\"viz-note\">出典:Monthly Book Derma. No.262「再考!美容皮膚診療」</p>\n      </div>\n    ",
+    sources: [
+      { label: "Monthly Book Derma. No.262「再考!美容皮膚診療-自然な若返りを望む患者への治療のコツ-」(森脇真一 編集企画)" },
+      { label: "『美容皮膚Q&A』(川田暁)" }
+    ]
   }
 ];
 
