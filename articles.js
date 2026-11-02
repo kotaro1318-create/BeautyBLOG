@@ -791,6 +791,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁)" },
       { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" }
     ]
+  },
+  {
+    title: "フロスは歯みがきの前?後?「正しい順番」で変わるフッ素の効き方",
+    date: "2026-11-02",
+    conclusion: "デンタルフロスを歯みがきの前に使い、仕上げのすすぎを控えめにすると、フッ化物(フッ素)の効果をより活かせる可能性があると報告されています。",
+    body: "「フロスは歯みがきの後」「仕上げは念入りにすすぐ」が習慣になっていませんか。実はこの順番、フッ化物(フッ素)の効果を十分に活かせていない可能性があるようです。\n\n米国歯周病学会(AAP)が歯学生25人を対象に行ったクロスオーバー試験では、歯みがきの前にフロスを使ったグループの方が、歯と歯の間の歯垢(プラーク)の減り方も、歯間に残るフッ化物の濃度も、後にフロスをしたグループより高かったと報告されています。先にフロスで歯間の汚れをかき出しておくことで、歯みがき粉に含まれるフッ化物が歯と歯の間までしっかり行き渡りやすくなる、という理屈のようです。ただしAAP自身も「順番についての統一見解はまだない」としており、虫歯そのものが減るかどうかまで確かめた研究ではない点には注意が必要です。\n\nもう一つ見直したいのが、歯みがき後のすすぎ方。英国の口腔保健団体Oral Health Foundationは、歯みがき粉に含まれるフッ化物を洗い流してしまわないよう、仕上げは水で何度もすすぐのではなく、軽く吐き出す程度にとどめるよう呼びかけています。すすぎすぎると、せっかく歯の表面に乗ったフッ化物の保護効果が薄まってしまうかもしれません。\n\n「フロス→歯みがき→軽くすすぐ」。小さな順番の見直しだけで、同じ歯みがき粉の効果をもう少し引き出せるかもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:見直したい歯みがきの順番</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>ステップ</th><th>ポイント</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>①フロス・歯間ブラシ</td><td>歯と歯の間の歯垢を先にかき出す</td></tr>\n              <tr><td>②フッ化物入り歯みがき粉でブラッシング</td><td>フッ化物が歯の表面・歯間まで行き渡りやすくなる</td></tr>\n              <tr><td>③仕上げは軽く吐き出す</td><td>何度もすすがず、フッ化物を歯の表面に残す</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:American Academy of Periodontology「New Study Suggests the Ideal Sequence for Removing Plaque」</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:AAPの研究で分かったこと</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">25人</span>\n            <span class=\"stat-label\">順番の違いを比較したクロスオーバー試験の歯学生の人数</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">フロス先行で上昇</span>\n            <span class=\"stat-label\">歯間のフッ化物濃度・歯垢の減少量がより大きかった結果</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">統一見解はまだない</span>\n            <span class=\"stat-label\">AAP自身による順番に関する補足コメント</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:American Academy of Periodontology、Oral Health Foundation(英国)</p>\n      </div>\n    ",
+    sources: [
+      { label: "American Academy of Periodontology「New Study Suggests the Ideal Sequence for Removing Plaque」", url: "https://www.perio.org/press-release/new-study-suggests-the-ideal-sequence-for-removing-plaque/" },
+      { label: "Dentistry.co.uk「Spit instead of rinsing for better oral health, Oral Health Foundation urges」", url: "https://dentistry.co.uk/?p=53096" }
+    ]
   }
 ];
 
