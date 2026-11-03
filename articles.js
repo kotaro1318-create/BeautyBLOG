@@ -802,6 +802,17 @@ const ARTICLES = [
       { label: "American Academy of Periodontology「New Study Suggests the Ideal Sequence for Removing Plaque」", url: "https://www.perio.org/press-release/new-study-suggests-the-ideal-sequence-for-removing-plaque/" },
       { label: "Dentistry.co.uk「Spit instead of rinsing for better oral health, Oral Health Foundation urges」", url: "https://dentistry.co.uk/?p=53096" }
     ]
+  },
+  {
+    title: "1日に抜ける髪の毛、何本までなら「普通」?毛周期というものさしで考える",
+    date: "2026-11-03",
+    conclusion: "1日に90〜150本ほど髪が抜けるのは毛周期の自然な範囲内と考えられており、本数そのものよりも急な増減や偏りのほうが見るべきサインかもしれません。",
+    body: "シャンプーのときに排水口にたまった髪を見て、ゾッとした経験はありませんか。でも髪が抜けること自体は、実はごく普通の生理現象です。1本の髪は「成長期(アナゲン)→退行期(カタゲン)→休止期(テロゲン)」というサイクルを繰り返していて、頭髪の場合は全体の8〜9割が成長期にあるとされています。成長期の長さは場所によって違い、頭髪は2〜6年とかなり長く続くのに対し、生え際のような細い毛は4〜9か月ほどで入れ替わるそうです。休止期に入った髪は自然に抜け落ちていくので、1日あたり20〜30代で約90本、50〜60代になると約150本ほど抜けるのが目安とされています。年齢とともに本数が増えるのは、成長期そのものが徐々に短くなっていく影響だと考えられています。髪の伸びる速さにも個人差があり、1日あたり0.2〜0.5mmほど、年代では16〜24歳がもっとも速く、65歳以降はゆっくりになる傾向があるようです。大切なのは「本数」よりも「変化」のほう。急に抜け毛が増えた、特定の場所だけ薄くなった、といった偏りがあるときは、毛周期が何らかの理由で乱れているサインかもしれないので、気になる場合は早めに専門家に相談するのがよさそうです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:毛周期(ヘアサイクル)の3段階</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">成長期</span>\n            <span class=\"stat-label\">頭髪全体の80〜90%。期間は2〜6年と長い</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">退行期</span>\n            <span class=\"stat-label\">毛包が縮み、毛の成長が止まっていく準備期間</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">休止期</span>\n            <span class=\"stat-label\">毛包が活動を休止し、やがて自然に毛が抜け落ちる</span>\n          </div>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:年代別・1日の自然な抜け毛本数の目安</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">20〜30代</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:60%\"></span></span>\n            <span class=\"bar-value\">約90本/日</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">50〜60代</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">約150本/日</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容のヒフ科学』(安田利顕)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容のヒフ科学』(安田利顕)" },
+      { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" }
+    ]
   }
 ];
 
