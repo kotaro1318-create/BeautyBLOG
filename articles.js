@@ -846,6 +846,17 @@ const ARTICLES = [
       { label: "『美容のヒフ科学』(安田利顕)" },
       { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" }
     ]
+  },
+  {
+    title: "香水の「オードトワレ」と「パルファム」、違いは濃さだけじゃなかった",
+    date: "2026-11-07",
+    conclusion: "香水の呼び名は香料の配合濃度を表す目安で、香り自体はつけた瞬間から時間とともに「トップ→ミドル→ベース」と変化していくものだと説明されています。",
+    body: "香水コーナーで「オードトワレ」「パルファム」といった表示を見て、なんとなく値段が高いほうを上質だと思っていませんか。実はこの呼び名の違い、香りの良さではなく香料をどのくらいの濃度で配合しているかの目安だとされています。濃い順に並べると、パルファムが香料濃度15〜30%程度、オードパルファムが5〜15%、オードトワレが5〜10%、オーデコロンが2〜7%、フレッシュコロンが1〜3%程度。濃度が高いほど香りの持続時間も長くなりやすいようです。もう一つ覚えておきたいのが、香水の香りは一つではなく時間とともに移り変わっていくという点。つけた直後にまず感じる揮発性の高い香りが「トップノート」、その後に香り全体の中心として立つのが「ミドルノート」、最後に肌の上で長く残るのが「ベースノート」と、3段階で変化していくと説明されています。ちなみに香料の安全性は国の法律ではなく、業界団体IFRAによる自主規制の枠組みで管理されているそうです。香水を選ぶときは濃度表示と香りの変化、両方を意識すると好みの印象を長く保ちやすいかもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:香水の種類と香料濃度の目安</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">パルファム</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">15〜30%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">オードパルファム</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:44%\"></span></span>\n            <span class=\"bar-value\">5〜15%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">オードトワレ</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:33%\"></span></span>\n            <span class=\"bar-value\">5〜10%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">オーデコロン</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:20%\"></span></span>\n            <span class=\"bar-value\">2〜7%</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">フレッシュコロン</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:9%\"></span></span>\n            <span class=\"bar-value\">1〜3%</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:香りが変化していく3つの段階</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">トップノート</span>\n            <span class=\"stat-label\">つけた直後、揮発性の高い香りが第一印象を作る</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">ミドルノート</span>\n            <span class=\"stat-label\">時間が経ち、香り全体の中心・骨格として立つ</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">ベースノート</span>\n            <span class=\"stat-label\">最後に肌の上に長く残る、残香性を担う香り</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:IFRA(国際香粧品香料協会)公式サイト</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容の科学』(日本コスメティック協会)" },
+      { label: "IFRA(International Fragrance Association)公式サイト「About Us」", url: "https://ifrafragrance.org/about-us" }
+    ]
   }
 ];
 
