@@ -857,6 +857,17 @@ const ARTICLES = [
       { label: "『美容の科学』(日本コスメティック協会)" },
       { label: "IFRA(International Fragrance Association)公式サイト「About Us」", url: "https://ifrafragrance.org/about-us" }
     ]
+  },
+  {
+    title: "「化粧」はいつから?黄土から始まった人類20万年の“盛る”歴史",
+    date: "2026-11-08",
+    conclusion: "化粧の起源は約20万年前の黄土を使った彩色まで遡るとされ、「美しく見せたい」という欲求は人類にとってかなり古くからの営みだったようです。",
+    body: "「化粧は現代的な文化」というイメージがありますが、実はその起源はびっくりするほど古いようです。ネアンデルタール人が黄土(オーカー)を顔や体に塗っていた痕跡は、約20万年前にまで遡るとされ、約4万年前のクロマニヨン人も赤い顔料を使っていた跡が見つかっているそうです。古代エジプトになると一気に「道具」が揃います。紀元前3000年頃の遺跡から化粧瓶や化粧パレット、手鏡が出土し、ツタンカーメン王の黄金マスクにはすでにアイラインが描かれていました。香油を使った沐浴後のスキンケアや、ヘンナで爪や手のひらを染める習慣もあったと伝わっています。古代ローマでは色白が美の基準となり、鉛白(塩基性炭酸鉛)や白亜を肌に塗って白さを演出していたほか、夜寝る前にパックのようなものを顔に乗せる習慣もこの頃から始まっていたとされています。日本に目を向けると、江戸時代には白粉(おしろい)が大流行しましたが、明治期になると鉛白粉による鉛中毒が社会問題化し、無鉛白粉の開発へとつながりました。「盛る」という行為は、美しさを求める気持ちと同時に、時に健康との綱引きの歴史でもあったのかもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:化粧の歴史、年代別のトピックス</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>時代</th><th>できごと</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>約20万年前</td><td>ネアンデルタール人が黄土で皮膚に彩色</td></tr>\n              <tr><td>約4万年前</td><td>クロマニヨン人が赤色顔料を使用</td></tr>\n              <tr><td>紀元前3000年頃</td><td>古代エジプトで化粧瓶・パレット・アイラインが登場</td></tr>\n              <tr><td>古代ローマ</td><td>鉛白・白亜による色白メイクと夜のパック習慣が流行</td></tr>\n              <tr><td>江戸時代(日本)</td><td>白粉(おしろい)が大流行</td></tr>\n              <tr><td>明治時代(日本)</td><td>鉛中毒が社会問題化し、無鉛白粉が開発される</td></tr>\n            </tbody>\n          </table>\n        </div>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:化粧の起源、どれだけ古い?</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約20万年前</span>\n            <span class=\"stat-label\">ネアンデルタール人による黄土彩色の痕跡</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">約5000年前</span>\n            <span class=\"stat-label\">古代エジプトで化粧道具一式(瓶・パレット・鏡)が確立</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)、The Metropolitan Museum of Art「Kohl Stick」</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容の科学』(日本コスメティック協会)" },
+      { label: "The Metropolitan Museum of Art「Kohl Stick」", url: "https://www.metmuseum.org/art/collection/search/560226" }
+    ]
   }
 ];
 
