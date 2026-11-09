@@ -868,6 +868,17 @@ const ARTICLES = [
       { label: "『美容の科学』(日本コスメティック協会)" },
       { label: "The Metropolitan Museum of Art「Kohl Stick」", url: "https://www.metmuseum.org/art/collection/search/560226" }
     ]
+  },
+  {
+    title: "美容医療を受ける前、日焼け止めは「当日」からでは遅い?施術前後のスキンケアで変わる仕上がり",
+    date: "2026-11-09",
+    conclusion: "レーザーやピーリングなど美容医療の効果を安全に引き出すには、施術当日だけでなく数か月前からの紫外線対策と、術後の保湿・美白ケアを始めるタイミングの管理が重要だとされています。",
+    body: "「せっかく時間とお金をかけてレーザーを受けたのに、思ったほど変わらなかった…」。そんな声の裏には、施術前後のスキンケアの“タイミング”が関わっているかもしれません。美容皮膚科の現場では、施術前後のケアを「守りのケア」と「攻めのケア」の2段階に分けて考えるのが基本だとされています。まず守りのケアの中心は紫外線対策。施術の2〜3か月前から低刺激な日焼け止めで遮光を徹底しておくことが、術後に起こりやすい炎症後色素沈着(かえってシミが濃くなってしまう現象)を防ぐポイントとされています。直前になって急に塗り始めても、すでに肌には紫外線の影響が蓄積している可能性があるためです。施術後は肌が乾燥しやすくなるので保湿を重視しつつ、化粧水をコットンで押し込むような摩擦は避けるのが基本とされています。そして見落とされがちなのが「攻めのケア」を再開するタイミングです。美白外用薬などを使い始めてよい時期は施術方法によって差があり、浅いケミカルピーリングなら翌日から、レーザーの場合はかさぶたが取れて肌が整ってからが目安とされています。焦って早く始めるとかえって肌への負担になることもあるようなので、医師の指示に沿ったタイミングを守ることが、仕上がりの満足度を左右する意外な鍵なのかもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:施術前後の「守りのケア」と「攻めのケア」</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>区分</th><th>内容</th><th>タイミングの目安</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>守りのケア</td><td>低刺激な日焼け止めによる紫外線対策</td><td>施術の2〜3か月前から徹底</td></tr>\n              <tr><td>守りのケア</td><td>保湿・摩擦を避けた洗顔・化粧水</td><td>施術直後から継続</td></tr>\n              <tr><td>攻めのケア</td><td>美白外用薬などの再開</td><td>浅いピーリング:翌日から/レーザー:上皮化後</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚医学BEAUTY 第41号』特集:スキンケア</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:見落とされがちな3つのタイミング</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">2〜3か月前</span>\n            <span class=\"stat-label\">紫外線対策を始めておきたい目安</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">翌日から</span>\n            <span class=\"stat-label\">浅いケミカルピーリング後、保湿を本格化できる目安</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">上皮化後</span>\n            <span class=\"stat-label\">レーザー治療後、攻めのケアを再開できる目安</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『Monthly Book Derma. No.262』「再考!美容皮膚診療」</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容皮膚医学BEAUTY 第41号』特集:スキンケア" },
+      { label: "『Monthly Book Derma. No.262』「再考!美容皮膚診療」" }
+    ]
   }
 ];
 
