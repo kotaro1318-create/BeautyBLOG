@@ -923,6 +923,17 @@ const ARTICLES = [
       { label: "『美容皮膚Q&A』(川田暁)" },
       { label: "『美容の科学』(日本コスメティック協会)" }
     ]
+  },
+  {
+    title: "スマホのブルーライトでシミが増える?本当に怖いのは「屋外の光」だったという話",
+    date: "2026-11-14",
+    conclusion: "画面から出るブルーライトの強さは太陽光に含まれるブルーライトの数百分の一程度で肌への影響はほぼないとされる一方、太陽光そのもののブルーライトや、窓を通り抜けるUV-Aには注意が必要とされています。",
+    body: "スマホやPCの画面から出る「ブルーライト」で肌が荒れたりシミが濃くなったりすると気にしている人、意外と多いかもしれません。ただ美容分野の資料によると、画面から出るブルーライトの強さは太陽光に含まれるブルーライトの数百分の一程度にすぎず、肌への影響はほとんどないとされているそうです。一方で見落とされがちなのが、屋外の太陽光そのものに含まれるブルーライト。こちらは強度が高く、シミを濃くするというデータがあると報告されています。さらに紫外線の中でも波長の長いUV-Aは、曇りの日でも8割以上が雲を通り抜けるだけでなく、窓ガラスも透過して部屋の中に入り込み、真皮まで届いてシワやたるみの一因になるともいわれています。「画面を見る時間を減らす」よりも、「室内でも窓際では紫外線対策をする」ほうが、実はずっと効果的なのかもしれません。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:ブルーライトの強さ比較(イメージ)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">スマホ・PC画面</span>\n            <div class=\"bar-track\"><div class=\"bar-fill\" style=\"width:4%\"></div></div>\n            <span class=\"bar-value\">相対値 1</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">太陽光(屋外)</span>\n            <div class=\"bar-track\"><div class=\"bar-fill\" style=\"width:100%\"></div></div>\n            <span class=\"bar-value\">相対値 数百以上</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『コスメの教科書』(日本化粧品検定協会) ※「数百分の一程度」という記述をもとにした相対的なイメージ</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:見落とされがちな「光」のポイント</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">数百分の一</span>\n            <span class=\"stat-label\">画面のブルーライトは太陽光のブルーライトに対しこの程度の強さとされる</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">80%以上</span>\n            <span class=\"stat-label\">曇りの日でも雲を通過してくる紫外線の割合</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">UV-Aは窓ガラスを透過</span>\n            <span class=\"stat-label\">室内でも紫外線(UV-A)が真皮まで届き、シワ・たるみの一因になるとされる</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容のヒフ科学』(安田利顕)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『コスメの教科書』(日本化粧品検定協会)" },
+      { label: "『美容のヒフ科学』(安田利顕)" }
+    ]
   }
 ];
 
