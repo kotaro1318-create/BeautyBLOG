@@ -945,6 +945,17 @@ const ARTICLES = [
       { label: "『MB Derma No.262 再考!美容皮膚診療』" },
       { label: "『美容の科学』(日本コスメティック協会)" }
     ]
+  },
+  {
+    title: "肌診断はスマホの自撮りで。「AIスキン分析」市場が急拡大している理由",
+    date: "2026-11-16",
+    conclusion: "毛穴やシミなどを画像解析して処方を提案する「AIスキン分析」の市場は、まだ定義によって推計の幅が大きいものの、どの調査でも2025年以降急成長が見込まれています。",
+    body: "化粧品カウンターや通販サイトで「自撮りで肌を分析してぴったりの1本を提案」というサービスを見かけることが増えてきました。これを支えているのが「AIスキン分析」と呼ばれる技術で、画像から毛穴の開き・色素沈着・水分量などを数値化し、個人に合った処方やケア手順を提示する仕組みです。市場調査会社の推計を見ると、この技術だけに絞った狭い意味での市場規模は2025年に約18.2億ドル、2026年には約21.3億ドルとされ、2035年には約90.8億ドルまで、年平均16.5%というペースで拡大すると見込まれています。一方、肌分析アプリだけでなく処方提案AIや美容機器との連携まで含めた広い意味での「AIスキンケア市場」で見ると、2025年時点で既に約49.2億ドル規模とされ、2035年には約274億ドルに達するという予測も出ています。こちらは北米が最大の約36%のシェアを占めるとされ、医療機関よりも通販・リテール向けの活用が先行している印象です。ただしAIによる肌分析は、あくまで肌表面の画像から傾向を推定するものであり、気になる症状や肌トラブルがあるときは、やはり皮膚科での診察に代わるものではないという点は押さえておきたいところです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:「AIスキン分析」市場規模の推計(定義による違い)</p>\n        <div class=\"viz-bars\">\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">狭義:2025年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:7%\"></span></span>\n            <span class=\"bar-value\">約18.2億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">狭義:2035年(予測)</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:33%\"></span></span>\n            <span class=\"bar-value\">約90.8億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">広義:2025年</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:18%\"></span></span>\n            <span class=\"bar-value\">約49.2億ドル</span>\n          </div>\n          <div class=\"bar-row\">\n            <span class=\"bar-label\">広義:2035年(予測)</span>\n            <span class=\"bar-track\"><span class=\"bar-fill\" style=\"width:100%\"></span></span>\n            <span class=\"bar-value\">約274億ドル</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:Next Move Strategy Consulting「AI Skin Analysis Market」、Towards Healthcare「AI in Skincare Market Sizing」</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:知っておきたい数字</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">年16〜19%前後</span>\n            <span class=\"stat-label\">各社推計に共通する、今後の年平均成長率(CAGR)の目安</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">北米が約36%</span>\n            <span class=\"stat-label\">広義のAIスキンケア市場で最大シェアを占める地域</span>\n          </div>\n        </div>\n      </div>\n    ",
+    sources: [
+      { label: "Next Move Strategy Consulting「AI Skin Analysis Market」", url: "https://www.nextmsc.com/report/ai-skin-analysis-market-hc5146" },
+      { label: "Towards Healthcare「AI in Skincare Market Sizing」", url: "https://www.towardshealthcare.com/insights/ai-in-skincare-market-sizing" }
+    ]
   }
 ];
 
