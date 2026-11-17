@@ -956,6 +956,17 @@ const ARTICLES = [
       { label: "Next Move Strategy Consulting「AI Skin Analysis Market」", url: "https://www.nextmsc.com/report/ai-skin-analysis-market-hc5146" },
       { label: "Towards Healthcare「AI in Skincare Market Sizing」", url: "https://www.towardshealthcare.com/insights/ai-in-skincare-market-sizing" }
     ]
+  },
+  {
+    title: "脱毛、方法によって「できる場所」が違う理由。ワックスとレーザーの仕組みを比べてみると",
+    date: "2026-11-17",
+    conclusion: "脱毛には毛を物理的に抜いたり溶かしたりする方法と、毛根そのものを破壊する医療行為があり、仕組みの違いが「どこで受けられるか」を分けています。",
+    body: "「ムダ毛処理」とひとくくりにされがちですが、脱毛の方法ごとに仕組みも、受けられる場所も実はかなり違うそうです。エステサロンでの脱毛としてよく知られているのが、油性のワックスを温めて肌に塗り、固まったワックスごと毛を引き抜く「ワックス脱毛」と、硫化バリウムやチオグリコール酸塩といった強アルカリ成分で毛そのものを化学的に溶かす「ケミカルリムービング」。どちらも毛根そのものを壊すわけではないため、医療行為にはあたらず、エステサロンでも施術できるとされています。一方、医療機関で主流の「医療レーザー脱毛」は、毛の黒色メラニンだけに反応する熱エネルギーで毛根を破壊する仕組みで、こちらは医師法の規制対象となる医療行為。さらにレーザー脱毛にも、単発の高出力で毛包を一気に破壊する「ショット式」、低出力をじわじわ当てて熱を蓄積させる「蓄熱式」、皮膚を吸引しながら照射する「吸引式」といった種類があり、痛みの感じ方や、産毛・地黒肌への向き不向きも異なるとされています。さらに、レーザーで硬くなってしまった毛や白髪には、毛根そのものに針を刺して電気で破壊する「絶縁針脱毛」という方法も使われるそうです。「脱毛ならどこでも同じ」ではなく、仕組みを知っておくと施術選びの納得感が変わってきそうです。",
+    visual: "\n      <div class=\"viz\">\n        <p class=\"viz-title\">表:主な脱毛方法と仕組み・位置づけ</p>\n        <div class=\"viz-table-wrap\">\n          <table class=\"viz-table\">\n            <thead>\n              <tr><th>方法</th><th>仕組み</th><th>位置づけ</th></tr>\n            </thead>\n            <tbody>\n              <tr><td>ワックス脱毛</td><td>温めたワックスで毛を引き抜く</td><td>医療行為ではない(エステ可)</td></tr>\n              <tr><td>ケミカルリムービング</td><td>強アルカリ成分で毛を化学的に溶かす</td><td>医療行為ではない(エステ可)</td></tr>\n              <tr><td>医療レーザー脱毛</td><td>メラニンに反応する熱で毛根を破壊</td><td>医療行為(医師法の規制対象)</td></tr>\n              <tr><td>絶縁針脱毛</td><td>毛根に針を刺し電気で破壊</td><td>医療行為</td></tr>\n            </tbody>\n          </table>\n        </div>\n        <p class=\"viz-note\">出典:『美容の科学』(日本コスメティック協会)、『美容皮膚Q&A』(川田暁)</p>\n      </div>\n      <div class=\"viz\">\n        <p class=\"viz-title\">図:医療レーザー脱毛、3つの照射方式</p>\n        <div class=\"viz-stats\">\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">ショット式</span>\n            <span class=\"stat-label\">単発の高出力照射で毛包を破壊。効果の実感が早いが痛みはやや強め</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">蓄熱式</span>\n            <span class=\"stat-label\">低出力を連続照射し、じわじわ熱を蓄積。痛みが少なく産毛・地黒肌にも比較的安全</span>\n          </div>\n          <div class=\"stat-tile\">\n            <span class=\"stat-value\">吸引式</span>\n            <span class=\"stat-label\">皮膚を伸ばして照射しやすくし、赤みへの影響も抑えられるとされる</span>\n          </div>\n        </div>\n        <p class=\"viz-note\">出典:『美容皮膚Q&A』(川田暁)</p>\n      </div>\n    ",
+    sources: [
+      { label: "『美容の科学』(日本コスメティック協会)" },
+      { label: "『美容皮膚Q&A』(川田暁)" }
+    ]
   }
 ];
 
