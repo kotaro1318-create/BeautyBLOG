@@ -1055,6 +1055,54 @@ const ARTICLES = [
       { label: "『美容皮膚医学BEAUTY』第41号(菊地克子 企画編集)" },
       { label: "『あたらしい美容皮膚科学』(日本美容皮膚科学会)" }
     ]
+  },
+  {
+    title: "SPFは見ていてもPAは適当?「+」の数が守っているのは「焼け」じゃなく「黒化」という話",
+    date: "2026-11-27",
+    conclusion: "日焼け止めのPA表示は紫外線A波(UVA)による「即時黒化」を防ぐ強さを4段階で示す指標で、SPFが防ぐ対象や段階の細かさとは別物とされています。",
+    body: "日焼け止めを選ぶとき、SPFの数字ばかり見ていませんか。パッケージにもう一つ並んでいる「PA」の表示、実は役割がまったく違うそうです。紫外線にはUVBとUVAがあり、SPFが防ぐのはUVBによる「サンバーン」、つまり肌が赤くヒリヒリする炎症反応。一方のPAが防ぐのはUVAによる「即時黒化」で、浴びてから数時間ほどで肌が黒っぽくなる反応を指すとされています。UVAは波長が長く真皮まで届くため、黒化だけでなくコラーゲンやエラスチンにもダメージを与え、シワやたるみを進める一因になると考えられているようです。SPFが数値そのもので細かく差を示すのに対し、PAは「+」の数による+〜++++の4段階しかなく、+が多いほど防御力が高いというざっくりした目安にとどまるのも特徴です。目安としては日常生活ならSPF20〜30・PA++程度、屋外で長時間過ごす日はSPF50+・PA++++が勧められているとのこと。ちなみにSPF30の日焼け止めにSPF20のファンデーションを重ねても合計SPF50にはならないという誤解もよくあるそうです。塗る量・塗り直しの頻度に加えて、PAの意味もセットで覚えておくと、選び方の解像度がもう一段上がりそうです。",
+    visual: `
+      <div class="viz">
+        <p class="viz-title">表:SPFとPA、守っているものの違い</p>
+        <div class="viz-table-wrap">
+          <table class="viz-table">
+            <thead>
+              <tr><th>項目</th><th>SPF</th><th>PA</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>対象の紫外線</td><td>UVB</td><td>UVA</td></tr>
+              <tr><td>防ぐ反応</td><td>サンバーン(赤み・炎症)</td><td>即時黒化(数時間での黒ずみ)</td></tr>
+              <tr><td>表示の仕方</td><td>数値(例:30・50)</td><td>+の段階(+〜++++)</td></tr>
+              <tr><td>日常生活の目安</td><td>SPF20〜30</td><td>PA++</td></tr>
+              <tr><td>屋外長時間の目安</td><td>SPF50+</td><td>PA++++</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="viz-note">出典:『やさしく伝えるスキンケア実践ガイド』(野村有子)</p>
+      </div>
+      <div class="viz">
+        <p class="viz-title">図:覚えておきたいPA・UVAの数字</p>
+        <div class="viz-stats">
+          <div class="stat-tile">
+            <span class="stat-value">320〜400nm</span>
+            <span class="stat-label">UVAの波長域。真皮まで届き老化に関わるとされる</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">4段階</span>
+            <span class="stat-label">PA表示の区分(+・++・+++・++++)。数値ではなく段階で示される</span>
+          </div>
+          <div class="stat-tile">
+            <span class="stat-value">30+20≠50</span>
+            <span class="stat-label">日焼け止めとファンデーションのSPFは単純に足し算にならないとされる</span>
+          </div>
+        </div>
+        <p class="viz-note">出典:『美容の科学』(日本コスメティック協会)</p>
+      </div>
+    `,
+    sources: [
+      { label: "『やさしく伝えるスキンケア実践ガイド』(野村有子)" },
+      { label: "『美容の科学』(日本コスメティック協会)" }
+    ]
   }
 ];
 
